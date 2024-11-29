@@ -1,0 +1,19 @@
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.stats > h2 {
+    margin: 0;
+}
+
+.stats-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.stats-info > p {
+    margin: 0;
+}

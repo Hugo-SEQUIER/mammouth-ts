@@ -1,0 +1,12 @@
+.market-user-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.market-user-price input {
+    margin: 0;
+    width: fit-content;
+    max-width: 60px;
+}

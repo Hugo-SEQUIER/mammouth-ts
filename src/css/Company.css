@@ -1,0 +1,65 @@
+.company {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.company-stats {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-employees {
+    display: flex;
+    flex-direction: column;
+}
+
+.company button {
+    width: fit-content;
+    margin: 5px;
+    margin-left: 0;
+}
+
+.company-employees-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 10px;
+    border-left: 1px solid black;
+    height: 100%;
+}
+
+.employee {
+    display: flex;
+    flex-direction: column;
+}
+
+.employee button {
+    width: 100%;
+}
+
+.company-investment {
+    padding-left: 10px;
+    border-left: 1px solid black;
+    height: 100%;
+}
+
+.investment {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.asset input {
+    width: 100px;
+}
+
+.asset p {
+    font-size: 12px;
+}

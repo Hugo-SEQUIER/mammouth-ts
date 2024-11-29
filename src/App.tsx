@@ -1,25 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import { GamingProvider } from './context/GamingContext';
+
+import IceBlock from './IceBlock/IceBlock';
+import './css/IceBlock.css';
+
+import Market from './Market/Market';
+import './css/Market.css';
+
+import Pickaxe from './Items/Pickaxe';
+import './css/Items.css';
+
+import Company from './Company/Company';
+import './css/Company.css';
+
+import Laboratory from './Laboratory/Laboratory';
+import './css/Laboratory.css';
+
+import Stats from './Stats/Stats';
+import './css/Stats.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+	useEffect(() => {
+		console.log("App mounted");
+	}, []);
+	return (
+		<GamingProvider>
+	  		<div className="App">
+				<div className="flex-container">
+					<Stats />
+					<div className="flex-item">
+						<IceBlock />
+						<div className="flex-middle">
+							<div className="flex-tools">
+								<Pickaxe />
+								<Market />
+								<Laboratory />
+							</div>
+							<Company />
+						</div>
+					</div>
+				</div>
+			</div>
+	</GamingProvider>
   );
 }
 
