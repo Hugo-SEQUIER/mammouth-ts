@@ -2,13 +2,15 @@ import { useEffect, useState } from "react";
 import { useGaming } from "../context/GamingContext";
 import EmployeeComponent from "./Employees/Employee";
 import Investment from "./Investment/Investment";
-
+import { checkTechnologyDone } from "../context/utils";
+import MarketAnalysis from "./Analysis/MarketAnalysis";
 export default function Company() {
     const { state, dispatch } = useGaming();
     const [amountToInject, setAmountToInject] = useState(0);
     const [bankrupt, setBankrupt] = useState(false);
     const [negativeTimeCounter, setNegativeTimeCounter] = useState(0);
-    
+    const [hasMarketAnalysis, setHasMarketAnalysis] = useState(false);
+
     useEffect(() => {
         const interval = setInterval(() => {
             dispatch({ type: "UPDATE_HAPPINESS" });
@@ -32,13 +34,19 @@ export default function Company() {
         }, 1000);
 
         return () => clearInterval(interval);
-    }, [state.company.cashFlow, negativeTimeCounter]);
+    }, []);
 
     useEffect(() => {
         if (state.company.level > 0) {
             setBankrupt(false);
         }
     }, [state.company.level]);
+
+    useEffect(() => {
+        if (checkTechnologyDone('Market Analysis', state)){
+            setHasMarketAnalysis(true);
+        }       
+    }, [state.laboratory.researchDone])
 
     return (
         <>
@@ -50,29 +58,36 @@ export default function Company() {
                         <div className="company-container">
                             <div className="company-stats">
                                 <p>Level: {state.company.level}</p>
-                                <p>Upgrade Cost: {state.company.upgradeCost} $</p>
+                                <p>Upgrade Cost: {state.company.upgradeCost.toFixed(2)} $</p>
                                 <button onClick={() => dispatch({ type: "UPGRADE_COMPANY" })} disabled={state.basicInfo.money < state.company.upgradeCost}>
                                     Upgrade Company
                                 </button>
-                                <p>Reputation: {state.company.reputation}</p>
                                 <p>Cash Flow: {state.company.cashFlow.toFixed(2)}</p>
                                 <div className="company-pay-invoices">
                                     <input type="number" value={amountToInject} min={0.01} step={0.01} max={state.basicInfo.money} onChange={(e) => setAmountToInject(parseFloat(e.target.value))} />
                                     <button onClick={() => dispatch({ type: "INJECT_CASH", payload: amountToInject })}>Inject Cash</button>
                                 </div>
                             </div>
-                            <div className="company-employees">
-                                <div className="company-employees-container">
-                                    {state.company.employees.map((employee, index) => (
-                                        <EmployeeComponent employee={employee} key={index} />
-                                    ))}
+                            
+                                <div className="company-employees">
+                                    <div className="company-employees-container">
+                                        {state.company.employees.map((employee, index) => (
+                                            <EmployeeComponent employee={employee} key={index} />
+                                        ))}
+                                    </div>
                                 </div>
+                            <div className="company-investments-market-analysis">
+                                {state.company.level > 2 && (
+                                    <div className="company-investment">
+                                        <Investment />
+                                    </div>
+                                )}
+                                {hasMarketAnalysis && (
+                                    <div className="company-investment-market">
+                                        <MarketAnalysis />
+                                    </div>
+                                )}
                             </div>
-                            {state.company.level > 2 && (
-                                <div className="company-investment">
-                                    <Investment />
-                                </div>
-                            )}
                         </div>
                     )}
                     {state.company.level == 0 && (

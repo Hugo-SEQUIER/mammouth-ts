@@ -2,17 +2,17 @@ import { GameState } from "../interface";
 
 export const initialState: GameState = {
     basicInfo: {
-        ice: 0,
+        ice: 1000,
         icePerClick: 1,
         icePerSecond: 0,
-        money: 10000,
+        money: 11000,
     },
     items: {
         pickaxe: {
             level: 0,
             upgradeCost: 10,
         },
-        userLevel: 15,
+        userLevel: 1,
         costUpgrade: 100,
     },
     company: {
@@ -39,12 +39,11 @@ export const initialState: GameState = {
         investments: [],
     },
     laboratory: {
-        level: 1,
-        upgradeCost: 100,
+        level: 0,
+        upgradeCost: 1000,
         searchCost: 10,
         researchSpeed: 1,
         researchQueue: [],
-        researchProgress: 0,
         researchDone: [],
         employees: [],
     },
@@ -66,10 +65,15 @@ export const initialState: GameState = {
             avgBuyPrice: 0,
             actualPrice: 3400,
         },
-        sp500: {
+        spy: {
             amount: 0,
             avgBuyPrice: 0,
             actualPrice: 5900,
+        },
+        laika: {
+            amount: 0,
+            avgBuyPrice: 0,
+            actualPrice: 1,
         }
     }
 }

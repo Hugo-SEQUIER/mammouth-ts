@@ -12,6 +12,7 @@ export default function EmployeeComponent({ employee }: { employee: Employee }) 
         <div className="employee">
             <button 
                 onClick={() => dispatch({ type: "PAY_EMPLOYEE", payload: employee })}
+                disabled={employee.amount == 0}
             >
                 Pay {employee.job}
             </button>

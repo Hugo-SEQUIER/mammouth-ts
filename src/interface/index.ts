@@ -50,7 +50,6 @@ export interface Laboratory {
     searchCost: number;
     researchSpeed: number;
     researchQueue: Technology[];
-    researchProgress: number;
     researchDone: Technology[];
     employees: Employee[];
 }
@@ -59,6 +58,10 @@ export interface Technology {
     name: string;
     cost: number;
     effect: number;
+    category: "Production" | "Market" | "Investment" | "Laboratory";
+    description: string;
+    researchTime: number;
+    prerequisites: string[];
 }
 
 export interface Bitcoin {
@@ -67,7 +70,13 @@ export interface Bitcoin {
     actualPrice: number;
 }
 
-export interface SP500 {
+export interface spy {
+    amount: number;
+    avgBuyPrice: number;
+    actualPrice: number;
+}
+
+export interface Laika {
     amount: number;
     avgBuyPrice: number;
     actualPrice: number;
@@ -95,5 +104,6 @@ export interface Market {
 export interface Investment {
     bitcoin: Bitcoin;
     ethereum: Ethereum;
-    sp500: SP500;
+    spy: spy;
+    laika: Laika;
 }

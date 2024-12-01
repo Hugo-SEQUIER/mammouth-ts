@@ -1,8 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useGaming } from "../context/GamingContext";
-
+import { checkTechnologyDone } from "../context/utils";
 export default function Stats() {
     const { state, dispatch } = useGaming();
+    const [bonusIcePerSecond, setBonusIcePerSecond] = useState(1);
+    const [bonusIcePerClick, setBonusIcePerClick] = useState(1);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -11,14 +13,24 @@ export default function Stats() {
 
         // Cleanup interval on component unmount
         return () => clearInterval(interval);
-    }, [state.basicInfo.icePerSecond]);
+    }, []);
+
+
+    useEffect(() => {
+        if (checkTechnologyDone('Ice Defogger', state)){
+            setBonusIcePerClick(1.15)
+        }
+        if (checkTechnologyDone('Advanced Mining Techniques', state)){
+            setBonusIcePerSecond(1.2)
+        }
+    }, [state.laboratory.researchDone])
 
     return (
         <div className="stats container">
             <h2>Ice Collected: {Math.floor(state.basicInfo.ice)}</h2>
             <div className="stats-info">
-                <p>Ice per click: {state.basicInfo.icePerClick.toFixed(1)}</p>
-                <p>Ice per second: {state.basicInfo.icePerSecond}</p>
+                <p>Ice per click: {(state.basicInfo.icePerClick * bonusIcePerClick).toFixed(1)}</p>
+                <p>Ice per second: {(state.basicInfo.icePerSecond * bonusIcePerSecond).toFixed(2)}</p>
                 <p>Money: {state.basicInfo.money.toFixed(2)} $</p>
             </div>
         </div>

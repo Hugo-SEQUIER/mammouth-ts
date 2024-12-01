@@ -1,12 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useGaming } from "../../context/GamingContext";
+import { checkTechnologyDone } from "../../context/utils";
 
 export default function Investment() {
     const { state, dispatch } = useGaming();
     const [inputBtc, setInputBtc] = useState(0);
     const [inputEth, setInputEth] = useState(0);
-    const [inputSp500, setInputSp500] = useState(0);
-    const [isSellingSp500, setIsSellingSp500] = useState(false);
+    const [inputspy, setInputspy] = useState(0);
+    const [inputLaika, setInputLaika] = useState(0);
+    const [isSellingspy, setIsSellingspy] = useState(false);
+    const [isSellingLaika, setIsSellingLaika] = useState(false);
+    const [hasPortfolioDiversification, setHasPortfolioDiversification] = useState(false);
+
+    useEffect(() => {
+        if (checkTechnologyDone('Portfolio Diversification', state)){
+            setHasPortfolioDiversification(true);
+        }
+    }, [state.laboratory.researchDone])
+
     return (
         <div className="investment">
             <div className='asset'>
@@ -30,27 +41,51 @@ export default function Investment() {
                 </div>
             </div>
             <div className='asset'>
-                <div>S&P 500</div>
-                <div>Amount: {state.investment.sp500.amount.toFixed(4)}</div>
-                <div>Avg Buy Price: {state.investment.sp500.avgBuyPrice.toFixed(2)}</div>
-                <input type="number" min={0} step={0.1} value={inputSp500} onChange={(e) => setInputSp500(parseFloat(e.target.value))} />
+                <div>SPY</div>
+                <div>Amount: {state.investment.spy.amount.toFixed(4)}</div>
+                <div>Avg Buy Price: {state.investment.spy.avgBuyPrice.toFixed(2)}</div>
+                <input type="number" min={0} step={0.1} value={inputspy} onChange={(e) => setInputspy(parseFloat(e.target.value))} />
                 <div>
-                    <button onClick={() => dispatch({ type: "BUY_SP500", payload: inputSp500 })}>
+                    <button onClick={() => dispatch({ type: "BUY_spy", payload: inputspy })}>
                         Buy
                     </button>
                     <button onClick={() => {
-                        dispatch({ type: "SELL_SP500", payload: inputSp500 });
-                        setIsSellingSp500(true);
-                    }} disabled={state.investment.sp500.amount == 0}>
+                        dispatch({ type: "SELL_spy", payload: inputspy });
+                        setIsSellingspy(true);
+                    }} disabled={state.investment.spy.amount == 0}>
                         Sell
                     </button>
                 </div>
-                {isSellingSp500 && (
+                {isSellingspy && (
                     <div>
                         <p>Young Calf .... You really thought you could make it in TradFi ?</p>
                     </div>
                 )}
             </div>
+            {hasPortfolioDiversification && (
+                <div className='asset'>
+                    <div>Laika</div>
+                    <div>Amount: {state.investment.laika.amount.toFixed(4)}</div>
+                    <div>Avg Buy Price: {state.investment.laika.avgBuyPrice.toFixed(2)}</div>
+                    <input type="number" min={0} step={0.1} value={inputLaika} onChange={(e) => setInputLaika(parseFloat(e.target.value))} />
+                    <div>
+                        <button onClick={() => dispatch({ type: "BUY_LAIKA", payload: inputLaika })}>
+                            Buy
+                        </button>
+                        <button onClick={() => {
+                            dispatch({ type: "SELL_spy", payload: inputspy });
+                            setIsSellingLaika(true);
+                        }} disabled={state.investment.laika.amount == 0}>
+                            Sell
+                        </button>
+                    </div>
+                    {isSellingLaika && (
+                        <div>
+                            <p>Wouf</p>
+                        </div>
+                    )}
+                </div>
+            )}
         </div>
     );
 }

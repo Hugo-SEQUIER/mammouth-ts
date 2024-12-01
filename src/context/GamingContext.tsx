@@ -1,7 +1,8 @@
-import React, { createContext, useContext, useReducer, ReactNode } from 'react';
+import React, { createContext, useContext, useReducer, useEffect, ReactNode } from 'react';
 import { GameState } from '../interface';
 import { initialState } from './initialState';
-import { clamp } from 'lodash';
+import { calculatePublicDemand, checkTechnologyDone } from './utils';
+import { useGameAPI } from './useGameAPI';
 
 // Define the context type
 type GamingContextType = {
@@ -19,6 +20,63 @@ type GamingProviderProps = {
 
 export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
   	const [state, dispatch] = useReducer(gameReducer, initialState);
+  	const { loadGameState, saveGameState, fetchCurrentPrice, initializeGameState } = useGameAPI();
+
+  	// Charger l'état initial du jeu
+  	useEffect(() => {
+		const initGame = async () => {
+			const savedState = await loadGameState();
+			console.log("savedState", savedState);
+			if (savedState === 'No game state found') {
+				const newState = await initializeGameState();
+				console.log("newState", newState);
+				dispatch({ type: 'LOAD_STATE', payload: newState });
+			} else if (savedState) {
+				console.log("savedState", savedState);
+				dispatch({ type: 'LOAD_STATE', payload: savedState.state });
+			}
+		};
+
+		initGame();
+  	}, []);
+
+  	// Mettre à jour le prix du marché périodiquement
+  	useEffect(() => {
+		const updateMarketPrice = async () => {
+			const price = await fetchCurrentPrice();
+			if (price) {
+				dispatch({ type: 'UPDATE_INVESTMENT_PRICE', payload: price });
+			}
+		};
+
+		// Mettre à jour le prix toutes les 5 minutes
+		updateMarketPrice();
+		const interval = setInterval(updateMarketPrice, 60000*5);
+
+		return () => clearInterval(interval);
+  	}, []);
+
+  	// Sauvegarder l'état périodiquement
+  	useEffect(() => {
+		const saveState = async () => {
+			console.log("saveState", state);
+			await saveGameState(state);
+		};
+
+		const interval = setInterval(saveState, 5000); // Sauvegarde toutes les 5 secondes
+
+		return () => clearInterval(interval);
+  	}, [state]);
+
+  	// Sauvegarder l'état avant de quitter la page
+  	useEffect(() => {
+		const handleBeforeUnload = async () => {
+			await saveGameState(state);
+		};
+
+		window.addEventListener('beforeunload', handleBeforeUnload);
+		return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  	}, [state]);
 
   	return (
 		<GamingContext.Provider value={{ state, dispatch }}>
@@ -36,60 +94,33 @@ export const useGaming = () => {
   	return context;
 };
 
-// Define constants
-const ELASTICITY = 1.2; // Adjust sensitivity
-const MIN_DEMAND = 0;
-const MAX_DEMAND = 1000;
-const HIGH_PRICE_MULTIPLIER = 1.7;
-const LOW_PRICE_MULTIPLIER = 0.7;
-const HIGH_PRICE_MALUS = 0.1; // 10% of MIN_DEMAND
-
-// Utility function to calculate public demand
-function calculatePublicDemand(
-    userPrice: number, 
-    avgMarketPrice: number
-): number {
-    // Step 1: Calculate price ratio
-    const priceRatio = avgMarketPrice / userPrice;
-
-    // Step 2: Check if userPrice exceeds HIGH_PRICE_MULTIPLIER * avgMarketPrice
-    if (userPrice > HIGH_PRICE_MULTIPLIER * avgMarketPrice) {
-        return clamp(MIN_DEMAND * HIGH_PRICE_MALUS, MIN_DEMAND, MAX_DEMAND);
-    }
-
-    // Step 3: Enforce userPrice within [LOW_PRICE_MULTIPLIER * avgMarketPrice, HIGH_PRICE_MULTIPLIER * avgMarketPrice]
-    const clampedPriceRatio = clamp(priceRatio, 1 / HIGH_PRICE_MULTIPLIER, 1 / LOW_PRICE_MULTIPLIER);
-
-    // Step 4: Apply price elasticity
-    let demandMultiplier = Math.pow(clampedPriceRatio, ELASTICITY);
-
-    // Step 5: Calculate final demand (scale as needed)
-    const newDemand = demandMultiplier * 100; // Scaling factor to adjust demand range
-
-    // Step 6: Clamp demand between bounds
-    return clamp(newDemand, MIN_DEMAND, MAX_DEMAND);
-}
-
 // Basic reducer (you'll want to expand this with actual actions)
 const gameReducer = (state: GameState, action: any): GameState => {
+	let bonus = 1
 	switch (action.type) {
 		case "MINE_ICE":
+			if (checkTechnologyDone("Ice Defogger", state)){
+				bonus = 1.15;
+			}
 			return { ...state, basicInfo: {
 				...state.basicInfo,
-					ice: (state.basicInfo.ice + state.basicInfo.icePerClick)
+					ice: (state.basicInfo.ice + (state.basicInfo.icePerClick * bonus))
 				}
 			};
 		case "AUTO_MINE_ICE":
+			if (checkTechnologyDone("Advanced Mining Techniques", state)){
+				bonus = 1.2;
+			}
 			return { ...state, basicInfo: {
 				...state.basicInfo,
-					ice: (state.basicInfo.ice + state.basicInfo.icePerSecond)
+					ice: (state.basicInfo.ice + (state.basicInfo.icePerSecond * bonus))
 				}
 			};
 		case "UPGRADE_PICKAXE":
 			if (state.basicInfo.money < 0.01){
 				return state;
 			}
-			if (state.items.pickaxe.level == 0){
+			if (state.items.pickaxe.level === 0){
 				return {
 					...state, 
 					items: {
@@ -139,7 +170,7 @@ const gameReducer = (state: GameState, action: any): GameState => {
 			const newUserPrice = action.payload;
 			const avgMarketPrice = state.market.marketPrice; // Assuming avgMarketPrice is marketPrice
 
-			const updatedPublicDemand = calculatePublicDemand(newUserPrice, avgMarketPrice);
+			const updatedPublicDemand = calculatePublicDemand(newUserPrice, avgMarketPrice, state);
 
 			return {
 				...state,
@@ -150,23 +181,29 @@ const gameReducer = (state: GameState, action: any): GameState => {
 				}
 			};
 		case 'SELL_ICE':
+			if (state.basicInfo.ice < 0.01 || state.items.userLevel < 3){
+				return state;
+			}
+			if (checkTechnologyDone("Brand Recognition", state)){
+				bonus = 1.25;
+			}
 			return {
 				...state,
 				market: {
 					...state.market,
-					iceSell: state.market.iceSell + action.payload,
+					iceSell: state.market.iceSell + 1,
 				},
 				basicInfo: {
 					...state.basicInfo,
-					ice: state.basicInfo.ice - action.payload,
-					money: state.basicInfo.money + state.market.userPrice * action.payload
+					ice: state.basicInfo.ice - 1,
+					money: state.basicInfo.money + (state.market.userPrice * 1 * bonus)
 				}
 			};
 		case "UPGRADE_COMPANY":
 			if (state.basicInfo.money < 0.01){
 				return state;
 			}
-			if (state.company.level == 0){
+			if (state.company.level === 0){
 				return {
 					...state,
 					company: {
@@ -174,6 +211,10 @@ const gameReducer = (state: GameState, action: any): GameState => {
 						level: state.company.level + 1,
 						upgradeCost: state.company.upgradeCost * 2.5,
 					},
+					basicInfo: {
+						...state.basicInfo,
+						money: state.basicInfo.money - state.company.upgradeCost
+					}	
 				};
 			}
 			return {
@@ -186,6 +227,36 @@ const gameReducer = (state: GameState, action: any): GameState => {
 				basicInfo: {
 					...state.basicInfo,
 					money: state.basicInfo.money - state.company.upgradeCost
+				}
+			};
+		case "UPGRADE_LABORATORY":
+			if (state.basicInfo.money < 0.01){
+				return state;
+			}
+			if (state.laboratory.level === 0){
+				return {
+					...state,
+					laboratory: {
+						...state.laboratory,
+						level: state.laboratory.level + 1,
+					},
+					basicInfo: {
+						...state.basicInfo,
+						money: state.basicInfo.money - state.laboratory.upgradeCost
+					}
+				};
+			}
+			return {
+				...state,
+				laboratory: {
+					...state.laboratory,
+					level: state.laboratory.level + 1,
+					upgradeCost: state.laboratory.upgradeCost * 2.5,
+					researchSpeed: parseFloat((state.laboratory.researchSpeed * 1.15).toFixed(2))
+				},
+				basicInfo: {
+					...state.basicInfo,
+					money: state.basicInfo.money - state.laboratory.upgradeCost
 				}
 			};
 		case "INJECT_CASH":
@@ -205,9 +276,9 @@ const gameReducer = (state: GameState, action: any): GameState => {
 			};
 		case "HIRED_EMPLOYEE":
 			let employee_production = 0;
-			if (action.payload.job == "Junior Miner"){
+			if (action.payload.job === "Junior Miner"){
 				employee_production = 1;
-			} else if (action.payload.job == "Senior Miner"){
+			} else if (action.payload.job === "Senior Miner"){
 				employee_production = 2;
 			}
 			return {
@@ -215,14 +286,14 @@ const gameReducer = (state: GameState, action: any): GameState => {
 				company: {
 					...state.company,
 					employees: state.company.employees.map((employee) => {
-						if (employee.job == action.payload.job && employee.amount == 0){
+						if (employee.job === action.payload.job && employee.amount === 0){
 							return { 
 								...employee, 
 								amount: employee.amount + 1,
 								happiness: Math.random() * 100,
 								production: employee_production
 							};
-						} else if (employee.job == action.payload.job && employee.amount > 0){
+						} else if (employee.job === action.payload.job && employee.amount > 0){
 							return {
 								...employee,
 								amount: employee.amount + 1,
@@ -249,6 +320,9 @@ const gameReducer = (state: GameState, action: any): GameState => {
 				company: {
 					...state.company,
 					employees: state.company.employees.map((employee) => {
+						if (employee.amount === 0){
+							return employee;
+						}
 						let base_production = 0;
 						let base_employee = employee;
 						if (employee.job === "Junior Miner") {
@@ -272,7 +346,7 @@ const gameReducer = (state: GameState, action: any): GameState => {
 						}
 						// Decrease happiness by 0.01 each second
 						const newHappiness = Math.max(employee.happiness - 0.01, 0);
-						if (newHappiness == 0){
+						if (newHappiness === 0){
 							return base_employee;
 						}
 						// Adjust production based on happiness (e.g., linear scaling)
@@ -313,7 +387,7 @@ const gameReducer = (state: GameState, action: any): GameState => {
 				}
 			};
 		case "BANKRUPT":
-			if (state.company.cashFlow < -3000 || action.payload == "BANKRUPT"){
+			if (state.company.cashFlow < -3000 || action.payload === "BANKRUPT"){
 				return {
 					...state,
 					company: initialState.company,
@@ -355,6 +429,9 @@ const gameReducer = (state: GameState, action: any): GameState => {
 			if (action.payload < 0){
 				return state;
 			}
+			if (checkTechnologyDone("Trading Algorithms", state)){
+				bonus = 1.2;
+			}
 			return {
 				...state,
 				investment: {
@@ -366,7 +443,7 @@ const gameReducer = (state: GameState, action: any): GameState => {
 				},
 				company: {
 					...state.company,
-					cashFlow: state.company.cashFlow + action.payload * state.investment.bitcoin.actualPrice
+					cashFlow: state.company.cashFlow + (action.payload * state.investment.bitcoin.actualPrice * bonus)
 				}
 			};
 		case "BUY_ETHEREUM":
@@ -396,6 +473,9 @@ const gameReducer = (state: GameState, action: any): GameState => {
 			if (action.payload < 0){
 				return state;
 			}
+			if (checkTechnologyDone("Trading Algorithms", state)){
+				bonus = 1.2;
+			}
 			return {
 				...state,
 				investment: {
@@ -407,47 +487,117 @@ const gameReducer = (state: GameState, action: any): GameState => {
 				},
 				company: {
 					...state.company,
-					cashFlow: state.company.cashFlow + action.payload * state.investment.ethereum.actualPrice
+					cashFlow: state.company.cashFlow + (action.payload * state.investment.ethereum.actualPrice * bonus)
 				}
 			};
-		case "BUY_SP500":
+		case "BUY_spy":
 			if (action.payload < 0){
 				return state;
 			}
-			let currentTotalValueSP500 = state.investment.sp500.amount * state.investment.sp500.avgBuyPrice;
-			let newPurchaseValueSP500 = action.payload * state.investment.sp500.actualPrice;
-			let newTotalAmountSP500 = state.investment.sp500.amount + action.payload;
-			let newAvgPriceSP500 = (currentTotalValueSP500 + newPurchaseValueSP500) / newTotalAmountSP500;
+			let currentTotalValuespy = state.investment.spy.amount * state.investment.spy.avgBuyPrice;
+			let newPurchaseValuespy = action.payload * state.investment.spy.actualPrice;
+			let newTotalAmountspy = state.investment.spy.amount + action.payload;
+			let newAvgPricespy = (currentTotalValuespy + newPurchaseValuespy) / newTotalAmountspy;
 			return {
 				...state,
 				investment: {
 					...state.investment,
-					sp500: {
-						...state.investment.sp500,
-							amount: newTotalAmountSP500,
-							avgBuyPrice: newAvgPriceSP500
+					spy: {
+						...state.investment.spy,
+							amount: newTotalAmountspy,
+							avgBuyPrice: newAvgPricespy
 					},
 				},
 				company: {
 					...state.company,
-					cashFlow: state.company.cashFlow - newPurchaseValueSP500
+					cashFlow: state.company.cashFlow - newPurchaseValuespy
 				}
 			};
-		case "SELL_SP500":
+		case "SELL_spy":
 			if (action.payload < 0){
 				return state;
 			}
-			if (action.payload > state.investment.sp500.amount){
+			if (action.payload > state.investment.spy.amount){
 				return state;
 			}
 			return {
 				...state,
 				investment: {
 					...state.investment,
-					sp500: {
-						...state.investment.sp500,
-						amount: state.investment.sp500.amount - action.payload,
+					spy: {
+						...state.investment.spy,
+						amount: state.investment.spy.amount - action.payload,
 					},
+				},
+			};
+		case "START_RESEARCH":
+			if (checkTechnologyDone("Multi-tasking", state) || state.laboratory.researchQueue.length === 0){
+				return {
+					...state,
+					laboratory: {
+						...state.laboratory,
+						researchQueue: [...state.laboratory.researchQueue, action.payload],
+					},
+					basicInfo: {
+						...state.basicInfo,
+						money: state.basicInfo.money - action.payload.cost
+					}
+				};
+			}
+			return state;
+		case "PROGRESS_RESEARCH":
+			if (state.laboratory.researchQueue.length === 0) {
+				return state;
+			}
+			if (checkTechnologyDone("Research Efficiency", state)){
+				bonus = 1.25;
+			}
+			let newDone = [];
+			let updatedQueue = [];
+			for (const tech of state.laboratory.researchQueue){
+				let newProgress: number = tech.researchTime - (state.laboratory.researchSpeed * bonus);
+				if (newProgress <= 0){
+					newDone.push(tech);
+				} else {
+					tech.researchTime = newProgress;
+					updatedQueue.push(tech);
+				}
+			}
+			return {
+				...state,
+				laboratory: {
+					...state.laboratory,
+					researchDone: [...state.laboratory.researchDone, ...newDone],
+					researchQueue: updatedQueue
+				}
+			};
+		case 'LOAD_STATE':
+			return {
+				...state,
+				...action.payload
+			};
+		case 'UPDATE_INVESTMENT_PRICE':
+			const priceMap = action.payload.reduce((acc: any, item: any) => {
+				acc[item.symbol.toLowerCase()] = item.current_price;
+				return acc;
+			}, {});
+
+			return {
+				...state,
+				investment: {
+					...state.investment,
+					bitcoin: {
+						...state.investment.bitcoin,
+						actualPrice: priceMap.bitcoin || state.investment.bitcoin.actualPrice
+					},
+					ethereum: {
+						...state.investment.ethereum,
+						actualPrice: priceMap.ethereum || state.investment.ethereum.actualPrice
+					},
+					spy: {
+						...state.investment.spy,
+						actualPrice: priceMap.spy || state.investment.spy.actualPrice
+					}
 				},
 			};
 		default:

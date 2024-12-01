@@ -1,0 +1,4 @@
+{"level":"error","message":"Error fetching game state for user undefined: JSON object requested, multiple (or no) rows returned","tag":"database","timestamp":"2024-12-01T01:29:27.493Z"}
+{"level":"error","message":"Error fetching game state for user undefined: JSON object requested, multiple (or no) rows returned","tag":"database","timestamp":"2024-12-01T01:31:35.957Z"}
+{"level":"error","message":"Error fetching game state for user undefined: JSON object requested, multiple (or no) rows returned","tag":"database","timestamp":"2024-12-01T01:31:56.525Z"}
+{"level":"error","message":"Error updating game state for user undefined: Could not find the 'game_state' column of 'game_states' in the schema cache","tag":"database","timestamp":"2024-12-01T01:33:21.647Z"}
