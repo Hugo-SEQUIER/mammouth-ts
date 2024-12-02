@@ -9,9 +9,15 @@ fastify.register(cors, {
   credentials: true
 });
 
+const { decryptResponse } = require('./utils/encryption');
+
 // API Key middleware
 const validateApiKey = async (request, reply) => {
-    const apiKey = request.headers['x-api-key'];
+    const apiKeyRequest = decryptResponse(request.headers['x-api-key']);
+    if (apiKeyRequest.state == 'error') {
+        reply.code(401).send({ error: 'Unauthorized - Invalid API Key' });
+    }
+    const apiKey = apiKeyRequest.response;
     if (!apiKey || apiKey !== process.env.API_KEY) {
       reply.code(401).send({ error: 'Unauthorized - Invalid API Key' });
     }

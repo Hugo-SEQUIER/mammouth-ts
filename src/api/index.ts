@@ -1,12 +1,12 @@
 import { GameState } from "../interface";
-import { decryptResponse } from "./encryption";
+import { encryptResponse, decryptResponse } from "./encryption";
 
 export async function getCurrentPrice(){
     const response = await fetch(`${process.env.REACT_APP_API_URL}/quote/getCurrentPrice`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'x-api-key': process.env.REACT_APP_API_KEY || ''
+            'x-api-key': encryptResponse(process.env.REACT_APP_API_KEY || '')
         },
         body: JSON.stringify({})
     });
@@ -24,7 +24,7 @@ export async function createGameState(userPublicAddress: string){
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'x-api-key': process.env.REACT_APP_API_KEY || ''
+            'x-api-key': encryptResponse(process.env.REACT_APP_API_KEY || '')
         },
         body: JSON.stringify({ userPublicKey: userPublicAddress })
     });
@@ -42,7 +42,7 @@ export async function getGameState(userPublicAddress: string){
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'x-api-key': process.env.REACT_APP_API_KEY || ''
+            'x-api-key': encryptResponse(process.env.REACT_APP_API_KEY || '')
         },
         body: JSON.stringify({ userPublicKey: userPublicAddress })
     });
@@ -56,11 +56,12 @@ export async function getGameState(userPublicAddress: string){
 }
 
 export async function updateGameState(userPublicAddress: string, gameState: GameState){
+    console.log("updateGameState userPublicAddress", userPublicAddress);
     const response = await fetch(`${process.env.REACT_APP_API_URL}/database/updateDatabaseData`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'x-api-key': process.env.REACT_APP_API_KEY || ''
+            'x-api-key': encryptResponse(process.env.REACT_APP_API_KEY || '')
         },
         body: JSON.stringify({ userPublicKey: userPublicAddress, gameState: gameState })
     });

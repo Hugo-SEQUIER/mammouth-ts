@@ -99,3 +99,10 @@ p {
     margin: 0 !important;
     width: max-content;
 }
+
+.flex-wallet {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
+}

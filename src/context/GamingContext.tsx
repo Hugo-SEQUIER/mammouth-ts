@@ -3,7 +3,7 @@ import { GameState } from '../interface';
 import { initialState } from './initialState';
 import { calculatePublicDemand, checkTechnologyDone } from './utils';
 import { useGameAPI } from './useGameAPI';
-
+import { usePublicKey } from './publicKeyContext';
 // Define the context type
 type GamingContextType = {
 	state: GameState;
@@ -21,7 +21,7 @@ type GamingProviderProps = {
 export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
   	const [state, dispatch] = useReducer(gameReducer, initialState);
   	const { loadGameState, saveGameState, fetchCurrentPrice, initializeGameState } = useGameAPI();
-
+  	const { publicKey } = usePublicKey();
   	// Charger l'état initial du jeu
   	useEffect(() => {
 		const initGame = async () => {
@@ -38,7 +38,7 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
 		};
 
 		initGame();
-  	}, []);
+  	}, [publicKey]);
 
   	// Mettre à jour le prix du marché périodiquement
   	useEffect(() => {

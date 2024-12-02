@@ -2,10 +2,10 @@ import { GameState } from "../interface";
 
 export const initialState: GameState = {
     basicInfo: {
-        ice: 1000,
+        ice: 0,
         icePerClick: 1,
         icePerSecond: 0,
-        money: 11000,
+        money: 0,
     },
     items: {
         pickaxe: {

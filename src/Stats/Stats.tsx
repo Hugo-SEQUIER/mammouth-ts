@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
 import { useGaming } from "../context/GamingContext";
 import { checkTechnologyDone } from "../context/utils";
+import { usePublicKey } from "../context/publicKeyContext";
+import { useWallet } from "@solana/wallet-adapter-react";
+
 export default function Stats() {
     const { state, dispatch } = useGaming();
     const [bonusIcePerSecond, setBonusIcePerSecond] = useState(1);
     const [bonusIcePerClick, setBonusIcePerClick] = useState(1);
+    const { updatePublicKey } = usePublicKey();
+    const { wallet } = useWallet();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -15,6 +20,11 @@ export default function Stats() {
         return () => clearInterval(interval);
     }, []);
 
+    useEffect(() => {
+        if (wallet?.adapter?.publicKey) {
+            updatePublicKey(wallet.adapter.publicKey.toString());
+        }
+    }, [wallet?.adapter?.publicKey]);
 
     useEffect(() => {
         if (checkTechnologyDone('Ice Defogger', state)){

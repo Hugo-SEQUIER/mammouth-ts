@@ -1,7 +1,12 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useMemo } from 'react';
 import { GamingProvider } from './context/GamingContext';
-
+import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
+import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
+import { PhantomWalletAdapter, SolflareWalletAdapter } from '@solana/wallet-adapter-wallets';
+import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import { PublicKeyProvider } from './context/publicKeyContext';
+require('@solana/wallet-adapter-react-ui/styles.css');
 import IceBlock from './IceBlock/IceBlock';
 import './css/IceBlock.css';
 
@@ -21,29 +26,47 @@ import Stats from './Stats/Stats';
 import './css/Stats.css';
 
 function App() {
-	useEffect(() => {
-		console.log("App mounted");
-	}, []);
+	const network = 'https://staging-rpc.dev2.eclipsenetwork.xyz'; // Use Devnet for testing
+	const wallets = useMemo(
+		() => [
+			new PhantomWalletAdapter(),
+			new SolflareWalletAdapter(),
+		],
+		[]
+	);
+
 	return (
-		<GamingProvider>
-	  		<div className="App">
-				<div className="flex-container">
-					<Stats />
-					<div className="flex-item">
-						<IceBlock />
-						<div className="flex-middle">
-							<div className="flex-tools">
-								<Pickaxe />
-								<Market />
-								<Laboratory />
+		<ConnectionProvider endpoint={network}>
+			<WalletProvider wallets={wallets} autoConnect>
+				<WalletModalProvider>
+					<PublicKeyProvider>
+						<GamingProvider>
+							<div className="App">
+								<div className="flex-container">
+								<div className="flex-wallet">	
+									<Stats />
+									<WalletMultiButton />
+								</div>
+								<div className="flex-item">
+									<IceBlock />
+									<div className="flex-middle">
+										<div className="flex-tools">
+											<Pickaxe />
+											<Market />
+											<Laboratory />
+										</div>
+										<Company />
+									</div>
+								</div>
+								
 							</div>
-							<Company />
-						</div>
-					</div>
-				</div>
-			</div>
-	</GamingProvider>
-  );
+							</div>
+						</GamingProvider>
+					</PublicKeyProvider>
+				</WalletModalProvider>
+			</WalletProvider>
+		</ConnectionProvider>
+	);
 }
 
 export default App;
