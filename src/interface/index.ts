@@ -13,7 +13,7 @@ export interface BasicInfo {
     icePerClick: number;
     icePerSecond: number;
     money: number;
-
+    nbClickAllowed: number;
 }
 
 export interface Employee {

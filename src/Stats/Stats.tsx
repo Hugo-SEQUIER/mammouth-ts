@@ -10,7 +10,7 @@ export default function Stats() {
     const [bonusIcePerClick, setBonusIcePerClick] = useState(1);
     const { updatePublicKey } = usePublicKey();
     const { wallet } = useWallet();
-
+    
     useEffect(() => {
         const interval = setInterval(() => {
             dispatch({ type: "AUTO_MINE_ICE" });
@@ -42,6 +42,7 @@ export default function Stats() {
                 <p>Ice per click: {(state.basicInfo.icePerClick * bonusIcePerClick).toFixed(1)}</p>
                 <p>Ice per second: {(state.basicInfo.icePerSecond * bonusIcePerSecond).toFixed(2)}</p>
                 <p>Money: {state.basicInfo.money.toFixed(2)} $</p>
+                <p>Nb click allowed: {state.basicInfo.nbClickAllowed}</p>
             </div>
         </div>
     )

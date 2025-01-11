@@ -1,5 +1,6 @@
 import { clamp } from 'lodash';
 import { GameState } from '../interface';
+import { interactWithContract } from '../api';
 // Utility function to calculate public demand
 export function calculatePublicDemand(
     userPrice: number, 
@@ -39,4 +40,12 @@ export function calculatePublicDemand(
 
 export function checkTechnologyDone(technologyName: string, state: GameState): boolean {
     return state.laboratory.researchDone.some(tech => tech.name === technologyName);
+}
+
+export async function checkInteractionDone(){
+    const result = await interactWithContract();
+    if (result.state === 'error'){
+        return false;
+    }
+    return true;
 }

@@ -25,10 +25,13 @@ const validateApiKey = async (request, reply) => {
 
 const databaseRoutes = require('./routes/databaseRoutes');
 const quoteRoutes = require('./routes/quoteRoutes');
+const contractRoutes = require('./routes/contractRoutes');
+
 fastify.register(async function (fastify) {
     fastify.addHook('preHandler', validateApiKey);
     fastify.register(databaseRoutes, { prefix: '/database' });
     fastify.register(quoteRoutes, { prefix: '/quote' });
+    fastify.register(contractRoutes, { prefix: '/contract' });
 });
 
 fastify.get('/', async (request, reply) => {

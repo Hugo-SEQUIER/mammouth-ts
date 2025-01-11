@@ -10,6 +10,7 @@ const createGameState = async (request, reply) => {
             icePerClick: 1,
             icePerSecond: 0,
             money: 0,
+            nbClickAllowed: 0,
         },
         items: {
             pickaxe: {

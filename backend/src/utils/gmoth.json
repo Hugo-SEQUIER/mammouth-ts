@@ -1,0 +1,26 @@
+{
+    "address": "2YU4ujreHtNHqA27Hh1WQoWFHm33uugCz1WhxnnCjoLf",
+    "metadata": {
+      "name": "gmoth",
+      "version": "0.1.0",
+      "spec": "0.1.0",
+      "description": "Created with Anchor"
+    },
+    "instructions": [
+      {
+        "name": "initialize",
+        "discriminator": [
+          175,
+          175,
+          109,
+          31,
+          13,
+          152,
+          155,
+          237
+        ],
+        "accounts": [],
+        "args": []
+      }
+    ]
+  }

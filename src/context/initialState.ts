@@ -6,6 +6,7 @@ export const initialState: GameState = {
         icePerClick: 1,
         icePerSecond: 0,
         money: 0,
+        nbClickAllowed: 1,
     },
     items: {
         pickaxe: {

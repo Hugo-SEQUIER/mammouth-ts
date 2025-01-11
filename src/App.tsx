@@ -25,6 +25,9 @@ import './css/Laboratory.css';
 import Stats from './Stats/Stats';
 import './css/Stats.css';
 
+import ModalToSendEth from './eclipseContract/ModalToSendEth';
+import './css/Modal.css';
+
 function App() {
 	const network = 'https://staging-rpc.dev2.eclipsenetwork.xyz'; // Use Devnet for testing
 	const wallets = useMemo(
@@ -45,6 +48,7 @@ function App() {
 								<div className="flex-container">
 								<div className="flex-wallet">	
 									<Stats />
+									<ModalToSendEth />
 									<WalletMultiButton />
 								</div>
 								<div className="flex-item">

@@ -1,0 +1,52 @@
+{
+  "address": "2STyoQ34vkZi6Q86tP5ykcvXBkLBTSoaSXZspcMhe4sV",
+  "metadata": {
+    "name": "idlegame",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "send_eth",
+      "discriminator": [
+        222,
+        79,
+        49,
+        60,
+        67,
+        59,
+        120,
+        69
+      ],
+      "accounts": [
+        {
+          "name": "from",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "to",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "Unauthorized",
+      "msg": "Unauthorized: You cannot perform this action."
+    }
+  ]
+}

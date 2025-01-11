@@ -72,3 +72,21 @@ export async function updateGameState(userPublicAddress: string, gameState: Game
         response: decryptedData.response
     }
 }
+
+export async function interactWithContract(){
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/contract/interactWithContract`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': encryptResponse(process.env.REACT_APP_API_KEY || '')
+        },
+        body: JSON.stringify({})
+    });
+    const data = await response.json();
+    const decryptedData = decryptResponse(data.response);
+    return {
+        state: data.state,
+        response: decryptedData.response
+    }
+}
+

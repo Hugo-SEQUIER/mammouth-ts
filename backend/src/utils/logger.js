@@ -45,4 +45,5 @@ const createLogger = (tag) => {
 module.exports = {
 	databaseLogger: createLogger('database'),
 	quoteLogger: createLogger('quote'),
+	contractLogger: createLogger('contract'),
 };

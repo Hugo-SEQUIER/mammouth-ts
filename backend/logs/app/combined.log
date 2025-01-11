@@ -237,3 +237,118 @@
 {"level":"info","message":"Quote for BINANCE:BTCUSDT: 97222.57","tag":"quote","timestamp":"2024-12-01T13:37:48.885Z"}
 {"level":"info","message":"Quote for SPY: 602.55","tag":"quote","timestamp":"2024-12-01T13:37:48.990Z"}
 {"level":"info","message":"Quote for BINANCE:ETHUSDT: 3700.8","tag":"quote","timestamp":"2024-12-01T13:37:49.154Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3280","tag":"quote","timestamp":"2025-01-11T15:06:42.141Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T15:06:42.143Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94605.88","tag":"quote","timestamp":"2025-01-11T15:06:42.144Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T15:11:43.361Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94550.41","tag":"quote","timestamp":"2025-01-11T15:11:43.378Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3275.64","tag":"quote","timestamp":"2025-01-11T15:11:43.381Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3271.52","tag":"quote","timestamp":"2025-01-11T15:15:14.116Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94493.2","tag":"quote","timestamp":"2025-01-11T15:15:14.118Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T15:15:14.120Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94451.71","tag":"quote","timestamp":"2025-01-11T15:18:24.117Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T15:18:24.120Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3270.32","tag":"quote","timestamp":"2025-01-11T15:18:24.121Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T15:23:24.487Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94449.93","tag":"quote","timestamp":"2025-01-11T15:23:24.488Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3270.6","tag":"quote","timestamp":"2025-01-11T15:23:24.494Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T20:20:18.127Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3281.84","tag":"quote","timestamp":"2025-01-11T20:20:18.130Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94299.99","tag":"quote","timestamp":"2025-01-11T20:20:18.131Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T20:20:21.486Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94338.78","tag":"quote","timestamp":"2025-01-11T20:20:21.490Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3282.3","tag":"quote","timestamp":"2025-01-11T20:20:21.491Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:20:43.827Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94315.77","tag":"quote","timestamp":"2025-01-11T20:21:01.805Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3281.01","tag":"quote","timestamp":"2025-01-11T20:21:01.811Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T20:21:01.812Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:21:04.158Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3282.61","tag":"quote","timestamp":"2025-01-11T20:26:02.148Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T20:26:02.150Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94326.51","tag":"quote","timestamp":"2025-01-11T20:26:02.153Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:27:52.730Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:27:54.375Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:27:54.548Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:27:54.728Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:27:54.900Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:27:55.080Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94443.19","tag":"quote","timestamp":"2025-01-11T20:32:54.497Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T20:32:54.502Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3287.5","tag":"quote","timestamp":"2025-01-11T20:32:54.528Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:11.836Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:15.947Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:16.163Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:16.387Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:16.590Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:16.786Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:16.972Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:17.157Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:17.369Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:17.552Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:17.776Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:18.341Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:18.528Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:18.692Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:18.892Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:19.075Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:19.275Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:19.368Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:19.511Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:19.603Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:19.742Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:19.826Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:20.059Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:20.282Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:20.526Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:20.741Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:20.961Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:21.200Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:21.637Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:21.841Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:22.013Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:22.191Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:22.719Z"}
+{"level":"error","message":"Error interacting with contract: ENOENT: no such file or directory, open 'F:\\projets\\CryptoHunter-NFT\\idle-mammouth\\mammouth-ts\\backend\\utils\\gmoth.json'","tag":"contract","timestamp":"2025-01-11T20:33:22.882Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T20:34:41.355Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3288.52","tag":"quote","timestamp":"2025-01-11T20:34:41.363Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94432.54","tag":"quote","timestamp":"2025-01-11T20:34:41.364Z"}
+{"level":"error","message":"Error interacting with contract: bad secret key size","tag":"contract","timestamp":"2025-01-11T20:34:44.236Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T20:35:21.914Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94464.37","tag":"quote","timestamp":"2025-01-11T20:35:21.917Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3289.51","tag":"quote","timestamp":"2025-01-11T20:35:21.918Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94464.37","tag":"quote","timestamp":"2025-01-11T20:35:26.522Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T20:35:26.525Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3289.51","tag":"quote","timestamp":"2025-01-11T20:35:26.526Z"}
+{"level":"error","message":"Error interacting with contract: Cannot read properties of undefined (reading '_bn')","tag":"contract","timestamp":"2025-01-11T20:35:29.124Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94456.02","tag":"quote","timestamp":"2025-01-11T20:35:48.054Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3287.82","tag":"quote","timestamp":"2025-01-11T20:35:48.057Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T20:35:48.058Z"}
+{"level":"error","message":"Error interacting with contract: Cannot read properties of undefined (reading '_bn')","tag":"contract","timestamp":"2025-01-11T20:35:48.547Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T20:36:44.106Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3286.45","tag":"quote","timestamp":"2025-01-11T20:36:44.110Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94400.01","tag":"quote","timestamp":"2025-01-11T20:36:44.111Z"}
+{"level":"info","message":"Transaction successful: 4tY2ZJfT3RrLHdKjhX1BauuWz2EUWq1CHTpPH735f4XYo4gSbG1zj2HuDsauo5kZ4mSsZL3YhoqRFFHqPBHWvSDw","tag":"contract","timestamp":"2025-01-11T20:36:46.863Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-01-11T20:36:54.996Z"}
+{"level":"info","message":"Transaction successful: 3m4pHFzHwe5RSAeWUVgF5AX12tvHX4KKy9WzzJbJm4YU7NasNA24q28EtTwskvAwfYCRcoG6MhFjbRKi6TYDjBqM","tag":"contract","timestamp":"2025-01-11T20:36:55.232Z"}
+{"level":"info","message":"Transaction successful: TqD5d6zq4D6cqD5LBhnmUtuj24WHSbgFm1E1rajXgaWxqoMhsMU6QusBgsBSFpCtaLVtJidLWNB8mpWkfbmg94f","tag":"contract","timestamp":"2025-01-11T20:36:55.695Z"}
+{"level":"info","message":"Transaction successful: 2AZQhs8AuBYezjng13ncbUVjUQsfgnDhcfvLHi4VsvH9fCACWbxmtQyWY5i12tYc6hamwt9r6vraZHPXBd8QpUzd","tag":"contract","timestamp":"2025-01-11T20:36:55.811Z"}
+{"level":"info","message":"Transaction successful: 2AZQhs8AuBYezjng13ncbUVjUQsfgnDhcfvLHi4VsvH9fCACWbxmtQyWY5i12tYc6hamwt9r6vraZHPXBd8QpUzd","tag":"contract","timestamp":"2025-01-11T20:36:55.961Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-01-11T20:36:56.020Z"}
+{"level":"info","message":"Transaction successful: 4vAdar7ujddZ4tWXkJfiTX8tW8k8pdk5zeSBsnmkmp8TbVBt9Bc1Kh1d3rK2nNiVkU5h4RnPVGp11F48Ma1p7zDm","tag":"contract","timestamp":"2025-01-11T20:36:56.331Z"}
+{"level":"info","message":"Transaction successful: 1ni1TwJjSUfMrgKGbcHwGru96Fp81dVJXBpzmACmNZwex7shwhJWrKrk6ZtkyMcWB4NoKeGWUQkWfu6BZzkwKfi","tag":"contract","timestamp":"2025-01-11T20:36:56.923Z"}
+{"level":"info","message":"Transaction successful: 1ni1TwJjSUfMrgKGbcHwGru96Fp81dVJXBpzmACmNZwex7shwhJWrKrk6ZtkyMcWB4NoKeGWUQkWfu6BZzkwKfi","tag":"contract","timestamp":"2025-01-11T20:36:56.943Z"}
+{"level":"info","message":"Transaction successful: 4ntyGouSgrv341MnYbRLaTHCZiqATUmFfonFAeovpF2sEgX7eVZUgJtTsY3x3ttZC2u2s8f6FLcuMUqy7LZaYJ5E","tag":"contract","timestamp":"2025-01-11T20:36:57.184Z"}
+{"level":"info","message":"Transaction successful: 4ntyGouSgrv341MnYbRLaTHCZiqATUmFfonFAeovpF2sEgX7eVZUgJtTsY3x3ttZC2u2s8f6FLcuMUqy7LZaYJ5E","tag":"contract","timestamp":"2025-01-11T20:36:57.421Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-01-11T20:36:57.426Z"}
+{"level":"info","message":"Transaction successful: 3Bhott8a9U3EmeTSom8gjjxxiYmTrZXKUykhQn1T1DhBBQg8AYS3wn8UTeVw35Wr2S3W1JH2mkQraD5cHjgfTunp","tag":"contract","timestamp":"2025-01-11T20:36:57.587Z"}
+{"level":"info","message":"Transaction successful: 3Bhott8a9U3EmeTSom8gjjxxiYmTrZXKUykhQn1T1DhBBQg8AYS3wn8UTeVw35Wr2S3W1JH2mkQraD5cHjgfTunp","tag":"contract","timestamp":"2025-01-11T20:36:57.689Z"}
+{"level":"info","message":"Transaction successful: 2S6SubLrgRUguQqi85VkTGyd2bqCJcWfqcmvrYqKwqbQ8sP8RkwX56699T4fADVPzs8pbYE7HGCVR6bE4hszNBJn","tag":"contract","timestamp":"2025-01-11T20:36:57.781Z"}
+{"level":"info","message":"Transaction successful: 6wxY4F3tkUSXtAdkD6pvxSzRA179w5jFU1hiLXQfrB1Eqgj3c2KARXXJv6AFrSKFBkgwNMjr4cX9UvpbvDzoWGH","tag":"contract","timestamp":"2025-01-11T20:36:58.091Z"}
+{"level":"info","message":"Transaction successful: 6wxY4F3tkUSXtAdkD6pvxSzRA179w5jFU1hiLXQfrB1Eqgj3c2KARXXJv6AFrSKFBkgwNMjr4cX9UvpbvDzoWGH","tag":"contract","timestamp":"2025-01-11T20:36:58.149Z"}
+{"level":"info","message":"Transaction successful: 4yJnebX6mcksAFF7jQCcmyJR3MKV1Wh12uebL9dB1RL3hegv8tU5C6wYLcmnboPJgepLiVKyqfxsT9tLMMQgNid8","tag":"contract","timestamp":"2025-01-11T20:36:58.453Z"}
+{"level":"info","message":"Transaction successful: 4yJnebX6mcksAFF7jQCcmyJR3MKV1Wh12uebL9dB1RL3hegv8tU5C6wYLcmnboPJgepLiVKyqfxsT9tLMMQgNid8","tag":"contract","timestamp":"2025-01-11T20:36:58.515Z"}
+{"level":"info","message":"Transaction successful: 4bdiYkv7uCxo7svcPsmWG2DwhFJy2raESNMQMQQwn7b1rDwbg9qPx6ePHMHvWCohkyHiNAF4ebUPeQU81boJzi5Y","tag":"contract","timestamp":"2025-01-11T20:36:58.746Z"}
+{"level":"info","message":"Transaction successful: 4bdiYkv7uCxo7svcPsmWG2DwhFJy2raESNMQMQQwn7b1rDwbg9qPx6ePHMHvWCohkyHiNAF4ebUPeQU81boJzi5Y","tag":"contract","timestamp":"2025-01-11T20:36:58.877Z"}
+{"level":"info","message":"Quote for SPY: 580.49","tag":"quote","timestamp":"2025-01-11T20:39:16.369Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3291.21","tag":"quote","timestamp":"2025-01-11T20:39:16.373Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 94466.49","tag":"quote","timestamp":"2025-01-11T20:39:16.374Z"}

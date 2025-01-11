@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Cristik', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -16,4 +16,16 @@ html, body, #root {
     height: 100%;
     margin: 0;
     padding: 0;
+}
+
+h2 {
+    font-family: 'Cristik';
+}
+
+p {
+    font-family: 'Cristik';
+}
+
+button {
+    font-family: 'Cristik';
 }

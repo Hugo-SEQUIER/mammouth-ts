@@ -4,6 +4,7 @@ import { initialState } from './initialState';
 import { calculatePublicDemand, checkTechnologyDone } from './utils';
 import { useGameAPI } from './useGameAPI';
 import { usePublicKey } from './publicKeyContext';
+
 // Define the context type
 type GamingContextType = {
 	state: GameState;
@@ -59,8 +60,9 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
   	// Sauvegarder l'état périodiquement
   	useEffect(() => {
 		const saveState = async () => {
-			console.log("saveState", state);
-			await saveGameState(state);
+			if (publicKey	){
+				await saveGameState(state);
+			}
 		};
 
 		const interval = setInterval(saveState, 5000); // Sauvegarde toutes les 5 secondes
@@ -71,7 +73,9 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
   	// Sauvegarder l'état avant de quitter la page
   	useEffect(() => {
 		const handleBeforeUnload = async () => {
-			await saveGameState(state);
+			if (publicKey){
+				await saveGameState(state);
+			}
 		};
 
 		window.addEventListener('beforeunload', handleBeforeUnload);
@@ -98,13 +102,25 @@ export const useGaming = () => {
 const gameReducer = (state: GameState, action: any): GameState => {
 	let bonus = 1
 	switch (action.type) {
+		case "ADD_CLICK":
+			return {
+				...state,
+				basicInfo: {
+					...state.basicInfo,
+					nbClickAllowed: state.basicInfo.nbClickAllowed + action.payload
+				}
+			};
 		case "MINE_ICE":
+			if (state.basicInfo.nbClickAllowed <= 0){
+				return state;
+			}
 			if (checkTechnologyDone("Ice Defogger", state)){
 				bonus = 1.15;
 			}
 			return { ...state, basicInfo: {
 				...state.basicInfo,
-					ice: (state.basicInfo.ice + (state.basicInfo.icePerClick * bonus))
+					ice: (state.basicInfo.ice + (state.basicInfo.icePerClick * bonus)),
+					nbClickAllowed: state.basicInfo.nbClickAllowed - 1
 				}
 			};
 		case "AUTO_MINE_ICE":
