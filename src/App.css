@@ -9,7 +9,7 @@ html, body, #root {
 }
 
 .App {
-	background-color: #f0f8ff;
+	background-color: #93e2a2;
 	height: 100vh;
 	box-sizing: border-box;
 	overflow: hidden;
@@ -25,7 +25,7 @@ html, body, #root {
 }
 
 .stats {
-	height: 15vh;
+	height: 10vh;
 	width: calc(20% + (80%)*0.4 + 7px)
 }
 
@@ -105,4 +105,46 @@ p {
 	flex-direction: row;
 	gap: 10px;
 	align-items: center;
+}
+
+h1 {
+    font-family: 'Cristik';
+    color: #000;
+	margin: 0;
+	text-align: center;
+}
+
+.flex-wallet-button {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
+}
+
+.flex-header {
+	display: flex;
+	flex-direction: row;
+	align-items:end;
+	justify-content: center;
+	gap: 10px;
+}
+
+.flex-header p {
+	font-size: 16px;
+	color: #000; /* baa8d7 */
+}
+
+input {
+    border: solid 1px #d8f0cc;
+    color: #000;
+    margin-top: 1px;
+    text-align: left;
+    text-indent: 5px;
+}
+
+input:focus {
+    outline: none;
 }

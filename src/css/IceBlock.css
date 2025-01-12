@@ -1,6 +1,6 @@
 .ice-block {
     cursor: pointer;
-    background-color: #e3f2fd;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,6 +10,8 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    border-radius: .375rem;
+    border: 1px solid #000;
 }
 
 .ice-block:active {
@@ -18,4 +20,12 @@
 
 .ice-block span {
     font-size: 64px;
+}
+
+.ice-block img {
+    width: 100%;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }

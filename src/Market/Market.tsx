@@ -31,7 +31,7 @@ export default function Market() {
         <div className={`market ${state.items.userLevel > 2 ? 'container' : ''}`}>
             {state.items.userLevel > 2 && (
                 <>
-                    <h2>Market</h2>
+                    <h2>MARKET</h2>
                     <p>Market Price: {state.market.marketPrice} $</p>
                     <div className="market-user-price">
                         <p>User Price: </p>
@@ -44,7 +44,7 @@ export default function Market() {
             {state.items.userLevel >= 5 && state.company.level > 2 && (
                 <>
                     <br/>
-                    <h2>Investments</h2>
+                    <h2>INVESTMENTS</h2>
                     <p>SPY: {state.investment.spy.actualPrice}</p>
                     <p>Bitcoin: {state.investment.bitcoin.actualPrice}</p>
                     <p>Ethereum: {state.investment.ethereum.actualPrice}</p>

@@ -26,7 +26,11 @@ export default function ModalToSendEth() {
                             <input
                                 type="number"
                                 value={clickAmount}
-                                onChange={(e) => setClickAmount(e.target.value)}
+                                onChange={(e) => {
+                                    if (parseInt(e.target.value) > 0) {
+                                        setClickAmount(e.target.value);
+                                    }
+                                }}
                                 min="1"
                             />
                         </div>

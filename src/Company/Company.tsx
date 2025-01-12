@@ -53,7 +53,7 @@ export default function Company() {
         <div className={`company ${state.items.userLevel > 4 ? 'container' : ''}`}>
             {state.items.userLevel > 4 && (
                 <>
-                    <h2>Company</h2>
+                    <h2>COMPANY</h2>
                     {state.company.level > 0 && (
                         <div className="company-container">
                             <div className="company-stats">

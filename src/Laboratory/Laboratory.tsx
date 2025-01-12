@@ -27,7 +27,7 @@ export default function Laboratory() {
         <div className={`laboratory ${state.items.userLevel > 14 ? 'container' : ''}`}>
             {state.items.userLevel > 14 && (
                 <>
-                    <h2>Laboratory</h2>
+                    <h2>LABORATORY</h2>
                     {state.laboratory.level > 0 && (
                         <>
                             <div className="laboratory-stats">

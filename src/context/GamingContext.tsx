@@ -60,9 +60,7 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
   	// Sauvegarder l'état périodiquement
   	useEffect(() => {
 		const saveState = async () => {
-			if (publicKey	){
-				await saveGameState(state);
-			}
+			await saveGameState(state);
 		};
 
 		const interval = setInterval(saveState, 5000); // Sauvegarde toutes les 5 secondes
@@ -73,9 +71,7 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
   	// Sauvegarder l'état avant de quitter la page
   	useEffect(() => {
 		const handleBeforeUnload = async () => {
-			if (publicKey){
-				await saveGameState(state);
-			}
+			await saveGameState(state);
 		};
 
 		window.addEventListener('beforeunload', handleBeforeUnload);

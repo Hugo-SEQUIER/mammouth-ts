@@ -6,8 +6,8 @@ export default function IceBlock() {
 
     return (
         <div className="ice-block container" onClick={() => mineIce(state, dispatch)}>
-            <span>🧊</span>
-            <p>Mine!</p>
+            <span><img src={"./images/iceMammoth2.png"} alt="iceMammoth" /></span>
+            <p>Mine</p>
         </div>
     )
 }

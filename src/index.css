@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Cristik', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Orbitron", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -19,13 +17,30 @@ html, body, #root {
 }
 
 h2 {
-    font-family: 'Cristik';
+  font-family: "Orbitron", serif;
+  color: #000;
+  font-weight: 600;
 }
 
 p {
-    font-family: 'Cristik';
+    font-family: "Orbitron", serif;
 }
 
 button {
-    font-family: 'Cristik';
+    font-family: "Orbitron", serif;
+}
+
+button {
+  background-color: #d8f0cc;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  border: solid 1px #d8f0cc;
+  border-radius: .375rem;
+  padding-top: .375rem;
+  padding-bottom: .375rem;
+  padding-left: .625rem;
+  padding-right: .625rem;
+  width: max-content;
 }

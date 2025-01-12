@@ -13,7 +13,7 @@ export default function Pickaxe() {
 
     return (
         <div className="items container">
-            <h2>User</h2>
+            <h2>USER</h2>
             <p>User Level: {state.items.userLevel}</p>
             <p>Cost Upgrade: {Math.floor(state.items.costUpgrade)} ice</p>
             <button

@@ -18,27 +18,25 @@
 }
 
 .modal-content {
-    background-color: #F9F6EE;
+    background-color: #fff;
     padding: 20px;
     border-radius: .375rem;
-    width: 50%;
-    box-shadow: 0 0 0px #444444;
+    width: 30%;
+    box-shadow: 0 0 0px #000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.modal-fixed {
-    width: 50% !important;
+    gap: 10px;
 }
 
 .modal-content > div {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    width: -webkit-fill-available;
-    justify-content: space-between;
+    width: -webkit-fill-available;  
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-content > div > div:first-child {
@@ -48,5 +46,5 @@
 .modal-content h2 {
     margin-top: 0;
     margin-bottom: 20px;
-    color: #444444;
+    color: #000;
 }

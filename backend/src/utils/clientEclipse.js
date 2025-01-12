@@ -2,7 +2,6 @@ import { Connection, Keypair, PublicKey, sendAndConfirmTransaction, Transaction 
 import { Program, AnchorProvider, Wallet } from "@project-serum/anchor";
 import fs from "fs";
 import bs58 from "bs58";
-const { contractLogger } = require('./logger');
 
 export async function main() {
     // Setup connection to cluster
@@ -63,10 +62,10 @@ export async function main() {
             })
             .rpc();
 
-        contractLogger.info("Transaction signature:", tx);
+        console.info("Transaction signature:", tx);
         return tx;
     } catch (error) {
-        contractLogger.error("Error details:", error);
+        console.error("Error details:", error);
         throw new Error(`Error interacting with contract: ${error.message}`);
     }
 }

@@ -46,10 +46,16 @@ function App() {
 						<GamingProvider>
 							<div className="App">
 								<div className="flex-container">
+									<div className="flex-header">
+										<h1>FROST MAMMOTH</h1>
+										<p>by Celestial Mammoth</p>
+									</div>
 								<div className="flex-wallet">	
 									<Stats />
-									<ModalToSendEth />
-									<WalletMultiButton />
+									<div className="flex-wallet-button">
+										<ModalToSendEth />
+										<WalletMultiButton />
+									</div>
 								</div>
 								<div className="flex-item">
 									<IceBlock />

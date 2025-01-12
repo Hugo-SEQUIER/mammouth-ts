@@ -37,7 +37,7 @@ export default function Stats() {
 
     return (
         <div className="stats container">
-            <h2>Ice Collected: {Math.floor(state.basicInfo.ice)}</h2>
+            <h2>ICE COLLECTED: {Math.floor(state.basicInfo.ice)}</h2>
             <div className="stats-info">
                 <p>Ice per click: {(state.basicInfo.icePerClick * bonusIcePerClick).toFixed(1)}</p>
                 <p>Ice per second: {(state.basicInfo.icePerSecond * bonusIcePerSecond).toFixed(2)}</p>
