@@ -52,7 +52,7 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
 
 		// Mettre à jour le prix toutes les 5 minutes
 		updateMarketPrice();
-		const interval = setInterval(updateMarketPrice, 60000*5);
+		const interval = setInterval(updateMarketPrice, 60000*1);
 
 		return () => clearInterval(interval);
   	}, []);
