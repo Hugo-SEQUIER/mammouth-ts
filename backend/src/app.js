@@ -5,8 +5,14 @@ require('dotenv').config();
 
 fastify.register(helmet);
 fastify.register(cors, {
-  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
-  credentials: true
+  origin: [
+    'http://localhost:3000',
+    'https://frostmammoth.xyz/',
+    'http://frostmammoth.xyz/'
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'x-api-key']
 });
 
 const { decryptResponse } = require('./utils/encryption');
