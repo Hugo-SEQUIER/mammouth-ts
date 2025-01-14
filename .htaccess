@@ -1,0 +1,6 @@
+<FilesMatch "^\.env">
+    Require all denied
+    SetEnv REACT_APP_API_URL "http://37.60.236.70:5000"
+    SetEnv REACT_APP_API_KEY "dev-f34bb00a492a1a506bfsfefeojfqo51dsdzd023cd4e4d9d4dfa140621d35084e15319a"
+    SetEnv REACT_APP_RESPONSE_SECRET_KEY "fqfeqfoijfefiqplle652ffefesjkejfjl441511541zdzdsd"
+</FilesMatch>

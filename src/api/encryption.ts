@@ -1,6 +1,7 @@
 import CryptoJS from 'crypto-js';
+import { getConfig } from '../config';
 
-const SECRET_KEY : string = process.env.REACT_APP_RESPONSE_SECRET_KEY || '';
+const SECRET_KEY : string = "fqfeqfoijfefiqplle652ffefesjkejfjl441511541zdzdsd";
 
 const encryptResponse = (data: any) => {
     const textToEncrypt = typeof data === 'object' ? JSON.stringify(data) : data;

@@ -1,9 +1,9 @@
-import { Connection, Keypair, PublicKey, sendAndConfirmTransaction, Transaction } from "@solana/web3.js";
-import { Program, AnchorProvider, Wallet } from "@project-serum/anchor";
-import fs from "fs";
-import bs58 from "bs58";
+const { Connection, Keypair, PublicKey, sendAndConfirmTransaction, Transaction } = require("@solana/web3.js");
+const { Program, AnchorProvider, Wallet } = require("@project-serum/anchor");
+const fs = require("fs");
+const bs58 = require("bs58");
 
-export async function main() {
+async function main() {
     // Setup connection to cluster
     const connection = new Connection("https://staging-rpc.dev2.eclipsenetwork.xyz", "confirmed");
     const idl = JSON.parse(fs.readFileSync("./src/utils/gmoth.json", "utf8"));
@@ -70,4 +70,6 @@ export async function main() {
     }
 }
 
-export default main;
+module.exports = {
+    main
+};

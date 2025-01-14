@@ -56,7 +56,6 @@ const config: Configuration = {
       Buffer: ['buffer', 'Buffer'],
       process: 'process/browser',
     }),
-    new Dotenv(),
   ],
   devServer: {
     static: {
