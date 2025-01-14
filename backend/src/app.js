@@ -7,8 +7,9 @@ fastify.register(helmet);
 fastify.register(cors, {
   origin: [
     'http://localhost:3000',
-    'https://frostmammoth.xyz/',
-    'http://frostmammoth.xyz/'
+    'https://frostmammoth.xyz',
+    'http://frostmammoth.xyz',
+    'https://mammouth-ts.onrender.com'
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
