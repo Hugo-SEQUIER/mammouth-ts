@@ -1,4 +1,4 @@
-const { Connection, Keypair, PublicKey, sendAndConfirmTransaction, Transaction } = require("@solana/web3.js");
+const { Connection, Keypair, PublicKey } = require("@solana/web3.js");
 const { Program, AnchorProvider, Wallet } = require("@project-serum/anchor");
 const fs = require("fs");
 const bs58 = require("bs58");
@@ -15,18 +15,14 @@ async function main() {
 
     let privateKey;
     try {
-        // Handle base58 or comma-separated format
-        if (privateKeyString.includes(',')) {
-            privateKey = Uint8Array.from(privateKeyString.split(',').map(num => parseInt(num)));
-        } else {
-            // Assuming it might be base58 encoded
-            privateKey = bs58.decode(privateKeyString);
-        }
+        // Ensure bs58 is correctly imported and used
+        privateKey = Buffer.from(bs58.default.decode(privateKeyString));
         
         if (privateKey.length !== 64) {
             throw new Error(`Invalid private key length: ${privateKey.length}. Expected 64 bytes.`);
         }
     } catch (error) {
+        console.error('Private key error:', error);
         throw new Error(`Failed to process private key: ${error.message}`);
     }
     const keypair = Keypair.fromSecretKey(privateKey);
