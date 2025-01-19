@@ -4,12 +4,15 @@
 
 .laboratory-stats {
     margin-bottom: 20px;
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
 }
 
 .research-status {
     margin-bottom: 20px;
     padding: 10px;
-    background-color: #d8f0cc;
+    background-color: #fff;
     border-radius: 5px;
 }
 
@@ -21,26 +24,30 @@
 }
 
 .technology {
-    border: 1px solid #ddd;
+    border: 1px solid #2a1d4c;
     padding: 15px;
     border-radius: 5px;
-    background-color: white;
+    background-color: #fff;
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
 }
 
 .completed-tech {
     display: inline-block;
     margin: 5px;
     padding: 5px 10px;
-    background-color: #e8f5e9;
+    background-color: #ffffff;
     border-radius: 3px;
-    font-size: 0.9em;
+    font-size: x-small;
 }
 
 .research-progress {
     margin-top: 10px;
     padding: 10px;
-    background-color: white;
+    background-color: #2a1d4c;
     border-radius: 3px;
+    color: #fff;
 }
 
 .technology p {

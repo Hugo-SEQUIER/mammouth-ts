@@ -8,7 +8,8 @@ import { usePublicKey } from './publicKeyContext';
 // Define the context type
 type GamingContextType = {
 	state: GameState;
-	dispatch: React.Dispatch<any>; // We'll type this better when we create actions
+	dispatch: React.Dispatch<any>;
+	customDispatch: React.Dispatch<any>;
 };
 
 // Create the context
@@ -20,11 +21,18 @@ type GamingProviderProps = {
 };
 
 export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
-  	const [state, dispatch] = useReducer(gameReducer, initialState);
-  	const { loadGameState, saveGameState, fetchCurrentPrice, initializeGameState } = useGameAPI();
-  	const { publicKey } = usePublicKey();
-  	// Charger l'état initial du jeu
-  	useEffect(() => {
+	const [state, dispatch] = useReducer(gameReducer, initialState);
+	const { loadGameState, saveGameState, fetchCurrentPrice, initializeGameState } = useGameAPI();
+	const { publicKey } = usePublicKey();
+
+	// Custom dispatch function to save state after each action
+	const customDispatch = async (action: any) => {
+		dispatch(action);
+		await saveGameState(state).catch(error => console.error("Error saving game state:", error));
+	};
+
+	// Charger l'état initial du jeu
+	useEffect(() => {
 		const initGame = async () => {
 			const savedState = await loadGameState();
 			console.log("savedState", savedState);
@@ -39,59 +47,48 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
 		};
 
 		initGame();
-  	}, [publicKey]);
+	}, [publicKey]);
 
-  	// Mettre à jour le prix du marché périodiquement
-  	useEffect(() => {
+	// Mettre à jour le prix du marché périodiquement
+	useEffect(() => {
 		const updateMarketPrice = async () => {
 			const price = await fetchCurrentPrice();
 			if (price) {
-				dispatch({ type: 'UPDATE_INVESTMENT_PRICE', payload: price });
+				customDispatch({ type: 'UPDATE_INVESTMENT_PRICE', payload: price });
 			}
 		};
 
 		// Mettre à jour le prix toutes les 5 minutes
 		updateMarketPrice();
-		const interval = setInterval(updateMarketPrice, 60000*1);
+		const interval = setInterval(updateMarketPrice, 60000 * 1);
 
 		return () => clearInterval(interval);
-  	}, []);
+	}, []);
 
-  	// Sauvegarder l'état périodiquement
-  	useEffect(() => {
-		const saveState = async () => {
-			await saveGameState(state);
-		};
-
-		const interval = setInterval(saveState, 5000); // Sauvegarde toutes les 5 secondes
-
-		return () => clearInterval(interval);
-  	}, [state]);
-
-  	// Sauvegarder l'état avant de quitter la page
-  	useEffect(() => {
+	// Sauvegarder l'état avant de quitter la page
+	useEffect(() => {
 		const handleBeforeUnload = async () => {
 			await saveGameState(state);
 		};
 
 		window.addEventListener('beforeunload', handleBeforeUnload);
 		return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-  	}, [state]);
+	}, [state]);
 
-  	return (
-		<GamingContext.Provider value={{ state, dispatch }}>
-	  		{children}
+	return (
+		<GamingContext.Provider value={{ state, dispatch: customDispatch, customDispatch }}>
+			{children}
 		</GamingContext.Provider>
-  	);
+	);
 };
 
 // Create a custom hook for using the context
 export const useGaming = () => {
-  	const context = useContext(GamingContext);
-  	if (context === undefined) {
+	const context = useContext(GamingContext);
+	if (context === undefined) {
 		throw new Error('useGaming must be used within a GamingProvider');
-  	}
-  	return context;
+	}
+	return context;
 };
 
 // Basic reducer (you'll want to expand this with actual actions)
@@ -614,5 +611,5 @@ const gameReducer = (state: GameState, action: any): GameState => {
 			};
 		default:
 			return state;
-  	}
+	}
 };

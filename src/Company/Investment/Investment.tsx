@@ -21,7 +21,7 @@ export default function Investment() {
     return (
         <div className="investment">
             <div className='asset'>
-                <div>Bitcoin</div>
+                <h3>Bitcoin</h3>
                 <div>Amount: {state.investment.bitcoin.amount.toFixed(4)}</div>
                 <div>Avg Buy Price: {state.investment.bitcoin.avgBuyPrice.toFixed(2)}</div>
                 <input type="number" min={0}step={0.0001} value={inputBtc} onChange={(e) => setInputBtc(parseFloat(e.target.value))} />
@@ -31,7 +31,7 @@ export default function Investment() {
                 </div>
             </div>
             <div className='asset'>
-                <div>Ethereum</div>
+                <h3>Ethereum</h3>
                 <div>Amount: {state.investment.ethereum.amount.toFixed(4)}</div>
                 <div>Avg Buy Price: {state.investment.ethereum.avgBuyPrice.toFixed(2)}</div>
                 <input type="number" min={0} step={0.01}value={inputEth} onChange={(e) => setInputEth(parseFloat(e.target.value))} />
@@ -41,7 +41,7 @@ export default function Investment() {
                 </div>
             </div>
             <div className='asset'>
-                <div>SPY</div>
+                <h3>SPY</h3>
                 <div>Amount: {state.investment.spy.amount.toFixed(4)}</div>
                 <div>Avg Buy Price: {state.investment.spy.avgBuyPrice.toFixed(2)}</div>
                 <input type="number" min={0} step={0.1} value={inputspy} onChange={(e) => setInputspy(parseFloat(e.target.value))} />
@@ -64,7 +64,7 @@ export default function Investment() {
             </div>
             {hasPortfolioDiversification && (
                 <div className='asset'>
-                    <div>Laika</div>
+                    <h3>Laika</h3>
                     <div>Amount: {state.investment.laika.amount.toFixed(4)}</div>
                     <div>Avg Buy Price: {state.investment.laika.avgBuyPrice.toFixed(2)}</div>
                     <input type="number" min={0} step={0.1} value={inputLaika} onChange={(e) => setInputLaika(parseFloat(e.target.value))} />

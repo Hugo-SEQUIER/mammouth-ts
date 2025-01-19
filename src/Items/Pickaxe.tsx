@@ -25,7 +25,7 @@ export default function Pickaxe() {
             <br />
             {state.items.userLevel > 1 && (
                 <>
-                    <h2>Pickaxe</h2>
+                    <h2>ITEMS</h2>
                     <p>Pickaxe Level: {state.items.pickaxe.level}</p>
                     <p>Cost Upgrade: {Math.floor(state.items.pickaxe.upgradeCost)} $</p>
                     <button 

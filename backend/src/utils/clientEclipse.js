@@ -5,7 +5,7 @@ const bs58 = require("bs58");
 
 async function main() {
     // Setup connection to cluster
-    const connection = new Connection("https://staging-rpc.dev2.eclipsenetwork.xyz", "confirmed");
+    const connection = new Connection("https://mainnetbeta-rpc.eclipse.xyz/", "confirmed");
     const idl = JSON.parse(fs.readFileSync("./src/utils/gmoth.json", "utf8"));
     // Convert private key string to Uint8Array and create keypair
     const privateKeyString = process.env.TX_PRIVATE_KEY;

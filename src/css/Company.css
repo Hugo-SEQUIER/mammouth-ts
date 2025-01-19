@@ -15,6 +15,7 @@
 .company-stats {
     display: flex;
     flex-direction: column;
+    gap: 3px;
 }
 
 .company-employees {
@@ -33,7 +34,7 @@
     flex-direction: row;
     gap: 10px;
     padding-left: 10px;
-    border-left: 1px solid black;
+    border-left: 1px solid #415c50;
     width: max-content;
 }
 
@@ -44,11 +45,24 @@
 
 .employee button {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.employee button > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
 }
 
 .company-investment {
     padding-left: 10px;
-    border-left: 1px solid black;
+    border-left: 1px solid #415c50;
 }
 
 .investment {
@@ -57,12 +71,16 @@
     gap: 10px;
 }
 
-.asset input {
-    width: 100px;
+.asset {
+    font-size: 9px;
+    gap: 3px;
+    display: flex;
+    flex-direction: column;
 }
 
-.asset p {
-    font-size: 12px;
+
+.asset input {
+    width: 100px;
 }
 
 .company-investments-market-analysis {

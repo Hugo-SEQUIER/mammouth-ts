@@ -3,7 +3,7 @@ import { Program, AnchorProvider, Idl, Wallet, BN } from '@coral-xyz/anchor';
 import rawIdl from './idlegame.json';
 const idl = rawIdl as Idl;
 
-const ECLIPSE_RPC_URL = 'https://staging-rpc.dev2.eclipsenetwork.xyz';
+const ECLIPSE_RPC_URL = 'https://mainnetbeta-rpc.eclipse.xyz/';
 
 async function main(userWallet: any, amount: number, dispatch: any) {
     console.log(userWallet)

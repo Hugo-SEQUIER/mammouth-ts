@@ -5,7 +5,7 @@ import Investment from "./Investment/Investment";
 import { checkTechnologyDone } from "../context/utils";
 import MarketAnalysis from "./Analysis/MarketAnalysis";
 export default function Company() {
-    const { state, dispatch } = useGaming();
+    const { state, customDispatch } = useGaming();
     const [amountToInject, setAmountToInject] = useState(0);
     const [bankrupt, setBankrupt] = useState(false);
     const [negativeTimeCounter, setNegativeTimeCounter] = useState(0);
@@ -13,10 +13,10 @@ export default function Company() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            dispatch({ type: "UPDATE_HAPPINESS" });
-            dispatch({ type: "UPDATE_ICE_PER_SECOND" });
+            customDispatch({ type: "UPDATE_HAPPINESS" });
+            customDispatch({ type: "UPDATE_ICE_PER_SECOND" });
             if (state.company.cashFlow < -3000 && !bankrupt) {
-                dispatch({ type: "BANKRUPT" });
+                customDispatch({ type: "BANKRUPT" });
                 setBankrupt(true);
             }
             // Track negative cash flow duration
@@ -24,7 +24,7 @@ export default function Company() {
                 setNegativeTimeCounter(prev => prev + 1);
                 // Trigger bankruptcy after 60 seconds of negative cash flow
                 if (negativeTimeCounter >= 60) {
-                    dispatch({ type: "BANKRUPT", payload: "BANKRUPT"});
+                    customDispatch({ type: "BANKRUPT", payload: "BANKRUPT"});
                     setBankrupt(true);
                     setNegativeTimeCounter(0);
                 }
@@ -34,7 +34,7 @@ export default function Company() {
         }, 1000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [state.company]);
 
     useEffect(() => {
         if (state.company.level > 0) {
@@ -59,13 +59,13 @@ export default function Company() {
                             <div className="company-stats">
                                 <p>Level: {state.company.level}</p>
                                 <p>Upgrade Cost: {state.company.upgradeCost.toFixed(2)} $</p>
-                                <button onClick={() => dispatch({ type: "UPGRADE_COMPANY" })} disabled={state.basicInfo.money < state.company.upgradeCost}>
+                                <button onClick={() => customDispatch({ type: "UPGRADE_COMPANY" })} disabled={state.basicInfo.money < state.company.upgradeCost}>
                                     Upgrade Company
                                 </button>
                                 <p>Cash Flow: {state.company.cashFlow.toFixed(2)}</p>
                                 <div className="company-pay-invoices">
                                     <input type="number" value={amountToInject} min={0.01} step={0.01} max={state.basicInfo.money} onChange={(e) => setAmountToInject(parseFloat(e.target.value))} />
-                                    <button onClick={() => dispatch({ type: "INJECT_CASH", payload: amountToInject })}>Inject Cash</button>
+                                    <button onClick={() => customDispatch({ type: "INJECT_CASH", payload: amountToInject })}>Inject Cash</button>
                                 </div>
                             </div>
                             
@@ -91,7 +91,7 @@ export default function Company() {
                         </div>
                     )}
                     {state.company.level == 0 && (
-                        <button onClick={() => dispatch({ type: "UPGRADE_COMPANY" })} disabled={state.basicInfo.money < state.company.upgradeCost}>
+                        <button onClick={() => customDispatch({ type: "UPGRADE_COMPANY" })} disabled={state.basicInfo.money < state.company.upgradeCost}>
                             Create Your Company for only {state.company.upgradeCost} $ that's basically free :D
                         </button>
                     )}

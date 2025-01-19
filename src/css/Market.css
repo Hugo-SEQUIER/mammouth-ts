@@ -6,7 +6,6 @@
 }
 
 .market-user-price input {
-    margin: 0;
     width: fit-content;
     max-width: 60px;
 }

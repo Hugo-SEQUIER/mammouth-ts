@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  font-family: "Orbitron", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,30 +16,32 @@ html, body, #root {
 }
 
 h2 {
-  font-family: "Orbitron", serif;
-  color: #000;
-  font-weight: 600;
+  color: #2a1d4c;
+  font-weight: 400;
+  font-size: medium
 }
 
+h3 {
+  font-size: small;
+}
+  
 p {
-    font-family: "Orbitron", serif;
+  font-size: 9px;
 }
 
 button {
-    font-family: "Orbitron", serif;
-}
-
-button {
-  background-color: #d8f0cc;
-  color: #000;
+  background-color: #fff;
+  color: #2a1d4c;
+  font-weight: 100;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 10px;
   transition: background-color 0.3s;
-  border: solid 1px #d8f0cc;
+  border: solid 1px #2a1d4c;
   border-radius: .375rem;
   padding-top: .375rem;
   padding-bottom: .375rem;
   padding-left: .625rem;
   padding-right: .625rem;
   width: max-content;
+  font-family: "Press Start 2P", serif;
 }

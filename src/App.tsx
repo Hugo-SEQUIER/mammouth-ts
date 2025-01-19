@@ -47,19 +47,28 @@ function App() {
 							<div className="App">
 								<div className="flex-container">
 									<div className="flex-header">
+										<div className="flex-header-links">
+											<div>
+												<img src="./images/twitter2.png" alt="Twitter" />
+												<a href="https://x.com/CelestMammoth" className="nav-link" target="_blank" rel="noopener noreferrer">Twitter</a>
+											</div>
+											<div>
+												<img src="./images/discord_CM.png" alt="Discord" />
+												<a href="https://discord.gg/hNd72TezbN" className="nav-link" target="_blank" rel="noopener noreferrer">Discord</a>
+											</div>
+										</div>
 										<h1>FROST MAMMOTH</h1>
-										<p>by Celestial Mammoth</p>
+										<div className="flex-header-wallet">
+											<ModalToSendEth />
+											<WalletMultiButton />
+										</div>
 									</div>
-								<div className="flex-wallet">	
-									<Stats />
-									<div className="flex-wallet-button">
-										<ModalToSendEth />
-										<WalletMultiButton />
-									</div>
-								</div>
 								<div className="flex-item">
 									<IceBlock />
 									<div className="flex-middle">
+										<div className="flex-wallet">	
+										<Stats />
+									</div>
 										<div className="flex-tools">
 											<Pickaxe />
 											<Market />

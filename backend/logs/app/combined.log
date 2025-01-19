@@ -483,3 +483,133 @@
 {"level":"info","message":"Quote for SPY: 581.39","tag":"quote","timestamp":"2025-01-13T21:29:56.502Z"}
 {"level":"info","message":"Quote for BINANCE:BTCUSDT: 93828.16","tag":"quote","timestamp":"2025-01-13T21:29:56.513Z"}
 {"level":"info","message":"Quote for BINANCE:ETHUSDT: 3103","tag":"quote","timestamp":"2025-01-13T21:29:56.515Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3211.97","tag":"quote","timestamp":"2025-01-15T13:21:11.776Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 97053.96","tag":"quote","timestamp":"2025-01-15T13:21:11.779Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T13:21:11.807Z"}
+{"level":"error","message":"Error interacting with contract: Failed to process private key: bs58.decode is not a function","tag":"contract","timestamp":"2025-01-15T13:24:24.763Z"}
+{"level":"error","message":"Error interacting with contract: Failed to process private key: bs58.decode is not a function","tag":"contract","timestamp":"2025-01-15T13:24:25.697Z"}
+{"level":"error","message":"Error interacting with contract: Failed to process private key: bs58.decode is not a function","tag":"contract","timestamp":"2025-01-15T13:25:11.588Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3215.11","tag":"quote","timestamp":"2025-01-15T13:25:34.667Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T13:25:34.670Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 97288.09","tag":"quote","timestamp":"2025-01-15T13:25:34.670Z"}
+{"level":"error","message":"Error interacting with contract: Failed to process private key: bs58.decode is not a function","tag":"contract","timestamp":"2025-01-15T13:25:57.590Z"}
+{"level":"error","message":"Error interacting with contract: Failed to process private key: bs58.decode is not a function","tag":"contract","timestamp":"2025-01-15T13:26:53.741Z"}
+{"level":"error","message":"Error interacting with contract: Failed to process private key: bs58.decode is not a function","tag":"contract","timestamp":"2025-01-15T13:26:57.543Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 97331.16","tag":"quote","timestamp":"2025-01-15T13:28:08.235Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T13:28:08.237Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3224.81","tag":"quote","timestamp":"2025-01-15T13:28:08.238Z"}
+{"level":"error","message":"Error interacting with contract: Failed to process private key: bs58.decode is not a function","tag":"contract","timestamp":"2025-01-15T13:28:19.635Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98443.78","tag":"quote","timestamp":"2025-01-15T13:33:08.739Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3275.97","tag":"quote","timestamp":"2025-01-15T13:33:08.750Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T13:33:08.753Z"}
+{"level":"error","message":"Error interacting with contract: Failed to process private key: bs58.decode is not a function","tag":"contract","timestamp":"2025-01-15T13:33:16.501Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3280.46","tag":"quote","timestamp":"2025-01-15T13:33:24.457Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T13:33:24.460Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98507.31","tag":"quote","timestamp":"2025-01-15T13:33:24.460Z"}
+{"level":"error","message":"Error interacting with contract: Failed to process private key: bs58.decode is not a function","tag":"contract","timestamp":"2025-01-15T13:33:47.088Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98533.75","tag":"quote","timestamp":"2025-01-15T13:34:13.475Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3275.72","tag":"quote","timestamp":"2025-01-15T13:34:13.483Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T13:34:13.484Z"}
+{"level":"error","message":"Error interacting with contract: Failed to process private key: Cannot read properties of undefined (reading 'decode')","tag":"contract","timestamp":"2025-01-15T13:34:16.879Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T13:34:49.962Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98564.44","tag":"quote","timestamp":"2025-01-15T13:34:49.968Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3276.81","tag":"quote","timestamp":"2025-01-15T13:34:49.971Z"}
+{"level":"error","message":"Error interacting with contract: Failed to process private key: bs58.decode is not a function","tag":"contract","timestamp":"2025-01-15T13:34:51.193Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98513.12","tag":"quote","timestamp":"2025-01-15T13:35:05.139Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3276.47","tag":"quote","timestamp":"2025-01-15T13:35:05.142Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T13:35:05.169Z"}
+{"level":"error","message":"Error interacting with contract: Failed to process private key: Cannot read properties of undefined (reading 'decode')","tag":"contract","timestamp":"2025-01-15T13:35:08.061Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T13:35:14.599Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3276.47","tag":"quote","timestamp":"2025-01-15T13:35:14.602Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98513.12","tag":"quote","timestamp":"2025-01-15T13:35:14.604Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3270.3","tag":"quote","timestamp":"2025-01-15T13:38:50.080Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98493.35","tag":"quote","timestamp":"2025-01-15T13:38:50.082Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T13:38:50.083Z"}
+{"level":"error","message":"Error interacting with contract: Failed to process private key: bs58.decode is not a function","tag":"contract","timestamp":"2025-01-15T13:39:21.556Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98408.23","tag":"quote","timestamp":"2025-01-15T13:39:53.385Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T13:39:53.388Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3268.5","tag":"quote","timestamp":"2025-01-15T13:39:53.389Z"}
+{"level":"info","message":"Transaction successful: mKYfbCD2zLkA6TkWETvdNNXFmbMYAKt6h7xHSfpdGC5qMorYGMfNsNK99j5v3Ty1rfxKBJirYgEcA54H2rNgpUE","tag":"contract","timestamp":"2025-01-15T13:39:57.432Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98485.55","tag":"quote","timestamp":"2025-01-15T13:44:54.065Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3268.55","tag":"quote","timestamp":"2025-01-15T13:44:54.083Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T13:44:54.086Z"}
+{"level":"info","message":"Transaction successful: 5UkfzU4zv9DJRBJGPxakA7ZSxdGaUvpYwoMF1jEAFkBRmCx56fzaK7im2YLjSwc7WwguBm169os79kBcmBXLKcJ2","tag":"contract","timestamp":"2025-01-15T13:47:35.877Z"}
+{"level":"info","message":"Transaction successful: 2R9bNpVhcSueXZVALbjvkK9NbGizH54P2Zfv9CUJSNuaKJZgrSvjLrhjAPsD9YzhAG15wnj1GwBMqJzYe89XM339","tag":"contract","timestamp":"2025-01-15T13:47:36.977Z"}
+{"level":"info","message":"Transaction successful: 3FDv9LazT7LiArufuN9S24b5P73aDxE9AiGFzRD3UPikWjgYppU8Rj3kabY9da4rXfcy1EuuC9WYSXmNVBJs1aPi","tag":"contract","timestamp":"2025-01-15T13:47:39.158Z"}
+{"level":"info","message":"Transaction successful: wKmWgsgGyAcfwy7x3Rjff1bC1jacFipFqmiJNbn4tiyEGt7KMKKWGXpeWVtFFkQ2gTkr2VDZvNjEByXTUW6en8a","tag":"contract","timestamp":"2025-01-15T13:47:40.618Z"}
+{"level":"info","message":"Transaction successful: 3Tjre9dFL7Yuj6XT4GTFkjX4Lrp9eje7GCgCg9diht72iWZoYuHWcv6U9WNeZAF6ao5vWZTxDV7Cs2d31hvdY3Vv","tag":"contract","timestamp":"2025-01-15T13:47:40.803Z"}
+{"level":"info","message":"Transaction successful: 2mfSoYJXCjTmXfqdKHASd1RSNBw2fCDHVA5F1GWCwVjC5ZAsYZqcdynFKqZwGGZ9TCFXfcyW4AcLVWBaVqEu5kTL","tag":"contract","timestamp":"2025-01-15T13:47:42.290Z"}
+{"level":"info","message":"Transaction successful: 2mfSoYJXCjTmXfqdKHASd1RSNBw2fCDHVA5F1GWCwVjC5ZAsYZqcdynFKqZwGGZ9TCFXfcyW4AcLVWBaVqEu5kTL","tag":"contract","timestamp":"2025-01-15T13:47:42.435Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-01-15T13:47:43.140Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-01-15T13:47:43.149Z"}
+{"level":"info","message":"Transaction successful: 2bFSMf3zhwYpXy7XimVejtrWMSQWfW82vkCRiCqCbYGRzrRRKtNEbT2RAWn6DMTomZZs5STcg4sVveceaV1oYm8H","tag":"contract","timestamp":"2025-01-15T13:47:43.154Z"}
+{"level":"info","message":"Transaction successful: 4kV2ab9cRgvDMC6dRjXE4KyxYScxvgiyfxR7YoyNTFTZqkBr1wdq9HeDmX1sCirFkwN5QivgZm81Ck473Qv8fghw","tag":"contract","timestamp":"2025-01-15T13:47:43.305Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-01-15T13:47:43.583Z"}
+{"level":"info","message":"Transaction successful: 2buYmnsB83tPYPs3QsvvkCBKGkDdpeE5MWHhiCTqbUHJ9PxmKw29eQAThRiA8t15otUFja9Jv3gkGzHP61efY7dn","tag":"contract","timestamp":"2025-01-15T13:47:43.718Z"}
+{"level":"info","message":"Transaction successful: 4UThvpSi5G19d9cw7vk7NQzaGDJhjvkfBmD5dKau2Jks6DYfAy3bxS2Ykot1QMhGwc6m7L69MkzP7iN28mrBjDY8","tag":"contract","timestamp":"2025-01-15T13:47:43.855Z"}
+{"level":"info","message":"Transaction successful: 4UThvpSi5G19d9cw7vk7NQzaGDJhjvkfBmD5dKau2Jks6DYfAy3bxS2Ykot1QMhGwc6m7L69MkzP7iN28mrBjDY8","tag":"contract","timestamp":"2025-01-15T13:47:43.886Z"}
+{"level":"info","message":"Transaction successful: 5Y6RVSiHpg3kaarm26sY8E5Pf99jAbjbZ4uDxguh4ZJUU1jBhvpE56HG4mMLEBKMbBW492LjyNA25Edcu5SYpB44","tag":"contract","timestamp":"2025-01-15T13:47:44.169Z"}
+{"level":"info","message":"Transaction successful: 5Y6RVSiHpg3kaarm26sY8E5Pf99jAbjbZ4uDxguh4ZJUU1jBhvpE56HG4mMLEBKMbBW492LjyNA25Edcu5SYpB44","tag":"contract","timestamp":"2025-01-15T13:47:44.379Z"}
+{"level":"info","message":"Transaction successful: 53Ym6CTyrzVuoMUTRz4djMrrvhANrHJhvxQ1uwmsc1ari17Yspic5s85h6avhzMi1mxHGSRZiqyCj1W9eoKDyJz2","tag":"contract","timestamp":"2025-01-15T13:47:44.614Z"}
+{"level":"info","message":"Transaction successful: 53Ym6CTyrzVuoMUTRz4djMrrvhANrHJhvxQ1uwmsc1ari17Yspic5s85h6avhzMi1mxHGSRZiqyCj1W9eoKDyJz2","tag":"contract","timestamp":"2025-01-15T13:47:44.737Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-01-15T13:47:45.074Z"}
+{"level":"info","message":"Transaction successful: 5M645oWVJDheBmd2i1jk9DNJWbAECiNko3vyKSNCrboBSVAEfQhd2pk6hmQa2MpuJ6sPxs5uYPkT6G2FNX65mFbR","tag":"contract","timestamp":"2025-01-15T13:47:45.143Z"}
+{"level":"info","message":"Transaction successful: 3v7ja4QjRMXjMjm9d5StCb3DM4fvmpDNJqjv3B4V6WpjCWsj9cPCCE7N2afBRYJ4CAXDg4pdnEn2As6pJBN6cjYp","tag":"contract","timestamp":"2025-01-15T13:47:45.267Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-01-15T13:47:45.374Z"}
+{"level":"info","message":"Transaction successful: 3v7ja4QjRMXjMjm9d5StCb3DM4fvmpDNJqjv3B4V6WpjCWsj9cPCCE7N2afBRYJ4CAXDg4pdnEn2As6pJBN6cjYp","tag":"contract","timestamp":"2025-01-15T13:47:45.471Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-01-15T13:47:45.474Z"}
+{"level":"info","message":"Transaction successful: Zh3RwJdoxLQjU5wbvrckFANPssW1DSe91T66FuNzLLqPtSN79UKH843YzntPzshUCSrhQVpgWbLVwwxyMBvxhAx","tag":"contract","timestamp":"2025-01-15T13:47:45.645Z"}
+{"level":"info","message":"Transaction successful: Zh3RwJdoxLQjU5wbvrckFANPssW1DSe91T66FuNzLLqPtSN79UKH843YzntPzshUCSrhQVpgWbLVwwxyMBvxhAx","tag":"contract","timestamp":"2025-01-15T13:47:45.705Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-01-15T13:47:45.775Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-01-15T13:47:45.876Z"}
+{"level":"info","message":"Transaction successful: 5d2pHXUtLR2Tf3w6xDcEjcccxqW6iUkLCqgSLFriaeQ2fJi7gHbuyycjJtYfcaDDELxavKpx1U8szRX1fjBc8WTG","tag":"contract","timestamp":"2025-01-15T13:47:46.081Z"}
+{"level":"info","message":"Transaction successful: 5d2pHXUtLR2Tf3w6xDcEjcccxqW6iUkLCqgSLFriaeQ2fJi7gHbuyycjJtYfcaDDELxavKpx1U8szRX1fjBc8WTG","tag":"contract","timestamp":"2025-01-15T13:47:46.083Z"}
+{"level":"info","message":"Transaction successful: 64sMG82AwLn6ioH6EtcaRnLquFSYmUGMyirTFxbVqUXXgwLcuTAMN4Uz9Ab78dxBwgkb6hTmPpZ7hf4ntzd2qTt4","tag":"contract","timestamp":"2025-01-15T13:47:46.656Z"}
+{"level":"info","message":"Transaction successful: 4Yj3WHBnDEt87XFcpqMVuaVVxufqVCyPLAPjth9K8B6g1UPyuqf8JjS3H1qyH3WbhT95qKMtgvjNoxSB2TTzBRrs","tag":"contract","timestamp":"2025-01-15T13:48:10.324Z"}
+{"level":"info","message":"Transaction successful: 5FADqpzmffDq6YPeGRpENQMrTxdrqtjUK8qhwiGqGsSHaYaxApDuYvCbEnEprTVyZi9FVTnTSJEzWbwHgxAkvYbS","tag":"contract","timestamp":"2025-01-15T13:48:58.821Z"}
+{"level":"info","message":"Transaction successful: xnqDN5Hhjs4EdcFNJtmfpsvqvjcUSWTEEckDh1Jugybh2snF8TXxJD7CqVdbPcR8xVLEN78HHbYuE4PGg4QdEPC","tag":"contract","timestamp":"2025-01-15T13:49:29.562Z"}
+{"level":"info","message":"Transaction successful: 34LwdZJCGqWvJmScHcycp9ABYQc8NhVeTw5SsyMiVEvigTr4gE2e8U4E4dYQAjHiAMmCSkFRJaYXCtRQnWAg4AGG","tag":"contract","timestamp":"2025-01-15T13:49:34.487Z"}
+{"level":"info","message":"Transaction successful: 39x87BEuT8poegtx7cXo2mu6KvAx9u6wRxXfYiTswoVesAZaJ3HFv1xxRJQaEJGxMLFr3io6rue4BokS6NhumPPM","tag":"contract","timestamp":"2025-01-15T13:49:36.575Z"}
+{"level":"info","message":"Transaction successful: 5tzzPuav1P2YtVXdDbpH4desEWgJooF346DRavfAS3kQykag6WpNYnKwGa198t8g4Jr5mNvV6a7BRDSNL1PbWNAf","tag":"contract","timestamp":"2025-01-15T13:49:39.396Z"}
+{"level":"info","message":"Transaction successful: 7gj2QBVT4xSKBEdWJd7ittgfKCsKRJJ6GxvsH2jmpfF4MvZt2jncH6UyBsAd7QeFXa5Yib75XXxGRwETCjoBKmJ","tag":"contract","timestamp":"2025-01-15T13:49:40.894Z"}
+{"level":"info","message":"Transaction successful: 3uJgaHjT9RbyPvAgMnHBQkY5ShXNoX5hsB9HSvuRSb16JUhiUcMiZ65TTeF4ZziHnmnt8SAATXEgdVG6JkMVkhF9","tag":"contract","timestamp":"2025-01-15T13:49:42.761Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T13:49:53.864Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3287.87","tag":"quote","timestamp":"2025-01-15T13:49:53.866Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98993.99","tag":"quote","timestamp":"2025-01-15T13:49:54.044Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98872.17","tag":"quote","timestamp":"2025-01-15T13:56:49.071Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T13:56:49.074Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3287.17","tag":"quote","timestamp":"2025-01-15T13:56:49.097Z"}
+{"level":"info","message":"Transaction successful: 49ZWV9ZS6BagwUvXyJryimeR7fhMs8n9nU3aiZ9phdYnQUpP1xaTDy9f1uCKZwLzeEzESfWhYTzp7mRJBUthjzQc","tag":"contract","timestamp":"2025-01-15T13:59:08.880Z"}
+{"level":"info","message":"Transaction successful: 31Ag9ATBiXa8H1Zgte5tZ3hYeT31n9hSX6T7vP5nPGyYoF7aGakwYyrZvqKocbnUnJCAxbZusKPiWmAwrDfKQZ3N","tag":"contract","timestamp":"2025-01-15T13:59:09.150Z"}
+{"level":"info","message":"Transaction successful: 4gitcDaCEPmmioJsANtz6n4JTzVVuiKyd7XS6LB9PFioxFioVNdfQkzmX9VqqeQpBZ2rbKSrPx4WnibovLVPDFY3","tag":"contract","timestamp":"2025-01-15T13:59:09.842Z"}
+{"level":"info","message":"Transaction successful: 4vX4f5pAwjsmPb3jtEmFEfeBoZUm1FbtaWBgWSxs3wdMk6N8Z1uQiZMfePJuS5uHQUEmbG89wsjWVfUS2nMBBpcH","tag":"contract","timestamp":"2025-01-15T14:00:06.997Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3306.28","tag":"quote","timestamp":"2025-01-15T14:01:49.617Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T14:01:49.619Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 99358.3","tag":"quote","timestamp":"2025-01-15T14:01:49.625Z"}
+{"level":"info","message":"Transaction successful: 5BQHWsNGp25uE4DGN4B1M5Lu2EZkPq6oBy49MNubnFeAh9EfagPCvQ1rE6ZnRiarDMeRbYJxEUHgpwxyo37NJMgn","tag":"contract","timestamp":"2025-01-15T14:06:08.271Z"}
+{"level":"info","message":"Transaction successful: 3psFYix6qW5foqkgdHNnXc7uNbPZ9qf9iMh6QUQJDRgdnyK9DazG4S92fJ1hLXRfTMyWgiU3mfs56W2D3iVTgW5","tag":"contract","timestamp":"2025-01-15T14:06:08.752Z"}
+{"level":"info","message":"Transaction successful: 4vwVBRPqDXBbnehisU6RmD9Awz2cuQPrrHZHPJ94adf7hqeyFWG9wBXMtEJZ63SuzsCL9E2APzaKL1oJ7craM59M","tag":"contract","timestamp":"2025-01-15T14:06:09.208Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3311.36","tag":"quote","timestamp":"2025-01-15T14:06:49.619Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 99320.14","tag":"quote","timestamp":"2025-01-15T14:06:49.621Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T14:06:49.626Z"}
+{"level":"info","message":"Transaction successful: 2aMnERe1PLEL4s7WQiL2TCDAQhdTitWy4Jfm6th6MoFv2UBqR5wptQPVfoLYydJoENP7K6Ch9KYzowKuTiKJqPSs","tag":"contract","timestamp":"2025-01-15T14:07:02.905Z"}
+{"level":"info","message":"Transaction successful: 2aMnERe1PLEL4s7WQiL2TCDAQhdTitWy4Jfm6th6MoFv2UBqR5wptQPVfoLYydJoENP7K6Ch9KYzowKuTiKJqPSs","tag":"contract","timestamp":"2025-01-15T14:07:03.000Z"}
+{"level":"info","message":"Transaction successful: 5enpnURg2zV4QVA2eSBV8cvNFouKzL6HWwzk1Nv7L2q3JaMGbyaJrUbbT6kaZF3uEKXyxg9ZY1ZAcSzy6ovCSMBy","tag":"contract","timestamp":"2025-01-15T14:07:05.696Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 99127.79","tag":"quote","timestamp":"2025-01-15T14:11:49.819Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T14:11:49.821Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3302","tag":"quote","timestamp":"2025-01-15T14:11:49.842Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3283.46","tag":"quote","timestamp":"2025-01-15T14:16:49.627Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98800","tag":"quote","timestamp":"2025-01-15T14:16:49.629Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T14:16:49.800Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98990.89","tag":"quote","timestamp":"2025-01-15T14:21:49.841Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T14:21:49.849Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3291.93","tag":"quote","timestamp":"2025-01-15T14:21:49.852Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 99128.39","tag":"quote","timestamp":"2025-01-15T14:26:49.841Z"}
+{"level":"info","message":"Quote for SPY: 582.19","tag":"quote","timestamp":"2025-01-15T14:26:49.848Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3296.8","tag":"quote","timestamp":"2025-01-15T14:26:49.857Z"}
+{"level":"info","message":"Quote for SPY: 589.93","tag":"quote","timestamp":"2025-01-15T14:31:49.669Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98886.71","tag":"quote","timestamp":"2025-01-15T14:31:49.671Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3295.72","tag":"quote","timestamp":"2025-01-15T14:31:49.676Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 3285.85","tag":"quote","timestamp":"2025-01-15T14:36:49.656Z"}
+{"level":"info","message":"Quote for SPY: 590.2537","tag":"quote","timestamp":"2025-01-15T14:36:49.666Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 98725.19","tag":"quote","timestamp":"2025-01-15T14:36:49.672Z"}
