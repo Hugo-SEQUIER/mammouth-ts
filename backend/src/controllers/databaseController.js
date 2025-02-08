@@ -14,7 +14,7 @@ const createGameState = async (request, reply) => {
         },
         items: {
             pickaxe: {
-                level: 0,
+                level: 1,
                 upgradeCost: 10,
             },
             userLevel: 1,
@@ -101,8 +101,62 @@ const createGameState = async (request, reply) => {
     };
 }
 
+const getAllData = async () => {
+    const { data, error } = await supabase
+        .from('game_states')
+        .select('*')
+
+    if (error) {
+        databaseLogger.error(`Error fetching all game states: ${error.message}`);
+        return {
+            state: 'error',
+            response: encryptResponse('Error fetching all game states')
+        };
+    }
+
+    return {
+        state: 'success',
+        response: encryptResponse(data)
+    };
+}
+
+const filterData = (data) => {
+    if (data.state != "success"){
+        return {
+            state: 'error',
+            response: encryptResponse("No Leaderboard found")
+        };
+    }
+    const filteredData = data.response
+        .filter(item => item.state.basicInfo.ice > 0)
+        .sort((a, b) => b.state.basicInfo.ice - a.state.basicInfo.ice)
+        .map(item => ({
+
+            userPublicKey: item.user_public_key,
+            ice: item.state.basicInfo.ice
+        }));
+    return filteredData;
+}
+
+const getLeaderboard = async (request, reply) => {
+    const data = await getAllData()
+    if (data.state != "success"){
+        return {
+            state: 'error',
+            response: encryptResponse("No Leaderboard found")
+        };
+    }
+    const filteredLeaderboard = filterData(decryptResponse(data.response))
+    return {
+        state: 'success',
+        response: encryptResponse(filteredLeaderboard)
+    };
+}
+
+
 const getDatabaseData = async (request, reply) => {
     const { userPublicKey } = request.body;
+
 
     const { data, error } = await supabase
         .from('game_states')
@@ -154,6 +208,8 @@ const updateDatabaseData = async (request, reply) => {
 module.exports = {
     getDatabaseData,
     updateDatabaseData,
-    createGameState
+    createGameState,
+    getLeaderboard
 }
+
 

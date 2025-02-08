@@ -16,7 +16,7 @@ fastify.register(cors, {
   allowedHeaders: ['Content-Type', 'x-api-key']
 });
 
-const { decryptResponse } = require('./utils/encryption');
+const { decryptResponse, encryptResponse } = require('./utils/encryption');
 
 // API Key middleware
 const validateApiKey = async (request, reply) => {
