@@ -1,5 +1,5 @@
 import './App.css';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { GamingProvider } from './context/GamingContext';
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
 import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
@@ -37,6 +37,32 @@ function App() {
 		],
 		[]
 	);
+	
+	// Set to true to show maintenance page
+	const [isUnderMaintenance] = useState(true);
+
+	// Maintenance page component
+	const MaintenancePage = () => (
+		<div className="maintenance-container">
+			<h1>FROST MAMMOTH</h1>
+			<div className="maintenance-content">
+				<img src="./images/work.png" alt="Under Maintenance" className="maintenance-image" />
+				<h2>Under Maintenance</h2>
+				<p>We're currently upgrading our systems before the competition.</p>
+				<p>Please check back soon!</p>
+			</div>
+			<div className="maintenance-footer">
+				<div>
+					<img src="./images/twitter2.png" alt="Twitter" />
+					<a href="https://x.com/CelestMammoth" className="nav-link" target="_blank" rel="noopener noreferrer">Twitter</a>
+				</div>
+				<div>
+					<img src="./images/discord_CM.png" alt="Discord" />
+					<a href="https://discord.gg/hNd72TezbN" className="nav-link" target="_blank" rel="noopener noreferrer">Discord</a>
+				</div>
+			</div>
+		</div>
+	);
 
 	return (
 		<ConnectionProvider endpoint={network}>
@@ -45,40 +71,43 @@ function App() {
 					<PublicKeyProvider>
 						<GamingProvider>
 							<div className="App">
-								<div className="flex-container">
-									<div className="flex-header">
-										<div className="flex-header-links">
-											<div>
-												<img src="./images/twitter2.png" alt="Twitter" />
-												<a href="https://x.com/CelestMammoth" className="nav-link" target="_blank" rel="noopener noreferrer">Twitter</a>
+								{isUnderMaintenance ? (
+									<MaintenancePage />
+								) : (
+									<div className="flex-container">
+										<div className="flex-header">
+											<div className="flex-header-links">
+												<div>
+													<img src="./images/twitter2.png" alt="Twitter" />
+													<a href="https://x.com/CelestMammoth" className="nav-link" target="_blank" rel="noopener noreferrer">Twitter</a>
+												</div>
+												<div>
+													<img src="./images/discord_CM.png" alt="Discord" />
+													<a href="https://discord.gg/hNd72TezbN" className="nav-link" target="_blank" rel="noopener noreferrer">Discord</a>
+												</div>
 											</div>
-											<div>
-												<img src="./images/discord_CM.png" alt="Discord" />
-												<a href="https://discord.gg/hNd72TezbN" className="nav-link" target="_blank" rel="noopener noreferrer">Discord</a>
+											<h1>FROST MAMMOTH</h1>
+											<div className="flex-header-wallet">
+												<ModalToSendEth />
+												<WalletMultiButton />
 											</div>
 										</div>
-										<h1>FROST MAMMOTH</h1>
-										<div className="flex-header-wallet">
-											<ModalToSendEth />
-											<WalletMultiButton />
+										<div className="flex-item">
+											<IceBlock />
+											<div className="flex-middle">
+												<div className="flex-wallet">	
+												<Stats />
+											</div>
+												<div className="flex-tools">
+													<Pickaxe />
+													<Market />
+													<Laboratory />
+												</div>
+												<Company />
+											</div>
 										</div>
 									</div>
-								<div className="flex-item">
-									<IceBlock />
-									<div className="flex-middle">
-										<div className="flex-wallet">	
-										<Stats />
-									</div>
-										<div className="flex-tools">
-											<Pickaxe />
-											<Market />
-											<Laboratory />
-										</div>
-										<Company />
-									</div>
-								</div>
-								
-							</div>
+								)}
 							</div>
 						</GamingProvider>
 					</PublicKeyProvider>

@@ -4,6 +4,7 @@ export interface GameState {
     company: Company;
     laboratory: Laboratory;
     achievements: Achievement[];
+    shop: Shop;
     market: Market;
     investment: Investment;
 }
@@ -13,6 +14,7 @@ export interface BasicInfo {
     icePerClick: number;
     icePerSecond: number;
     money: number;
+    nbClick: number;
     nbClickAllowed: number;
 }
 
@@ -26,11 +28,27 @@ export interface Employee {
 
 export interface Items {
     pickaxe: Pickaxe;
+    gloves : Gloves;
     userLevel: number;
     costUpgrade: number;
 }
 
+export interface Shop {
+    energyBar: EnergyBar;
+}
+
+export interface EnergyBar {
+    price: number;
+    isActive: boolean;
+    boost: number;
+}
+
 export interface Pickaxe {
+    level: number;
+    upgradeCost: number;
+}
+
+export interface Gloves {
     level: number;
     upgradeCost: number;
 }

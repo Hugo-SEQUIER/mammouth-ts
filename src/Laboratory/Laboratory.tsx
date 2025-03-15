@@ -70,7 +70,7 @@ export default function Laboratory() {
                                             return <Technology key={tech.name} technology={tech} />;
                                         }
                                         if (state.laboratory.level >= 2 && 
-                                            ["Market Analysis","Advanced Mining Techniques", "Research Efficiency", "Brand Recognition"].includes(tech.name)) {
+                                            ["Market Analysis","Advanced Mining Techniques", "Research Efficiency", "Brand Recognition", "Best Sellers"].includes(tech.name)) {
                                             return <Technology key={tech.name} technology={tech} />;
                                         }
                                         if (state.laboratory.level >= 3 && 

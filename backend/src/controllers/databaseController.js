@@ -10,12 +10,17 @@ const createGameState = async (request, reply) => {
             icePerClick: 1,
             icePerSecond: 0,
             money: 0,
-            nbClickAllowed: 0,
+            nbClick: 0,
+            nbClickAllowed: 1,
         },
         items: {
             pickaxe: {
                 level: 1,
                 upgradeCost: 10,
+            },
+            gloves: {
+                level: 1,
+                upgradeCost: 100,
             },
             userLevel: 1,
             costUpgrade: 100,
@@ -40,6 +45,20 @@ const createGameState = async (request, reply) => {
                     happiness: 0,
                     production: 2,
                 },
+                {
+                    amount: 0,
+                    job: "Frost Mage",
+                    salary: 1500,
+                    happiness: 0,
+                    production: 3.2,
+                },
+                {
+                    amount: 0,
+                    job: "Yeti",
+                    salary: 3000,
+                    happiness: 0,
+                    production: 5,
+                }
             ],
             investments: [],
         },
@@ -58,6 +77,13 @@ const createGameState = async (request, reply) => {
             userPrice: 1,
             publicDemand: 0,
             iceSell: 0,
+        },
+        shop: {
+            energyBar: {
+                price: 50,
+                isActive: false,
+                boost: 1.15,
+            },
         },
         investment: {
             bitcoin: {

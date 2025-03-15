@@ -8,6 +8,14 @@ export default function EmployeeComponent({ employee }: { employee: Employee }) 
         return <div></div>;
     }
 
+    if (employee.job == "Yeti" && state.company.level < 15) {
+        return <div></div>;
+    }
+
+    if (employee.job == "Frost Mage" && state.company.level < 10) {
+        return <div></div>;
+    }
+
     return (
         <div className="employee">
             <button 

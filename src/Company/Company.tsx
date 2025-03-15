@@ -4,6 +4,7 @@ import EmployeeComponent from "./Employees/Employee";
 import Investment from "./Investment/Investment";
 import { checkTechnologyDone } from "../context/utils";
 import MarketAnalysis from "./Analysis/MarketAnalysis";
+
 export default function Company() {
     const { state, customDispatch } = useGaming();
     const [amountToInject, setAmountToInject] = useState(0);

@@ -19,7 +19,7 @@
 
 .modal-content {
     background-color: #fff;
-    color: #2a1d4c;
+    color: black;
     padding: 20px;
     border-radius: .375rem;
     width: 30%;
@@ -28,7 +28,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    border: 5px solid #2a1d4c;
+    border: 5px solid black;
 }
 
 .modal-content > div {
@@ -45,10 +45,10 @@
 }
 
 .modal-content h2 {
-    color: #2a1d4c;
+    color: black;
     text-shadow: 0 0 1px #000;
     font-weight: 400;
-    color: #2a1d4c;
+    color: black;
 }
 
 label {

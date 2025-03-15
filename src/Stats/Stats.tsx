@@ -33,6 +33,9 @@ export default function Stats() {
         if (checkTechnologyDone('Advanced Mining Techniques', state)){
             setBonusIcePerSecond(1.2)
         }
+        if (checkTechnologyDone('Permafrost Engineering', state)){
+            setBonusIcePerSecond(1.2 * 1.3)
+        }
     }, [state.laboratory.researchDone])
 
     return (

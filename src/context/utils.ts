@@ -49,3 +49,87 @@ export async function checkInteractionDone(){
     }
     return true;
 }
+
+/**
+ * Creates a debounced function that delays invoking the provided function
+ * until after the specified wait time has elapsed since the last time it was invoked.
+ * 
+ * @param func The function to debounce
+ * @param wait The number of milliseconds to delay
+ * @returns A debounced version of the function
+ */
+export function debounce<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let timeout: NodeJS.Timeout | null = null;
+  
+  return function(...args: Parameters<T>): void {
+    const later = () => {
+      timeout = null;
+      func(...args);
+    };
+    
+    if (timeout !== null) {
+      clearTimeout(timeout);
+    }
+    
+    timeout = setTimeout(later, wait);
+  };
+}
+
+/**
+ * Creates a throttled function that only invokes the provided function
+ * at most once per every specified wait period.
+ * 
+ * @param func The function to throttle
+ * @param wait The number of milliseconds to throttle invocations to
+ * @returns A throttled version of the function
+ */
+export function throttle<T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): (...args: Parameters<T>) => void {
+  let lastCall = 0;
+  
+  return function(...args: Parameters<T>): void {
+    const now = Date.now();
+    
+    if (now - lastCall >= wait) {
+      lastCall = now;
+      func(...args);
+    }
+  };
+}
+
+/**
+ * Deep compares two objects to check if they are equal
+ * 
+ * @param obj1 First object to compare
+ * @param obj2 Second object to compare
+ * @returns Boolean indicating if the objects are equal
+ */
+export function deepEqual(obj1: any, obj2: any): boolean {
+  if (obj1 === obj2) return true;
+  
+  if (
+    typeof obj1 !== 'object' ||
+    typeof obj2 !== 'object' ||
+    obj1 === null ||
+    obj2 === null
+  ) {
+    return false;
+  }
+  
+  const keys1 = Object.keys(obj1);
+  const keys2 = Object.keys(obj2);
+  
+  if (keys1.length !== keys2.length) return false;
+  
+  for (const key of keys1) {
+    if (!keys2.includes(key)) return false;
+    if (!deepEqual(obj1[key], obj2[key])) return false;
+  }
+  
+  return true;
+}
