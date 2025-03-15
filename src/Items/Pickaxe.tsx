@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useGaming } from "../context/GamingContext";
-import { upgradePickaxe, upgradeUserLevel } from "./index";
+import { upgradePickaxe, upgradeUserLevel, upgradeGloves } from "./index";
 
 export default function Pickaxe() {
     const { state, dispatch } = useGaming();
@@ -33,6 +33,15 @@ export default function Pickaxe() {
                         disabled={state.basicInfo.money < state.items.pickaxe.upgradeCost}
                     >
                         Upgrade Pickaxe
+                    </button>
+                    <br />
+                    <p>Gloves Level: {state.items.gloves.level}</p>
+                    <p>Cost Upgrade: {Math.floor(state.items.gloves.upgradeCost)} $</p>
+                    <button 
+                        onClick={() => upgradeGloves(dispatch)}
+                        disabled={state.basicInfo.money < state.items.gloves.upgradeCost}
+                    >
+                        Upgrade Gloves
                     </button>
                 </>
             )}

@@ -4,6 +4,11 @@ import { GameState } from '../interface';
 import { usePublicKey } from './publicKeyContext';
 // Adresse publique en dur pour le moment
 
+// Maximum number of retry attempts
+const MAX_RETRIES = 3;
+// Delay between retries (in milliseconds)
+const RETRY_DELAY = 2000;
+
 export const useGameAPI = () => {
     // Récupérer le prix actuel
     const { publicKey } = usePublicKey();
@@ -51,18 +56,35 @@ export const useGameAPI = () => {
         }
     }, [publicKey]);
 
-    // Sauvegarder l'état du jeu
+    // Helper function to wait for a specified time
+    const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
+    // Sauvegarder l'état du jeu with retry logic
     const saveGameState = useCallback(async (gameState: GameState) => {
-        try {
-            const result = await updateGameState(publicKey, gameState);
-            if (result.state === 'success') {
-                return true;
+        let retries = 0;
+        
+        while (retries < MAX_RETRIES) {
+            try {
+                const result = await updateGameState(publicKey, gameState);
+                if (result.state === 'success') {
+                    return true;
+                }
+                throw new Error('Failed to save game state');
+            } catch (error) {
+                retries++;
+                console.error(`Error saving game state (attempt ${retries}/${MAX_RETRIES}):`, error);
+                
+                if (retries >= MAX_RETRIES) {
+                    console.error('Max retries reached. Failed to save game state.');
+                    return false;
+                }
+                
+                // Wait before retrying
+                await wait(RETRY_DELAY);
             }
-            throw new Error('Failed to save game state');
-        } catch (error) {
-            console.error('Error saving game state:', error);
-            return false;
         }
+        
+        return false;
     }, [publicKey]);
 
     return {

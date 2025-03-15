@@ -16,7 +16,7 @@ html, body, #root {
 }
 
 h2 {
-  color: #2a1d4c;
+  color: black;
   font-weight: 400;
   font-size: medium
 }
@@ -31,12 +31,12 @@ p {
 
 button {
   background-color: #fff;
-  color: #2a1d4c;
+  color: black;
   font-weight: 100;
   cursor: pointer;
   font-size: 10px;
   transition: background-color 0.3s;
-  border: solid 1px #2a1d4c;
+  border: solid 1px black;
   border-radius: .375rem;
   padding-top: .375rem;
   padding-bottom: .375rem;

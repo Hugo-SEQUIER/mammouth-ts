@@ -2,18 +2,25 @@ import { useEffect, useState } from "react";
 import { useGaming } from "../context/GamingContext"
 import { setUserPrice } from "./index";
 import { checkTechnologyDone } from "../context/utils";
+
 export default function Market() {
     const { state, dispatch } = useGaming();
     const [bonusPublicDemand, setBonusPublicDemand] = useState(1);
     const [hasPortfolioDiversification, setHasPortfolioDiversification] = useState(false);
+    const [isDisabledBuyEnergyBar, setIsDisabledBuyEnergyBar] = useState(false);
+
     useEffect(() => {
+        let second = 1;
+        if (checkTechnologyDone('Best Sellers', state)){
+            second = 0.5;
+        }
         const interval = setInterval(() => {
             const sellChance = Math.random() * 100; // Assuming publicDemand is a percentage
 
             if (sellChance < state.market.publicDemand) {
                 dispatch({type: 'SELL_ICE',});
             }
-        }, 1000); // Runs every second
+        }, 1000 * second); // Runs every second
 
         return () => clearInterval(interval); // Cleanup on unmount
     }, [state.market.publicDemand]);
@@ -27,6 +34,18 @@ export default function Market() {
         }
     }, [state.laboratory.researchDone])
 
+    const buyEnergyBar = () => {
+        if (state.basicInfo.money >= state.shop.energyBar.price) {
+            dispatch({type: 'BUY_ENERGY_BAR',});
+            setIsDisabledBuyEnergyBar(true);
+
+            setTimeout(() => {
+                setIsDisabledBuyEnergyBar(false);
+                dispatch({type: 'STOP_ENERGY_BAR',});
+            }, 30000);
+        }
+    }
+
     return (
         <div className={`market ${state.items.userLevel > 2 ? 'container' : ''}`}>
             {state.items.userLevel > 2 && (
@@ -39,7 +58,11 @@ export default function Market() {
                     </div>
                     <p>Public Demand: {(state.market.publicDemand * bonusPublicDemand).toFixed(3)}%</p>
                     <p>Ice Sell: {state.market.iceSell}</p>
-                </>
+                    <br/>
+                    <h2>Shop</h2>
+                    <p>Energy Bar : {state.shop.energyBar.price.toFixed(2)} $</p>
+                    {isDisabledBuyEnergyBar ? <p>You can't buy energy bar yet</p> : <button onClick={() => buyEnergyBar()} disabled={isDisabledBuyEnergyBar}>Buy</button>}
+                </>    
             )}
             {state.items.userLevel >= 5 && state.company.level > 2 && (
                 <>

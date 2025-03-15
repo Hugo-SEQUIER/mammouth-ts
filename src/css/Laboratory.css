@@ -24,7 +24,7 @@
 }
 
 .technology {
-    border: 1px solid #2a1d4c;
+    border: 1px solid black;
     padding: 15px;
     border-radius: 5px;
     background-color: #fff;
@@ -45,7 +45,7 @@
 .research-progress {
     margin-top: 10px;
     padding: 10px;
-    background-color: #2a1d4c;
+    background-color: black;
     border-radius: 3px;
     color: #fff;
 }

@@ -6,12 +6,17 @@ export const initialState: GameState = {
         icePerClick: 1,
         icePerSecond: 0,
         money: 0,
-        nbClickAllowed: 1,
+        nbClick: 0,
+        nbClickAllowed: 0,
     },
     items: {
         pickaxe: {
-            level: 0,
+            level: 1,
             upgradeCost: 10,
+        },
+        gloves: {
+            level: 1,
+            upgradeCost: 100,
         },
         userLevel: 1,
         costUpgrade: 100,
@@ -36,6 +41,20 @@ export const initialState: GameState = {
                 happiness: 0,
                 production: 2,
             },
+            {
+                amount: 0,
+                job: "Frost Mage",
+                salary: 1500,
+                happiness: 0,
+                production: 3.2,
+            },
+            {
+                amount: 0,
+                job: "Yeti",
+                salary: 3000,
+                happiness: 0,
+                production: 5,
+            }
         ],
         investments: [],
     },
@@ -54,6 +73,13 @@ export const initialState: GameState = {
         userPrice: 1,
         publicDemand: 0,
         iceSell: 0,
+    },
+    shop: {
+        energyBar: {
+            price: 50,
+            isActive: false,
+            boost: 1.15,
+        },
     },
     investment: {
         bitcoin: {

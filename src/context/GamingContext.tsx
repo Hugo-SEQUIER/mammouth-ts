@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useReducer, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useReducer, useEffect, ReactNode, useRef, useCallback } from 'react';
 import { GameState } from '../interface';
 import { initialState } from './initialState';
-import { calculatePublicDemand, checkTechnologyDone } from './utils';
+import { calculatePublicDemand, checkTechnologyDone, deepEqual } from './utils';
 import { useGameAPI } from './useGameAPI';
 import { usePublicKey } from './publicKeyContext';
 
@@ -24,11 +24,51 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
 	const [state, dispatch] = useReducer(gameReducer, initialState);
 	const { loadGameState, saveGameState, fetchCurrentPrice, initializeGameState } = useGameAPI();
 	const { publicKey } = usePublicKey();
+	
+	// Add a save timer and pending changes flag
+	const saveTimerRef = useRef<NodeJS.Timeout | null>(null);
+	const hasPendingChanges = useRef(false);
+	const lastSavedStateRef = useRef<GameState | null>(null);
+	const saveInProgressRef = useRef(false);
+
+	// Debounced save function to reduce API calls
+	const debouncedSave = useCallback(async (gameState: GameState) => {
+		// Don't queue another save if one is already in progress
+		if (saveInProgressRef.current) {
+			hasPendingChanges.current = true;
+			return;
+		}
+
+		// Clear any existing timer
+		if (saveTimerRef.current) {
+			clearTimeout(saveTimerRef.current);
+		}
+
+		// Mark that we have pending changes
+		hasPendingChanges.current = true;
+
+		// Set a new timer to save after delay
+		saveTimerRef.current = setTimeout(async () => {
+			try {
+				// Only save if there are actual changes
+				if (!lastSavedStateRef.current || !deepEqual(lastSavedStateRef.current, gameState)) {
+					saveInProgressRef.current = true;
+					await saveGameState(gameState);
+					lastSavedStateRef.current = JSON.parse(JSON.stringify(gameState));
+					saveInProgressRef.current = false;
+				}
+				hasPendingChanges.current = false;
+			} catch (error) {
+				console.error("Error in debounced save:", error);
+				saveInProgressRef.current = false;
+			}
+		}, 5000); // 5 second delay before saving
+	}, [saveGameState]);
 
 	// Custom dispatch function to save state after each action
 	const customDispatch = async (action: any) => {
 		dispatch(action);
-		await saveGameState(state).catch(error => console.error("Error saving game state:", error));
+		debouncedSave(state);
 	};
 
 	// Charger l'état initial du jeu
@@ -40,9 +80,11 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
 				const newState = await initializeGameState();
 				console.log("newState", newState);
 				dispatch({ type: 'LOAD_STATE', payload: newState });
+				lastSavedStateRef.current = JSON.parse(JSON.stringify(newState));
 			} else if (savedState) {
 				console.log("savedState", savedState);
 				dispatch({ type: 'LOAD_STATE', payload: savedState.state });
+				lastSavedStateRef.current = JSON.parse(JSON.stringify(savedState.state));
 			}
 		};
 
@@ -58,7 +100,7 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
 			}
 		};
 
-		// Mettre à jour le prix toutes les 5 minutes
+		// Mettre à jour le prix toutes les minutes
 		updateMarketPrice();
 		const interval = setInterval(updateMarketPrice, 60000 * 1);
 
@@ -67,13 +109,35 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
 
 	// Sauvegarder l'état avant de quitter la page
 	useEffect(() => {
-		const handleBeforeUnload = async () => {
-			await saveGameState(state);
+		const handleBeforeUnload = async (event: BeforeUnloadEvent) => {
+			// If we have pending changes, force an immediate save
+			if (hasPendingChanges.current) {
+				// Cancel any pending debounced save
+				if (saveTimerRef.current) {
+					clearTimeout(saveTimerRef.current);
+				}
+				
+				// Force synchronous save before unload
+				event.preventDefault();
+				event.returnValue = '';
+				await saveGameState(state);
+			}
 		};
 
 		window.addEventListener('beforeunload', handleBeforeUnload);
 		return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-	}, [state]);
+	}, [state, saveGameState]);
+
+	// Periodic save to ensure state is saved even if user doesn't trigger actions
+	useEffect(() => {
+		const periodicSaveInterval = setInterval(() => {
+			if (hasPendingChanges.current && !saveInProgressRef.current) {
+				debouncedSave(state);
+			}
+		}, 30000); // Check every 30 seconds
+
+		return () => clearInterval(periodicSaveInterval);
+	}, [state, debouncedSave]);
 
 	return (
 		<GamingContext.Provider value={{ state, dispatch: customDispatch, customDispatch }}>
@@ -113,12 +177,16 @@ const gameReducer = (state: GameState, action: any): GameState => {
 			return { ...state, basicInfo: {
 				...state.basicInfo,
 					ice: (state.basicInfo.ice + (state.basicInfo.icePerClick * bonus)),
+					nbClick: state.basicInfo.nbClick + 1,
 					nbClickAllowed: state.basicInfo.nbClickAllowed - 1
 				}
 			};
 		case "AUTO_MINE_ICE":
 			if (checkTechnologyDone("Advanced Mining Techniques", state)){
 				bonus = 1.2;
+			}
+			if (checkTechnologyDone("Permafrost Engineering", state)){
+				bonus = 1.2 * 1.3;
 			}
 			return { ...state, basicInfo: {
 				...state.basicInfo,
@@ -160,6 +228,43 @@ const gameReducer = (state: GameState, action: any): GameState => {
 					...state.basicInfo,
 					money: state.basicInfo.money - state.items.pickaxe.upgradeCost,
 					icePerClick: state.basicInfo.icePerClick * 1.15
+				}
+			};
+		case "UPGRADE_GLOVES":
+			if (state.basicInfo.money < 0.01){
+				return state;
+			}
+			if (state.items.gloves.level === 0){
+				return {
+					...state, 
+					items: {
+						...state.items,
+						gloves: { 
+							...state.items.gloves, 
+							level: state.items.gloves.level + 1, 
+							upgradeCost: state.items.gloves.upgradeCost * 1.8 
+						},
+					},
+					basicInfo: {
+						...state.basicInfo,
+						icePerClick: state.basicInfo.icePerClick * 1.2
+					}
+				};
+			}
+			return { 
+				...state, 
+				items: {
+					...state.items,
+					gloves: { 
+						...state.items.gloves, 
+						level: state.items.gloves.level + 1, 
+						upgradeCost: state.items.gloves.upgradeCost * 1.8 
+					},
+				},
+				basicInfo: {
+					...state.basicInfo,
+					money: state.basicInfo.money - state.items.gloves.upgradeCost,
+					icePerClick: state.basicInfo.icePerClick * 1.2
 				}
 			};
 		case "UPGRADE_USER_LEVEL":
@@ -272,6 +377,9 @@ const gameReducer = (state: GameState, action: any): GameState => {
 			if (state.basicInfo.money < 0.01 || action.payload > state.basicInfo.money){
 				return state;
 			}
+			if (action.payload < 0){
+				return state;
+			}
 			return {
 				...state,
 				basicInfo: {
@@ -289,7 +397,12 @@ const gameReducer = (state: GameState, action: any): GameState => {
 				employee_production = 1;
 			} else if (action.payload.job === "Senior Miner"){
 				employee_production = 2;
+			} else if (action.payload.job === "Frost Mage"){
+				employee_production = 3.2;
+			} else if (action.payload.job === "Yeti"){
+				employee_production = 5;
 			}
+
 			return {
 				...state,
 				company: {
@@ -351,6 +464,24 @@ const gameReducer = (state: GameState, action: any): GameState => {
 								salary: 600,
 								happiness: 0,
 								production: 2,
+							}
+						} else if (employee.job === "Frost Mage") {
+							base_production = employee.amount * 3.2;
+							base_employee = {
+								amount: 0,
+								job: "Frost Mage",
+								salary: 1500,
+								happiness: 0,
+								production: 2,
+							}
+						} else if (employee.job === "Yeti") {
+							base_production = employee.amount * 5;
+							base_employee = {
+								amount: 0,
+								job: "Yeti",
+								salary: 3000,
+								happiness: 0,
+								production: 5,
 							}
 						}
 						// Decrease happiness by 0.01 each second
@@ -608,6 +739,45 @@ const gameReducer = (state: GameState, action: any): GameState => {
 						actualPrice: priceMap.spy || state.investment.spy.actualPrice
 					}
 				},
+			};
+		case "BUY_ENERGY_BAR":
+			console.log("BUY_ENERGY_BAR");
+			console.log(state.shop.energyBar.price);
+			console.log(state.shop.energyBar.boost);
+
+			if (state.basicInfo.money < state.shop.energyBar.price){
+				return state;
+			}
+			return {
+				...state,
+				shop: {
+					...state.shop,
+					energyBar: {
+						...state.shop.energyBar,
+						price: state.shop.energyBar.price * 1.05,
+						isActive: true
+					}
+				},
+				basicInfo: {
+					...state.basicInfo,
+					money: state.basicInfo.money - state.shop.energyBar.price,
+					icePerClick: state.basicInfo.icePerClick + 0.2
+				}
+			};
+		case "STOP_ENERGY_BAR":
+			return {
+				...state,
+				shop: {
+					...state.shop,
+					energyBar: {
+						...state.shop.energyBar,
+						isActive: false
+					}
+				},
+				basicInfo: {
+					...state.basicInfo,
+					icePerClick: state.basicInfo.icePerClick - 0.2
+				}
 			};
 		default:
 			return state;
