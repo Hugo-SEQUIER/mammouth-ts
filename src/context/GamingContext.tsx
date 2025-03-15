@@ -30,6 +30,8 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
 	const hasPendingChanges = useRef(false);
 	const lastSavedStateRef = useRef<GameState | null>(null);
 	const saveInProgressRef = useRef(false);
+	const loadingStateRef = useRef(false);
+	const maxRetries = 3;
 
 	// Debounced save function to reduce API calls
 	const debouncedSave = useCallback(async (gameState: GameState) => {
@@ -71,25 +73,71 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
 		debouncedSave(state);
 	};
 
+	// Helper function to wait for a specified time
+	const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
 	// Charger l'état initial du jeu
 	useEffect(() => {
 		const initGame = async () => {
-			const savedState = await loadGameState();
-			console.log("savedState", savedState);
-			if (savedState === 'No game state found') {
-				const newState = await initializeGameState();
-				console.log("newState", newState);
-				dispatch({ type: 'LOAD_STATE', payload: newState });
-				lastSavedStateRef.current = JSON.parse(JSON.stringify(newState));
-			} else if (savedState) {
-				console.log("savedState", savedState);
+			if (!publicKey || loadingStateRef.current) return;
+			
+			loadingStateRef.current = true;
+			let retries = 0;
+			let savedState = null;
+			
+			// Try to load the game state with retries
+			while (retries < maxRetries && !savedState) {
+				try {
+					console.log(`Attempting to load game state (attempt ${retries + 1}/${maxRetries})...`);
+					savedState = await loadGameState();
+					console.log("Loaded game state:", savedState);
+					
+					if (savedState === null) {
+						throw new Error('Failed to load game state');
+					}
+				} catch (error) {
+					retries++;
+					console.error(`Error loading game state (attempt ${retries}/${maxRetries}):`, error);
+					
+					if (retries < maxRetries) {
+						// Wait before retrying
+						await wait(2000);
+					}
+				}
+			}
+			
+			// Process the loaded state or initialize a new one
+			if (savedState && savedState !== 'No game state found') {
+				console.log("Using existing game state:", savedState);
 				dispatch({ type: 'LOAD_STATE', payload: savedState.state });
 				lastSavedStateRef.current = JSON.parse(JSON.stringify(savedState.state));
+			} else {
+				console.log("No existing game state found, initializing new state...");
+				try {
+					const newState = await initializeGameState();
+					console.log("Initialized new game state:", newState);
+					
+					if (newState) {
+						dispatch({ type: 'LOAD_STATE', payload: newState });
+						lastSavedStateRef.current = JSON.parse(JSON.stringify(newState));
+					} else {
+						console.error("Failed to initialize new game state, using default state");
+						dispatch({ type: 'LOAD_STATE', payload: initialState });
+						lastSavedStateRef.current = JSON.parse(JSON.stringify(initialState));
+					}
+				} catch (error) {
+					console.error("Error initializing new game state:", error);
+					console.log("Using default initial state");
+					dispatch({ type: 'LOAD_STATE', payload: initialState });
+					lastSavedStateRef.current = JSON.parse(JSON.stringify(initialState));
+				}
 			}
+			
+			loadingStateRef.current = false;
 		};
 
 		initGame();
-	}, [publicKey]);
+	}, [publicKey, loadGameState, initializeGameState]);
 
 	// Mettre à jour le prix du marché périodiquement
 	useEffect(() => {

@@ -11,7 +11,7 @@ const createGameState = async (request, reply) => {
             icePerSecond: 0,
             money: 0,
             nbClick: 0,
-            nbClickAllowed: 1,
+            nbClickAllowed: 0,
         },
         items: {
             pickaxe: {
@@ -154,12 +154,13 @@ const filterData = (data) => {
         };
     }
     const filteredData = data.response
-        .filter(item => item.state.basicInfo.ice > 0)
+        .filter(item => item.state.basicInfo.ice >= 0)
+        .filter(item => item.user_public_key != "DJi9qeHDT5vpu1iKApVvPxfBa7UYdSkuMPPsZ97zxvSc")
         .sort((a, b) => b.state.basicInfo.ice - a.state.basicInfo.ice)
         .map(item => ({
-
             userPublicKey: item.user_public_key,
-            ice: item.state.basicInfo.ice
+            ice: item.state.basicInfo.ice,
+            nbClick: item.state.basicInfo.nbClick,
         }));
     return filteredData;
 }

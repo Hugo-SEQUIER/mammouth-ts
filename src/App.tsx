@@ -25,6 +25,9 @@ import './css/Laboratory.css';
 import Stats from './Stats/Stats';
 import './css/Stats.css';
 
+import { LeaderboardPage } from './Leaderboard';
+import './css/Leaderboard.css';
+
 import ModalToSendEth from './eclipseContract/ModalToSendEth';
 import './css/Modal.css';
 
@@ -40,6 +43,7 @@ function App() {
 	
 	// Set to true to show maintenance page
 	const [isUnderMaintenance] = useState(false);
+	const [showLeaderboard, setShowLeaderboard] = useState(false);
 
 	// Maintenance page component
 	const MaintenancePage = () => (
@@ -64,6 +68,14 @@ function App() {
 		</div>
 	);
 
+	const navigateToLeaderboard = () => {
+		setShowLeaderboard(true);
+	};
+
+	const navigateToGame = () => {
+		setShowLeaderboard(false);
+	};
+
 	return (
 		<ConnectionProvider endpoint={network}>
 			<WalletProvider wallets={wallets} autoConnect>
@@ -73,6 +85,8 @@ function App() {
 							<div className="App">
 								{isUnderMaintenance ? (
 									<MaintenancePage />
+								) : showLeaderboard ? (
+									<LeaderboardPage onBackToGame={navigateToGame} />
 								) : (
 									<div className="flex-container">
 										<div className="flex-header">
@@ -88,6 +102,13 @@ function App() {
 											</div>
 											<h1>FROST MAMMOTH</h1>
 											<div className="flex-header-wallet">
+												<div>
+													<button 
+														onClick={navigateToLeaderboard}
+													>
+														Leaderboard
+													</button>
+												</div>
 												<ModalToSendEth />
 												<WalletMultiButton />
 											</div>

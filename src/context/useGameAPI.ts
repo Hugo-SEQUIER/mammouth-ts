@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { getCurrentPrice, createGameState, getGameState, updateGameState } from '../api';
+import { getCurrentPrice, createGameState, getGameState, updateGameState, getLeaderboard } from '../api';
 import { GameState } from '../interface';
 import { usePublicKey } from './publicKeyContext';
 // Adresse publique en dur pour le moment
@@ -87,10 +87,26 @@ export const useGameAPI = () => {
         return false;
     }, [publicKey]);
 
+    // Récupérer le classement des joueurs
+    const fetchLeaderboard = useCallback(async () => {
+        try {
+            const result = await getLeaderboard();
+            console.log("fetchLeaderboard result", result);
+            if (result.state === 'success') {
+                return result.response;
+            }
+            throw new Error('Failed to fetch leaderboard');
+        } catch (error) {
+            console.error('Error fetching leaderboard:', error);
+            return null;
+        }
+    }, []);
+
     return {
         fetchCurrentPrice,
         initializeGameState,
         loadGameState,
-        saveGameState
+        saveGameState,
+        fetchLeaderboard
     };
 };
