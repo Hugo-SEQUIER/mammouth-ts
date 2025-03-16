@@ -232,10 +232,47 @@ const updateDatabaseData = async (request, reply) => {
     };
 }
 
+const bonusInvariant = async () => {
+    const invariantResult = await fetch("https://points.invariant.app/api/eclipse-mainnet/total/null?size=3000")
+    const invariantData = await invariantResult.json();
+    for (const user of invariantData.leaderboard) {
+        try {
+            const { data, error } = await supabase
+                .from('game_states')
+                .select('state')
+                .eq('user_public_key', user.address)
+                .single();
+            
+            if (error) {
+                continue;
+            }
+            
+            if (data) {
+                // Add 150 ice to the user's game state
+                const updatedState = { ...data.state };
+                updatedState.basicInfo.ice += 150;
+                
+                // Update the user's game state in the database
+                const { updateError } = await supabase
+                    .from('game_states')
+                    .update({ state: updatedState })
+                    .eq('user_public_key', user.address);
+                
+                if (updateError) {
+                    databaseLogger.error(`Error updating game state for user ${user.address}: ${updateError.message}`);
+                }
+            }
+        } catch (error) {
+            databaseLogger.error(`Error processing game state for user ${user.address}: ${error.message}`);
+        }
+    }
+}
+
 module.exports = {
     getDatabaseData,
     updateDatabaseData,
     createGameState,
-    getLeaderboard
+    getLeaderboard,
+    bonusInvariant
 }
 

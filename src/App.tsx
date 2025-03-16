@@ -97,7 +97,7 @@ function App() {
 												</div>
 												<div>
 													<img src="./images/discord_CM.png" alt="Discord" />
-													<a href="https://discord.gg/hNd72TezbN" className="nav-link" target="_blank" rel="noopener noreferrer">Discord</a>
+													<a href="https://discord.gg/vXySeEQVqW" className="nav-link" target="_blank" rel="noopener noreferrer">Discord</a>
 												</div>
 											</div>
 											<h1>FROST MAMMOTH</h1>

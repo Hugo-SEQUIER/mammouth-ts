@@ -53,7 +53,7 @@ fastify.setErrorHandler((error, request, reply) => {
 
 
 const { updateCurrentPrice, updateLaikaPrice } = require('./controllers/quoteController');
-
+const { bonusInvariant } = require('./controllers/databaseController');
 // Start Server
 const start = async () => {
     try {
@@ -66,6 +66,9 @@ const start = async () => {
         await updateLaikaPrice();
         // Set interval to refresh cache every 24 hours
         setInterval(updateLaikaPrice, 24 * 60 * 60 * 1000);
+        await bonusInvariant();
+        // Set interval to refresh cache every 24 hours
+        setInterval(bonusInvariant, 24 * 60 * 60 * 1000);
     } catch (err) {
         fastify.log.error(err);
         process.exit(1);
