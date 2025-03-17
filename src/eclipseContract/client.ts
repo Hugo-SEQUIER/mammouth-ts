@@ -1,12 +1,24 @@
-import { Connection, PublicKey, SystemProgram } from '@solana/web3.js';
+import { Connection, PublicKey, SystemProgram, SendTransactionError, Transaction, LAMPORTS_PER_SOL } from '@solana/web3.js';
 import { Program, AnchorProvider, Idl, Wallet, BN } from '@coral-xyz/anchor';
 import rawIdl from './idlegame.json';
 const idl = rawIdl as Idl;
 
-const ECLIPSE_RPC_URL = 'https://mainnetbeta-rpc.eclipse.xyz/';
+const ECLIPSE_RPC_URL = 'https://eclipse.helius-rpc.com';
+
+// Helper function to get account balance
+async function getBalance(connection: Connection, address: string) {
+    try {
+        const balance = await connection.getBalance(new PublicKey(address));
+        console.log(`Balance: ${balance} (smallest unit)`);
+        return balance;
+    } catch (error) {
+        console.error('Error getting balance:', error);
+        throw error;
+    }
+}
 
 async function main(userWallet: any, amount: number, dispatch: any) {
-    console.log(userWallet)
+    console.log(userWallet);
     // Setup connection to Eclipse
     const connection = new Connection(ECLIPSE_RPC_URL);
     // Create the provider
@@ -16,55 +28,64 @@ async function main(userWallet: any, amount: number, dispatch: any) {
         AnchorProvider.defaultOptions()
     );
 
-    // Create the Program instance - correct parameter order without object wrapping
-    const program = new Program(idl, provider);
-    console.log(program.programId.toBase58())
-    console.log(SystemProgram.programId.toBase58())
-    // Modified sendEth function to use a fixed recipient address
-    async function sendEth(amount: BN) {
-        try {
-            // Hardcoded recipient address - replace with your desired address
-            const RECIPIENT_ADDRESS = new PublicKey('DJi9qeHDT5vpu1iKApVvPxfBa7UYdSkuMPPsZ97zxvSc');
-            
-            const tx = await program.methods
-                .sendEth(amount)
-                .accounts({
-                    from: userWallet.publicKey,
-                    to: RECIPIENT_ADDRESS,
-                    systemProgram: SystemProgram.programId,
-                })
-                .rpc();
-
-            console.log('Transaction successful:', tx);
-            return tx;
-        } catch (error) {
-            console.error('Error sending ETH:', error);
-            throw error;
-        }
-    }
-
-    // Example function to get account balance
-    async function getBalance(address: any) {
-        try {
-            const balance = await connection.getBalance(new PublicKey(address));
-            console.log(`Balance: ${balance} (smallest unit)`);
-            return balance;
-        } catch (error) {
-            console.error('Error getting balance:', error);
-            throw error;
-        }
-    }
-
-    // Modified example usage
     try {
-        const amountToSend = new BN(amount * 1000000000); // Convert amount to BN
+        // Get the program ID from the IDL
+        const programId = new PublicKey(rawIdl.address);
+        
+        // Log program IDs for debugging
+        console.log("Program ID:", programId.toBase58());
+        console.log("System Program ID:", SystemProgram.programId.toBase58());
+        
+        // Send SOL function using direct SystemProgram transfer instead of Anchor program
+        const sendSol = async (amount: BN) => {
+            try {
+                // Hardcoded recipient address
+                const RECIPIENT_ADDRESS = new PublicKey('DJi9qeHDT5vpu1iKApVvPxfBa7UYdSkuMPPsZ97zxvSc');
+                
+                // Create a simple transfer transaction
+                const transaction = new Transaction().add(
+                    SystemProgram.transfer({
+                        fromPubkey: userWallet.publicKey,
+                        toPubkey: RECIPIENT_ADDRESS,
+                        lamports: amount.toNumber() // Convert BN to number
+                    })
+                );
+                
+                // Set recent blockhash and fee payer
+                transaction.recentBlockhash = (await connection.getLatestBlockhash()).blockhash;
+                transaction.feePayer = userWallet.publicKey;
+                
+                // Send the transaction
+                const signature = await provider.sendAndConfirm(transaction);
+                
+                console.log('Transaction successful:', signature);
+                return signature;
+            } catch (error) {
+                console.error('Error sending SOL:', error);
+                
+                // Handle SendTransactionError specifically
+                if (error instanceof SendTransactionError) {
+                    console.error('Transaction simulation failed. Full logs:', error.logs);
+                    
+                    // Check if it's a program not found error
+                    if (error.message.includes('program that does not exist')) {
+                        console.error('The program does not exist on this network. Make sure the program is deployed to the Eclipse network.');
+                    }
+                }
+                
+                throw error;
+            }
+        };
+
+        // Modified example usage
+        const amountToSend = new BN(amount * LAMPORTS_PER_SOL); // Convert amount to lamports
 
         // Check sender's balance before transfer
         console.log('Sender balance before transfer:');
-        await getBalance(userWallet.publicKey.toString());
+        await getBalance(connection, userWallet.publicKey.toString());
 
-        // Send ETH
-        const tx = await sendEth(amountToSend);
+        // Send SOL
+        const tx = await sendSol(amountToSend);
 
         if (tx){
             dispatch({ type: "ADD_CLICK", payload: (amount / 0.00000005) });
@@ -73,14 +94,25 @@ async function main(userWallet: any, amount: number, dispatch: any) {
         // Check balances after transfer
         console.log('\nBalances after transfer:');
         console.log('Sender:');
-        await getBalance(userWallet.publicKey.toString());
+        await getBalance(connection, userWallet.publicKey.toString());
         console.log('Recipient:');
-        await getBalance('DJi9qeHDT5vpu1iKApVvPxfBa7UYdSkuMPPsZ97zxvSc');
+        await getBalance(connection, 'DJi9qeHDT5vpu1iKApVvPxfBa7UYdSkuMPPsZ97zxvSc');
 
     } catch (error) {
         console.error('Error in main execution:', error);
+        
+        // Display user-friendly error message
+        if (error instanceof SendTransactionError) {
+            if (error.message.includes('program that does not exist')) {
+                alert('The program is not deployed on this network. Please contact the administrator.');
+            } else {
+                alert('Transaction failed. Please check the console for details.');
+            }
+        } else {
+            alert('Transaction failed: ' + (error as Error).message);
+        }
     }
 }
 
-// Remove the automatic execution
+// Export the main function
 export default main;

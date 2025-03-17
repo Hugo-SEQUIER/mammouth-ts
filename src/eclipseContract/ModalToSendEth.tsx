@@ -2,14 +2,20 @@ import React, { useState } from "react";
 import { useWallet } from "@solana/wallet-adapter-react";
 import client from "./client";
 import { useGaming } from "../context/GamingContext";
+
 export default function ModalToSendEth() {
     const { wallet } = useWallet();
     const [isOpen, setIsOpen] = useState(false);
     const [clickAmount, setClickAmount] = useState("0");
-    const ethRequired = parseInt(clickAmount) * 0.00000005; // Example rate: 0.001 ETH per click
+    const solRequired = parseInt(clickAmount) * 0.00000005; // Example rate: 0.00000005 SOL per click
     const { dispatch } = useGaming();
-    const handleSendEth = async () => {
-        await client(wallet?.adapter as any, parseInt(clickAmount)* 0.00000005, dispatch);
+    
+    const handleSendSol = async () => {
+        try {
+            await client(wallet?.adapter as any, parseInt(clickAmount) * 0.00000005, dispatch);
+        } catch (error) {
+            console.error("Error sending SOL:", error);
+        }
     }
 
     return (
@@ -37,7 +43,7 @@ export default function ModalToSendEth() {
 
                         <div>
                             <p>
-                                ETH Required: {ethRequired ? ethRequired.toFixed(8) : "0"} ETH
+                                SOL Required: {solRequired ? solRequired.toFixed(8) : "0"} SOL
                             </p>
                         </div>
 
@@ -49,7 +55,7 @@ export default function ModalToSendEth() {
                             </button>
                             <button
                                 onClick={async () => {
-                                    await handleSendEth();
+                                    await handleSendSol();
                                     setIsOpen(false);
                                 }}
                             >
