@@ -678,6 +678,50 @@ const gameReducer = (state: GameState, action: any): GameState => {
 					cashFlow: state.company.cashFlow + (action.payload * state.investment.ethereum.actualPrice * bonus)
 				}
 			};
+			case "BUY_LAIKA":
+				if (action.payload < 0){
+					return state;
+				}
+				let currentTotalValueLaika= state.investment.laika.amount * state.investment.laika.avgBuyPrice;
+				let newPurchaseValueLaika = action.payload * state.investment.laika.actualPrice;
+				let newTotalAmountLaika = state.investment.laika.amount + action.payload;
+				let newAvgPriceLaika = (currentTotalValueLaika + newPurchaseValueLaika) / newTotalAmountEthereum;
+				return {
+					...state,
+					investment: {
+						...state.investment,
+						laika: {
+							...state.investment.laika,
+								amount: newTotalAmountLaika,
+								avgBuyPrice: newAvgPriceLaika
+						},
+					},
+					company: {
+						...state.company,
+						cashFlow: state.company.cashFlow - newPurchaseValueLaika
+					}
+				};
+			case "SELL_LAIKA":
+				if (action.payload < 0){
+					return state;
+				}
+				// if (checkTechnologyDone("Trading Algorithms", state)){
+				// 	bonus = 1.2;
+				// }
+				return {
+					...state,
+					investment: {
+						...state.investment,
+						laika: {
+							...state.investment.laika,
+							amount: state.investment.laika.amount - action.payload,
+						},
+					},
+					company: {
+						...state.company,
+						cashFlow: state.company.cashFlow + (action.payload * state.investment.laika.actualPrice * bonus)
+					}
+				};
 		case "BUY_spy":
 			if (action.payload < 0){
 				return state;
