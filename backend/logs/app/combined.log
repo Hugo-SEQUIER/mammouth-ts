@@ -3539,3 +3539,407 @@
 {"level":"error","message":"Error fetching game state for user GXmJswRBHheDNdoNqXyVRJHU5gZ99G8ToYJysxcN9ovE: JSON object requested, multiple (or no) rows returned","tag":"database","timestamp":"2025-03-16T10:30:50.063Z"}
 {"level":"error","message":"Error fetching game state for user CLF5HZ3XKWn5wJgw8ARcLaskbPRNyxgJk4npckimfhHA: JSON object requested, multiple (or no) rows returned","tag":"database","timestamp":"2025-03-16T10:30:50.091Z"}
 {"level":"error","message":"Error fetching game state for user GEKWLXuDZGrkgKxnk855529kfRC2wVTL5UCPo5JN4ZDB: JSON object requested, multiple (or no) rows returned","tag":"database","timestamp":"2025-03-16T10:30:50.121Z"}
+{"level":"info","message":"Quote for SPY: 561.02","tag":"quote","timestamp":"2025-03-19T12:42:51.773Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 83587.99","tag":"quote","timestamp":"2025-03-19T12:42:51.775Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 1996.99","tag":"quote","timestamp":"2025-03-19T12:42:51.775Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2002.55","tag":"quote","timestamp":"2025-03-19T12:47:23.008Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 83695.51","tag":"quote","timestamp":"2025-03-19T12:47:23.011Z"}
+{"level":"info","message":"Quote for SPY: 561.02","tag":"quote","timestamp":"2025-03-19T12:47:23.012Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 1999.91","tag":"quote","timestamp":"2025-03-19T12:49:13.577Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 83597.66","tag":"quote","timestamp":"2025-03-19T12:49:13.579Z"}
+{"level":"info","message":"Quote for SPY: 561.02","tag":"quote","timestamp":"2025-03-19T12:49:13.579Z"}
+{"level":"error","message":"Error fetching leaderboard: Cannot read properties of undefined (reading 'state')","tag":"database","timestamp":"2025-03-19T12:49:19.054Z"}
+{"level":"error","message":"Error fetching leaderboard: Cannot read properties of undefined (reading 'state')","tag":"database","timestamp":"2025-03-19T12:49:19.056Z"}
+{"level":"error","message":"Error fetching leaderboard: Cannot read properties of undefined (reading 'state')","tag":"database","timestamp":"2025-03-19T12:49:20.179Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 83596.43","tag":"quote","timestamp":"2025-03-19T12:49:51.950Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 1999.92","tag":"quote","timestamp":"2025-03-19T12:49:51.952Z"}
+{"level":"info","message":"Quote for SPY: 561.02","tag":"quote","timestamp":"2025-03-19T12:49:51.957Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2000.09","tag":"quote","timestamp":"2025-03-19T12:50:12.272Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 83599.87","tag":"quote","timestamp":"2025-03-19T12:50:12.274Z"}
+{"level":"info","message":"Quote for SPY: 561.02","tag":"quote","timestamp":"2025-03-19T12:50:12.301Z"}
+{"level":"info","message":"Quote for SPY: 561.02","tag":"quote","timestamp":"2025-03-19T12:50:50.675Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 83627.05","tag":"quote","timestamp":"2025-03-19T12:50:50.687Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 1999.25","tag":"quote","timestamp":"2025-03-19T12:50:50.697Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 83603.13","tag":"quote","timestamp":"2025-03-19T12:55:51.038Z"}
+{"level":"info","message":"Quote for SPY: 561.02","tag":"quote","timestamp":"2025-03-19T12:55:51.051Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2002.02","tag":"quote","timestamp":"2025-03-19T12:55:51.073Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2003.65","tag":"quote","timestamp":"2025-03-19T13:00:51.035Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 83770.17","tag":"quote","timestamp":"2025-03-19T13:00:51.036Z"}
+{"level":"info","message":"Quote for SPY: 561.02","tag":"quote","timestamp":"2025-03-19T13:00:51.061Z"}
+{"level":"info","message":"Quote for SPY: 561.02","tag":"quote","timestamp":"2025-03-19T13:05:51.030Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2005.51","tag":"quote","timestamp":"2025-03-19T13:05:51.037Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 83896.48","tag":"quote","timestamp":"2025-03-19T13:05:51.063Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 83703.25","tag":"quote","timestamp":"2025-03-19T13:36:43.957Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2009.09","tag":"quote","timestamp":"2025-03-19T13:36:43.961Z"}
+{"level":"info","message":"Quote for SPY: 562.62","tag":"quote","timestamp":"2025-03-19T13:36:43.971Z"}
+{"level":"info","message":"Quote for SPY: 562.64","tag":"quote","timestamp":"2025-03-19T13:41:44.660Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 83959.71","tag":"quote","timestamp":"2025-03-19T13:41:44.666Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2014.86","tag":"quote","timestamp":"2025-03-19T13:41:44.669Z"}
+{"level":"info","message":"Quote for SPY: 562.13","tag":"quote","timestamp":"2025-03-19T13:46:44.625Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2015.57","tag":"quote","timestamp":"2025-03-19T13:46:44.632Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84053.19","tag":"quote","timestamp":"2025-03-19T13:46:44.637Z"}
+{"level":"info","message":"Quote for SPY: 563.05","tag":"quote","timestamp":"2025-03-19T13:51:44.639Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84161.93","tag":"quote","timestamp":"2025-03-19T13:51:44.639Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2016.71","tag":"quote","timestamp":"2025-03-19T13:51:44.640Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2018.14","tag":"quote","timestamp":"2025-03-19T13:56:44.665Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84278.61","tag":"quote","timestamp":"2025-03-19T13:56:44.665Z"}
+{"level":"info","message":"Quote for SPY: 564.34","tag":"quote","timestamp":"2025-03-19T13:56:44.669Z"}
+{"level":"info","message":"Transaction successful: 4tfWAb7wyGYSERmBXNAStMrSDoNBzwsQXn4R4FVVXfERFtPhsDkm1hTx2hTQVQP6spVT6RfQDDkBzAzHLeBQCrzC","tag":"contract","timestamp":"2025-03-19T13:57:02.103Z"}
+{"level":"info","message":"Transaction successful: 2yCrJRgGCyS3AAzYHkZpbAHhfxkgHoLxUfh9MveyaPLvmaVewqLiz22rfZNa3RbX9ssTSyLfMTFsXTrzG9XuhtEn","tag":"contract","timestamp":"2025-03-19T13:57:06.672Z"}
+{"level":"info","message":"Transaction successful: 2muPVKQgdrucENewWgc1PSBxPn3foMe9FhyBXXM1XCHKSN4Wv3m4PN7szLZf8vMQG9YE1yD9ewTftCnHR2umLfKZ","tag":"contract","timestamp":"2025-03-19T13:57:07.175Z"}
+{"level":"info","message":"Transaction successful: 5FXJXT8hjMyoVC8yi491EnAqZJsmdYdxrqBGtKqfKpwyKTyawUjYECe9XiKNLuFL89vZN8noqKcPaxhoE92EC4TP","tag":"contract","timestamp":"2025-03-19T13:57:07.679Z"}
+{"level":"info","message":"Transaction successful: 5FXJXT8hjMyoVC8yi491EnAqZJsmdYdxrqBGtKqfKpwyKTyawUjYECe9XiKNLuFL89vZN8noqKcPaxhoE92EC4TP","tag":"contract","timestamp":"2025-03-19T13:57:07.680Z"}
+{"level":"info","message":"Transaction successful: 5nzTEXiidzCsRf14SWzigFjxgfE3qkcvX8J5bfpyAz2fY2eKuRXUv33hdhTtwnRYgKVahQa7DwYrwbccx72wZ2JF","tag":"contract","timestamp":"2025-03-19T13:57:07.680Z"}
+{"level":"info","message":"Transaction successful: 3UuXMSiGGihJKg6V5bJA2n7ksY37uqzSZQ1azV5FFUpL5XSpfR6FsXcjMD1YCgap9XAag65Rqm1ptPALUFqHGyWz","tag":"contract","timestamp":"2025-03-19T13:57:08.714Z"}
+{"level":"info","message":"Transaction successful: 3UuXMSiGGihJKg6V5bJA2n7ksY37uqzSZQ1azV5FFUpL5XSpfR6FsXcjMD1YCgap9XAag65Rqm1ptPALUFqHGyWz","tag":"contract","timestamp":"2025-03-19T13:57:08.715Z"}
+{"level":"info","message":"Transaction successful: 23o9yN35EUn6RKXraaYjRykmHLxicRMCRnLiGS3TvkGBUwUTgVemGT5qjKkCGQUYVWpJBrgNVDkugJ6BgxgRNBAp","tag":"contract","timestamp":"2025-03-19T13:57:13.840Z"}
+{"level":"info","message":"Transaction successful: 4uR3GDFMNBusmMynbY7vxp8EZeHMtayK3Kbqz8XZbDP69rwLx1zjQwkZzWJByr5xVhmL4MLGqu3K3QEbGJMgxTmc","tag":"contract","timestamp":"2025-03-19T13:57:14.079Z"}
+{"level":"info","message":"Transaction successful: D4hscGXtK4vboF4SBG3Wis6o29aXeyk5SH6MvWMgEzSNbiB3rPReTJcsjRKHaqRKAepHHY1YBW6BznnHAdcLA4i","tag":"contract","timestamp":"2025-03-19T13:57:14.428Z"}
+{"level":"info","message":"Transaction successful: HEUciNWPkYkseC69KvsvGNCsS5bJH51yD9aBgeUUyLbecwg22paNz24CioB5JErA4LyF9qSwcaFQSY64nmu3FAx","tag":"contract","timestamp":"2025-03-19T13:57:14.931Z"}
+{"level":"info","message":"Transaction successful: 5EBPeEha4cJ3Jq2zrePsuJJbzQckZdLmFRPxSE7DDe1ZWMyp9rw5jNL32Tkc2nVFMQSJq9q92TUV5rvpdM5yU3Vx","tag":"contract","timestamp":"2025-03-19T13:57:14.932Z"}
+{"level":"info","message":"Transaction successful: HEUciNWPkYkseC69KvsvGNCsS5bJH51yD9aBgeUUyLbecwg22paNz24CioB5JErA4LyF9qSwcaFQSY64nmu3FAx","tag":"contract","timestamp":"2025-03-19T13:57:14.933Z"}
+{"level":"info","message":"Transaction successful: dU8Cp733wSz2fzPAkBrZdaj7VzndUNE74EQBn9vmAAvheg5zsmrJG8i1yH1XP85fLXqEEt6e5BRVoGKMrfTonDp","tag":"contract","timestamp":"2025-03-19T13:57:15.889Z"}
+{"level":"info","message":"Transaction successful: dU8Cp733wSz2fzPAkBrZdaj7VzndUNE74EQBn9vmAAvheg5zsmrJG8i1yH1XP85fLXqEEt6e5BRVoGKMrfTonDp","tag":"contract","timestamp":"2025-03-19T13:57:15.890Z"}
+{"level":"info","message":"Transaction successful: 3beUCBvN8dwzUBMVqaAepT49y48wjRi3vQntm7eJXi6CnKJN8NfrhPVz7nGe54ZKZ79XC4D8z7i1XHwro9AFS9VZ","tag":"contract","timestamp":"2025-03-19T13:57:29.604Z"}
+{"level":"info","message":"Transaction successful: 5pYcn8L4bC4yC5SsEsUqdsZEx7LrzRfbaqh8d3wstzTvvRqZdKDbPhJnNasPyBRjHgBwcacLEmJaNEz7b4MX9Ch7","tag":"contract","timestamp":"2025-03-19T13:57:30.108Z"}
+{"level":"info","message":"Transaction successful: UgMRD2mg7tN2xULEGjFhMhC89ACxXnjgX7FQw2k9NFRTwo1tJSzHM3HVUcRZbcbwhrdptyxPpJWJzGPbTzjFBji","tag":"contract","timestamp":"2025-03-19T13:57:30.411Z"}
+{"level":"info","message":"Transaction successful: 4GXZHxEyjjq9wm4qcyqnNLco7cNz2TTx3AujDQcWRyxWfqWxn638FmzSm356Lc6na3yJNrkGA82ctZq6bNqEGcWZ","tag":"contract","timestamp":"2025-03-19T13:57:30.914Z"}
+{"level":"info","message":"Transaction successful: 4wbD86n7BwtwpQJo2dTYSijPSjUARCc5WtAT8Ssyv4sksZJzesodaUh1a9B5hwuWSjn7VbGe7CbnjtJWvKRqoyuk","tag":"contract","timestamp":"2025-03-19T13:57:30.915Z"}
+{"level":"info","message":"Transaction successful: 4GXZHxEyjjq9wm4qcyqnNLco7cNz2TTx3AujDQcWRyxWfqWxn638FmzSm356Lc6na3yJNrkGA82ctZq6bNqEGcWZ","tag":"contract","timestamp":"2025-03-19T13:57:30.916Z"}
+{"level":"info","message":"Transaction successful: 4GXZHxEyjjq9wm4qcyqnNLco7cNz2TTx3AujDQcWRyxWfqWxn638FmzSm356Lc6na3yJNrkGA82ctZq6bNqEGcWZ","tag":"contract","timestamp":"2025-03-19T13:57:30.916Z"}
+{"level":"info","message":"Transaction successful: 4wbD86n7BwtwpQJo2dTYSijPSjUARCc5WtAT8Ssyv4sksZJzesodaUh1a9B5hwuWSjn7VbGe7CbnjtJWvKRqoyuk","tag":"contract","timestamp":"2025-03-19T13:57:30.916Z"}
+{"level":"info","message":"Transaction successful: 5iWhfJXbmGr5gRtzaq4NQsJMn12ZdJCwwRtTmrWTYvP5yfEarSPj1W3RDRhgB9ECiCSRSxM7reH8SdbErwRBLpHn","tag":"contract","timestamp":"2025-03-19T13:57:30.917Z"}
+{"level":"info","message":"Transaction successful: 2nvtwYLLgcDomTA1s3aouBrfPZWQT9mZxqr4JJt7TtNHn9s7y7KGrqQARn3b8VXXpxffKZ6umKFdRrLjd5xoVGQF","tag":"contract","timestamp":"2025-03-19T13:57:31.146Z"}
+{"level":"info","message":"Quote for SPY: 564.18","tag":"quote","timestamp":"2025-03-19T14:01:44.665Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84271.52","tag":"quote","timestamp":"2025-03-19T14:01:44.676Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2021.09","tag":"quote","timestamp":"2025-03-19T14:01:44.684Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84308.67","tag":"quote","timestamp":"2025-03-19T14:06:44.673Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2021.6","tag":"quote","timestamp":"2025-03-19T14:06:44.673Z"}
+{"level":"info","message":"Quote for SPY: 564.715","tag":"quote","timestamp":"2025-03-19T14:06:44.679Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84224.37","tag":"quote","timestamp":"2025-03-19T14:09:14.254Z"}
+{"level":"info","message":"Quote for SPY: 564.91","tag":"quote","timestamp":"2025-03-19T14:09:14.257Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2027.12","tag":"quote","timestamp":"2025-03-19T14:09:14.259Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84210.78","tag":"quote","timestamp":"2025-03-19T14:11:39.732Z"}
+{"level":"info","message":"Quote for SPY: 565.19","tag":"quote","timestamp":"2025-03-19T14:11:39.734Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2029.91","tag":"quote","timestamp":"2025-03-19T14:11:39.738Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2031.69","tag":"quote","timestamp":"2025-03-19T14:13:23.510Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84168","tag":"quote","timestamp":"2025-03-19T14:13:23.512Z"}
+{"level":"info","message":"Quote for SPY: 564.8","tag":"quote","timestamp":"2025-03-19T14:13:23.513Z"}
+{"level":"info","message":"Quote for SPY: 564.9034","tag":"quote","timestamp":"2025-03-19T14:15:14.446Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2027.06","tag":"quote","timestamp":"2025-03-19T14:15:14.459Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84136","tag":"quote","timestamp":"2025-03-19T14:15:14.469Z"}
+{"level":"info","message":"Quote for SPY: 564.955","tag":"quote","timestamp":"2025-03-19T14:26:07.550Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2026.78","tag":"quote","timestamp":"2025-03-19T14:26:07.552Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84141.21","tag":"quote","timestamp":"2025-03-19T14:26:07.571Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84033.99","tag":"quote","timestamp":"2025-03-19T14:29:25.093Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2025","tag":"quote","timestamp":"2025-03-19T14:29:25.094Z"}
+{"level":"info","message":"Quote for SPY: 564.79","tag":"quote","timestamp":"2025-03-19T14:29:25.095Z"}
+{"level":"info","message":"Transaction successful: 3yTn3J1wRm32YgjND1J43NYJRb2iN4jvNWRcCA9bUPAzX9JVZbaBhYHqRgLSTe1D3kTzKbHR5gb8d5zFQKBJNGdp","tag":"contract","timestamp":"2025-03-19T14:30:06.743Z"}
+{"level":"info","message":"Transaction successful: 3yTn3J1wRm32YgjND1J43NYJRb2iN4jvNWRcCA9bUPAzX9JVZbaBhYHqRgLSTe1D3kTzKbHR5gb8d5zFQKBJNGdp","tag":"contract","timestamp":"2025-03-19T14:30:06.744Z"}
+{"level":"info","message":"Transaction successful: 28vfkkDUGpheugWJsuxLx65bgf9pcKFgisSJnc2YGT5bzWLraUMP2SGBbRCEu6hrvn4VozezY8cZBa8BQKx1HEBJ","tag":"contract","timestamp":"2025-03-19T14:30:06.753Z"}
+{"level":"info","message":"Transaction successful: 5QjvHxHnAjAtgB3aFHy6oUJopCAucRjXeArL5ZHhpHhtS4fkUYo6zmc8hTJn3w1xB4ihN7PJTw5qPW2KYuvya88f","tag":"contract","timestamp":"2025-03-19T14:30:07.105Z"}
+{"level":"info","message":"Transaction successful: 5QjvHxHnAjAtgB3aFHy6oUJopCAucRjXeArL5ZHhpHhtS4fkUYo6zmc8hTJn3w1xB4ihN7PJTw5qPW2KYuvya88f","tag":"contract","timestamp":"2025-03-19T14:30:07.106Z"}
+{"level":"info","message":"Transaction successful: 5QjvHxHnAjAtgB3aFHy6oUJopCAucRjXeArL5ZHhpHhtS4fkUYo6zmc8hTJn3w1xB4ihN7PJTw5qPW2KYuvya88f","tag":"contract","timestamp":"2025-03-19T14:30:07.254Z"}
+{"level":"info","message":"Transaction successful: 2i7qxABJc6tFf8R791oxXH2pB6gpn156DV34iySqiFeyEHivKh4beVY8Dtoj944FLvyVqYDghPHJxvLAsREV7XzS","tag":"contract","timestamp":"2025-03-19T14:30:07.464Z"}
+{"level":"info","message":"Transaction successful: 2i7qxABJc6tFf8R791oxXH2pB6gpn156DV34iySqiFeyEHivKh4beVY8Dtoj944FLvyVqYDghPHJxvLAsREV7XzS","tag":"contract","timestamp":"2025-03-19T14:30:07.605Z"}
+{"level":"info","message":"Transaction successful: 4htD6kZbTjU98SuQzDUvURhdsHn5Z61h7hifKzh7qaM81DSGedtY7PkEgcHG3vkodRmgLtqTM9zeiatTPzZkBu6K","tag":"contract","timestamp":"2025-03-19T14:30:07.823Z"}
+{"level":"info","message":"Transaction successful: 4htD6kZbTjU98SuQzDUvURhdsHn5Z61h7hifKzh7qaM81DSGedtY7PkEgcHG3vkodRmgLtqTM9zeiatTPzZkBu6K","tag":"contract","timestamp":"2025-03-19T14:30:07.969Z"}
+{"level":"info","message":"Transaction successful: 2zxSuhsLbe18NGJwnhrMzi3uc2gGcdWbNBuRLLUU7Sqkm38gLKvtrwuxDizGq9fWuz6QMrnKvyenzWido3jX6R6T","tag":"contract","timestamp":"2025-03-19T14:30:08.165Z"}
+{"level":"info","message":"Transaction successful: 2zxSuhsLbe18NGJwnhrMzi3uc2gGcdWbNBuRLLUU7Sqkm38gLKvtrwuxDizGq9fWuz6QMrnKvyenzWido3jX6R6T","tag":"contract","timestamp":"2025-03-19T14:30:08.348Z"}
+{"level":"info","message":"Transaction successful: JSUeGiRfv12FuCcA1QtfhSvZA2FgCHYQuBq3XbTZLB2oFGwjotMcrEbBWN1mvGD4MKqWNRLXj8DnTpAqhcxpBJR","tag":"contract","timestamp":"2025-03-19T14:30:08.513Z"}
+{"level":"info","message":"Transaction successful: JSUeGiRfv12FuCcA1QtfhSvZA2FgCHYQuBq3XbTZLB2oFGwjotMcrEbBWN1mvGD4MKqWNRLXj8DnTpAqhcxpBJR","tag":"contract","timestamp":"2025-03-19T14:30:08.514Z"}
+{"level":"info","message":"Transaction successful: 5zpkY61qxSaVHYQQVf9FWn2ZC5dyRBkLTQo4KbTYSR6HteZX4CvtbFE4HNkiG9jgzMtu8euWH6QWBFqeAdKKzwp5","tag":"contract","timestamp":"2025-03-19T14:30:08.514Z"}
+{"level":"info","message":"Transaction successful: 3HbZx1CkoxRGHL9r7Lhm7GDHYDHBHjCkmgksJ3TwLHGV1x8tVatuXmN37qS9EHfpBrsUfYLZ8x1dDV6yRbniZwvw","tag":"contract","timestamp":"2025-03-19T14:30:08.516Z"}
+{"level":"info","message":"Transaction successful: 5SLp51hwaJqNmoAC5878R2CKPj7oaS7vNZ2bydLXgzN8a6XcHCVzrNe2jhoL6bZeWaV7ffgTYEhR1wdJ4aTZfz5g","tag":"contract","timestamp":"2025-03-19T14:30:08.875Z"}
+{"level":"info","message":"Transaction successful: 5SLp51hwaJqNmoAC5878R2CKPj7oaS7vNZ2bydLXgzN8a6XcHCVzrNe2jhoL6bZeWaV7ffgTYEhR1wdJ4aTZfz5g","tag":"contract","timestamp":"2025-03-19T14:30:08.887Z"}
+{"level":"info","message":"Transaction successful: 3Me7iNr71vkCrMQC9fJz58dBrMMjLewJrWBoXo3475yibmeCbEnn3vbsKzMgPYnkhzMptGYUhkDBMMeqfTBLHtFz","tag":"contract","timestamp":"2025-03-19T14:30:09.213Z"}
+{"level":"info","message":"Transaction successful: 3Me7iNr71vkCrMQC9fJz58dBrMMjLewJrWBoXo3475yibmeCbEnn3vbsKzMgPYnkhzMptGYUhkDBMMeqfTBLHtFz","tag":"contract","timestamp":"2025-03-19T14:30:09.339Z"}
+{"level":"info","message":"Transaction successful: 4Eog3Y2Bap9W51fNqkSWGraDTxT9vsHrnpbbqjf462zGZn2LjWyAfCGadMfA4P1ZKoNzTda7UCBFgVziKekWCAU","tag":"contract","timestamp":"2025-03-19T14:30:12.493Z"}
+{"level":"info","message":"Transaction successful: 3K6dk1kS29QBnDYM3zCV1shTjs5engMqNhd51sWjsZQNxQzFvwfrQ398cd3cmMBgHd9RNzWrcH5kvXFioi1D7U6n","tag":"contract","timestamp":"2025-03-19T14:33:04.865Z"}
+{"level":"info","message":"Transaction successful: 3K6dk1kS29QBnDYM3zCV1shTjs5engMqNhd51sWjsZQNxQzFvwfrQ398cd3cmMBgHd9RNzWrcH5kvXFioi1D7U6n","tag":"contract","timestamp":"2025-03-19T14:33:04.866Z"}
+{"level":"info","message":"Transaction successful: 4999Bs1NU8R7Jxk1cGnN43yPasqYHAHEAy8a7ofxNNnHhrvjGWSd7rCtWyxLZSMjqUsHs4DkGBzLSrhjah4jmt9j","tag":"contract","timestamp":"2025-03-19T14:33:05.227Z"}
+{"level":"info","message":"Transaction successful: 4999Bs1NU8R7Jxk1cGnN43yPasqYHAHEAy8a7ofxNNnHhrvjGWSd7rCtWyxLZSMjqUsHs4DkGBzLSrhjah4jmt9j","tag":"contract","timestamp":"2025-03-19T14:33:05.266Z"}
+{"level":"info","message":"Transaction successful: mQeeWGyjNvgW8zhe6JYGzAkijpK4xx4YBn9b9uZnLbrddKP1GwRpmhxFtxWMycUf9cFrkYQ4rscZq8g7mfMgz9Y","tag":"contract","timestamp":"2025-03-19T14:33:05.792Z"}
+{"level":"info","message":"Transaction successful: mQeeWGyjNvgW8zhe6JYGzAkijpK4xx4YBn9b9uZnLbrddKP1GwRpmhxFtxWMycUf9cFrkYQ4rscZq8g7mfMgz9Y","tag":"contract","timestamp":"2025-03-19T14:33:05.794Z"}
+{"level":"info","message":"Transaction successful: 5t8bzw9XpxtPiXoSevWnfuDxpbqWAr75xzPurFPhhxYcUx7ntGPRKhbQBJDET2crjvqgqR2Yw2ScfrVpFQ5GFnnW","tag":"contract","timestamp":"2025-03-19T14:33:07.117Z"}
+{"level":"info","message":"Transaction successful: 5t8bzw9XpxtPiXoSevWnfuDxpbqWAr75xzPurFPhhxYcUx7ntGPRKhbQBJDET2crjvqgqR2Yw2ScfrVpFQ5GFnnW","tag":"contract","timestamp":"2025-03-19T14:33:07.118Z"}
+{"level":"info","message":"Transaction successful: 4Up31b8aof4SpdNk2Va7otetk4y1mA6EETv9BJSaHpjKtGfnZorcgGzcdKksjd3owQVgku7L3SiMNoz2xzkhhk83","tag":"contract","timestamp":"2025-03-19T14:33:41.703Z"}
+{"level":"info","message":"Transaction successful: 5H8n45c528Nz9iyzg8xaoQdkW8ioVwfGdVJFKtybB8VbAkEydmdKnZHjTsiRo45Cy18SHw1FkPDj2YK4kmFeU1nE","tag":"contract","timestamp":"2025-03-19T14:33:41.703Z"}
+{"level":"info","message":"Transaction successful: 5H8n45c528Nz9iyzg8xaoQdkW8ioVwfGdVJFKtybB8VbAkEydmdKnZHjTsiRo45Cy18SHw1FkPDj2YK4kmFeU1nE","tag":"contract","timestamp":"2025-03-19T14:33:41.855Z"}
+{"level":"info","message":"Transaction successful: 28haqDuPB1DCr73tpiw26yr46Vq4jbNPb1ihMUuLRHubEN6tCV3owS4pYGAvABeksXciUmKf6ta6j3SGaZ3Spu5b","tag":"contract","timestamp":"2025-03-19T14:33:42.410Z"}
+{"level":"info","message":"Transaction successful: 441WG5Y4P1P9h4rciSGZPKwBFHj7qXKrQ6HBLdQgnauFuYD8kgYzEPJY9rfPwwu7QmqkkAaCSZrMmeGdzoSdmjdw","tag":"contract","timestamp":"2025-03-19T14:33:42.485Z"}
+{"level":"info","message":"Transaction successful: 63YdGbqvnuQEiaLjrTuSyQsDipH1QpT1XWVhPecbFypfjLLcDh1Bxkbq8iC3PQyCBPE6cr7hpfGHiiuE5RjjueNB","tag":"contract","timestamp":"2025-03-19T14:33:42.796Z"}
+{"level":"info","message":"Transaction successful: 5TmzJE2HVaR1Z51gVjP8hFDfwpDUBNUcEYPhKnAk7cMJvyGR3jiCruKnVAYss1ZRNZVzUQhF3GttWxKV2V9vvFm6","tag":"contract","timestamp":"2025-03-19T14:33:43.464Z"}
+{"level":"info","message":"Transaction successful: 59iAz2PKFcnb4u8uMwpkPn7kL75BSZVUtKVNqfYssrENYVQAUD1YCY2i1NRSDEEctWBTv1ekQHFgwjy3JA2dpHyV","tag":"contract","timestamp":"2025-03-19T14:33:43.531Z"}
+{"level":"info","message":"Transaction successful: 3h4NRMyFGxWoYQpNDQDnJiufZikCsm9CnnNJ6qmXDZtJdZHcyJJhja9w58oT6BfRgCkRqc2cGJ2psbMecq6JXyDA","tag":"contract","timestamp":"2025-03-19T14:33:43.811Z"}
+{"level":"info","message":"Transaction successful: 3h4NRMyFGxWoYQpNDQDnJiufZikCsm9CnnNJ6qmXDZtJdZHcyJJhja9w58oT6BfRgCkRqc2cGJ2psbMecq6JXyDA","tag":"contract","timestamp":"2025-03-19T14:33:43.964Z"}
+{"level":"info","message":"Transaction successful: 4HjU7855zvfsHJ3nbnvEdRNZLjT2unxcuSqctPEZbyRo8X1GpZATNQhHRJXbhUvANg6kyY5gzkkNuECarUW6SeFC","tag":"contract","timestamp":"2025-03-19T14:33:44.162Z"}
+{"level":"info","message":"Transaction successful: 4HjU7855zvfsHJ3nbnvEdRNZLjT2unxcuSqctPEZbyRo8X1GpZATNQhHRJXbhUvANg6kyY5gzkkNuECarUW6SeFC","tag":"contract","timestamp":"2025-03-19T14:33:44.163Z"}
+{"level":"info","message":"Transaction successful: 2XNtCM5zjw9TDMxEtC6nfRs4NjapwrT8fEpcy4wkBYtEFvQkfGey2w63SpyUDf6h7cMeesWYdruHhR6gmpDX8ust","tag":"contract","timestamp":"2025-03-19T14:33:44.164Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-03-19T14:33:44.187Z"}
+{"level":"info","message":"Transaction successful: 4HjU7855zvfsHJ3nbnvEdRNZLjT2unxcuSqctPEZbyRo8X1GpZATNQhHRJXbhUvANg6kyY5gzkkNuECarUW6SeFC","tag":"contract","timestamp":"2025-03-19T14:33:44.245Z"}
+{"level":"info","message":"Transaction successful: 3zFsntqa4UxN9t7xqaszU55hKnsLoxsvUVYJyqfV4gx3hwAFRG9QvtgAL1MhgS1xwP1EgtVCoTKwPM9sXZfCs1Sb","tag":"contract","timestamp":"2025-03-19T14:33:46.132Z"}
+{"level":"info","message":"Transaction successful: 2Ha4AXhtRW9xPW671NzmaCWQUjgMWe2b1kUSc5Vpjf3ift1frJXmy2RG5V7tuEmQQ4pfm8HTBnxmz8AzUvbfdqUb","tag":"contract","timestamp":"2025-03-19T14:33:47.433Z"}
+{"level":"info","message":"Transaction successful: 2NncP8TPGWr9qFcNStsz1tMCEWri8kWDLEtYAXNHv1euqXyfFp3R7McdizXBTkxChD2XXnLxrV1e4wb7aBxzHkVq","tag":"contract","timestamp":"2025-03-19T14:33:47.433Z"}
+{"level":"info","message":"Transaction successful: 38qM61LD7jyawBxhmV9Z2M7wd5yEEFyq3cnFBaqVWV2kXMgC2pR9GedvuDYPrTn7vBj64LYfz21DGWFeUpY5ymAj","tag":"contract","timestamp":"2025-03-19T14:33:47.434Z"}
+{"level":"info","message":"Transaction successful: 2NncP8TPGWr9qFcNStsz1tMCEWri8kWDLEtYAXNHv1euqXyfFp3R7McdizXBTkxChD2XXnLxrV1e4wb7aBxzHkVq","tag":"contract","timestamp":"2025-03-19T14:33:47.434Z"}
+{"level":"info","message":"Transaction successful: 2NncP8TPGWr9qFcNStsz1tMCEWri8kWDLEtYAXNHv1euqXyfFp3R7McdizXBTkxChD2XXnLxrV1e4wb7aBxzHkVq","tag":"contract","timestamp":"2025-03-19T14:33:47.435Z"}
+{"level":"info","message":"Transaction successful: 3nPiY2TtQBGKWv5vKDtQPKPwYNwDMDTnXCfJPtXXKwxfBj6ee5DT74J5UBpxPbT2vo54CUGYMensgpWqMgsGUqhJ","tag":"contract","timestamp":"2025-03-19T14:33:47.783Z"}
+{"level":"info","message":"Transaction successful: 3nPiY2TtQBGKWv5vKDtQPKPwYNwDMDTnXCfJPtXXKwxfBj6ee5DT74J5UBpxPbT2vo54CUGYMensgpWqMgsGUqhJ","tag":"contract","timestamp":"2025-03-19T14:33:47.787Z"}
+{"level":"info","message":"Transaction successful: 3nPiY2TtQBGKWv5vKDtQPKPwYNwDMDTnXCfJPtXXKwxfBj6ee5DT74J5UBpxPbT2vo54CUGYMensgpWqMgsGUqhJ","tag":"contract","timestamp":"2025-03-19T14:33:47.795Z"}
+{"level":"info","message":"Transaction successful: 3nPiY2TtQBGKWv5vKDtQPKPwYNwDMDTnXCfJPtXXKwxfBj6ee5DT74J5UBpxPbT2vo54CUGYMensgpWqMgsGUqhJ","tag":"contract","timestamp":"2025-03-19T14:33:47.799Z"}
+{"level":"info","message":"Transaction successful: 3nPiY2TtQBGKWv5vKDtQPKPwYNwDMDTnXCfJPtXXKwxfBj6ee5DT74J5UBpxPbT2vo54CUGYMensgpWqMgsGUqhJ","tag":"contract","timestamp":"2025-03-19T14:33:47.804Z"}
+{"level":"info","message":"Transaction successful: 44QGoaFXthCmB1ijSvwYKKHu5coBSBB8jKRFQx8dRu23RmW9iPLmamZT8gdyjapMzzEg3xxPim1pDMsdYmJ4zcDm","tag":"contract","timestamp":"2025-03-19T14:33:48.132Z"}
+{"level":"info","message":"Transaction successful: 44QGoaFXthCmB1ijSvwYKKHu5coBSBB8jKRFQx8dRu23RmW9iPLmamZT8gdyjapMzzEg3xxPim1pDMsdYmJ4zcDm","tag":"contract","timestamp":"2025-03-19T14:33:48.145Z"}
+{"level":"info","message":"Transaction successful: 44QGoaFXthCmB1ijSvwYKKHu5coBSBB8jKRFQx8dRu23RmW9iPLmamZT8gdyjapMzzEg3xxPim1pDMsdYmJ4zcDm","tag":"contract","timestamp":"2025-03-19T14:33:48.260Z"}
+{"level":"info","message":"Transaction successful: 44QGoaFXthCmB1ijSvwYKKHu5coBSBB8jKRFQx8dRu23RmW9iPLmamZT8gdyjapMzzEg3xxPim1pDMsdYmJ4zcDm","tag":"contract","timestamp":"2025-03-19T14:33:48.279Z"}
+{"level":"info","message":"Transaction successful: 44QGoaFXthCmB1ijSvwYKKHu5coBSBB8jKRFQx8dRu23RmW9iPLmamZT8gdyjapMzzEg3xxPim1pDMsdYmJ4zcDm","tag":"contract","timestamp":"2025-03-19T14:33:48.298Z"}
+{"level":"info","message":"Transaction successful: 2ZRfk73TvAahAtXCj9qpuuhvTb6WWd1HzaohdBe5yxdxx9nEVw1YpZBNsgadhqd65RXWGJKbQ7gY37QyLQ1r2U4P","tag":"contract","timestamp":"2025-03-19T14:33:48.498Z"}
+{"level":"info","message":"Transaction successful: 2ZRfk73TvAahAtXCj9qpuuhvTb6WWd1HzaohdBe5yxdxx9nEVw1YpZBNsgadhqd65RXWGJKbQ7gY37QyLQ1r2U4P","tag":"contract","timestamp":"2025-03-19T14:33:48.499Z"}
+{"level":"info","message":"Transaction successful: 2ZRfk73TvAahAtXCj9qpuuhvTb6WWd1HzaohdBe5yxdxx9nEVw1YpZBNsgadhqd65RXWGJKbQ7gY37QyLQ1r2U4P","tag":"contract","timestamp":"2025-03-19T14:33:48.539Z"}
+{"level":"info","message":"Transaction successful: 2ABsgJW8vL5WrYV6tP6HZt39DhPAufBxxPG2QaBmupXJcda4mXpSEWUA1pZNAL3P9vZRxxUJ6VNpuPH29XW4sVsh","tag":"contract","timestamp":"2025-03-19T14:33:49.191Z"}
+{"level":"info","message":"Transaction successful: 51YkCcqjJLASbYSJkk9VGBt25kApgNMK9XA5HC5kNJHXwgbF7REWSrbUViSjwVrNqQ42MfC5zy3UyWEmSp68MKjD","tag":"contract","timestamp":"2025-03-19T14:33:49.541Z"}
+{"level":"info","message":"Transaction successful: 51YkCcqjJLASbYSJkk9VGBt25kApgNMK9XA5HC5kNJHXwgbF7REWSrbUViSjwVrNqQ42MfC5zy3UyWEmSp68MKjD","tag":"contract","timestamp":"2025-03-19T14:33:49.632Z"}
+{"level":"info","message":"Transaction successful: 37KNqGwiehquEZfmu4fHR6oVqWKju1dAa7g6jXLcTi13hjneJrJwqXmip8SQZS75tEQjSvdvKRUAt1fZ7bxBCbcK","tag":"contract","timestamp":"2025-03-19T14:33:49.905Z"}
+{"level":"info","message":"Transaction successful: 37KNqGwiehquEZfmu4fHR6oVqWKju1dAa7g6jXLcTi13hjneJrJwqXmip8SQZS75tEQjSvdvKRUAt1fZ7bxBCbcK","tag":"contract","timestamp":"2025-03-19T14:33:49.997Z"}
+{"level":"info","message":"Transaction successful: 37KNqGwiehquEZfmu4fHR6oVqWKju1dAa7g6jXLcTi13hjneJrJwqXmip8SQZS75tEQjSvdvKRUAt1fZ7bxBCbcK","tag":"contract","timestamp":"2025-03-19T14:33:50.082Z"}
+{"level":"info","message":"Transaction successful: 3igkjQEAuNfDDPLCHeJqmNnZgnPxXPrpcYKZy7Zqn5ALCQZefpMYb1d64p5aQJPHmtht4HrVfKruRZC47RApDuQQ","tag":"contract","timestamp":"2025-03-19T14:33:52.447Z"}
+{"level":"info","message":"Transaction successful: 3igkjQEAuNfDDPLCHeJqmNnZgnPxXPrpcYKZy7Zqn5ALCQZefpMYb1d64p5aQJPHmtht4HrVfKruRZC47RApDuQQ","tag":"contract","timestamp":"2025-03-19T14:33:52.448Z"}
+{"level":"info","message":"Transaction successful: DdmXvsr7KsBSUgNia3b2V3hLVXAQ5dRJ9Ro1hsGrvDxvg1Nj6ZGBRCmWzqKRCyX6XcNmPTDwgEaKMkWWvxYgahg","tag":"contract","timestamp":"2025-03-19T14:33:53.499Z"}
+{"level":"info","message":"Transaction successful: 5VEtF9Df5HzJEcxSGPh3cUXuaozxF8RcyTvAZVvHnkgkdxbUz6CMqfzJCUBRT8nuo3t3hotSpHaXAzz63CD81pfa","tag":"contract","timestamp":"2025-03-19T14:33:53.500Z"}
+{"level":"info","message":"Transaction successful: 5HmbqqPKGgNk8GwB6gLZ17vcJGzs9PkmpT1JmGxtRpExi5H6jtLEBRjLob8wGhneow64XW6orSdsCxnN2SEuqfca","tag":"contract","timestamp":"2025-03-19T14:33:53.500Z"}
+{"level":"info","message":"Transaction successful: DdmXvsr7KsBSUgNia3b2V3hLVXAQ5dRJ9Ro1hsGrvDxvg1Nj6ZGBRCmWzqKRCyX6XcNmPTDwgEaKMkWWvxYgahg","tag":"contract","timestamp":"2025-03-19T14:33:53.501Z"}
+{"level":"info","message":"Transaction successful: 5HmbqqPKGgNk8GwB6gLZ17vcJGzs9PkmpT1JmGxtRpExi5H6jtLEBRjLob8wGhneow64XW6orSdsCxnN2SEuqfca","tag":"contract","timestamp":"2025-03-19T14:33:53.501Z"}
+{"level":"info","message":"Transaction successful: 5VEtF9Df5HzJEcxSGPh3cUXuaozxF8RcyTvAZVvHnkgkdxbUz6CMqfzJCUBRT8nuo3t3hotSpHaXAzz63CD81pfa","tag":"contract","timestamp":"2025-03-19T14:33:53.501Z"}
+{"level":"info","message":"Transaction successful: 3WDaXgL2Gz7UPGuVdgQfsrbD4kTe4cfopPE3PgUFxPchTPCN1k5G4VrJgb4zQGmG6ThDvE5eG1aJSvpaf13wpQ9A","tag":"contract","timestamp":"2025-03-19T14:33:53.897Z"}
+{"level":"info","message":"Transaction successful: 5bWibCz6mHRg6pZPUAt81NgqFopxo9m5M5zxtjuqDfnxfVsVeWBEsUt9TXZFwbah1h2xaGuhqwWaRMRCcpxVn4Kc","tag":"contract","timestamp":"2025-03-19T14:33:53.898Z"}
+{"level":"info","message":"Transaction successful: 5bWibCz6mHRg6pZPUAt81NgqFopxo9m5M5zxtjuqDfnxfVsVeWBEsUt9TXZFwbah1h2xaGuhqwWaRMRCcpxVn4Kc","tag":"contract","timestamp":"2025-03-19T14:33:53.898Z"}
+{"level":"info","message":"Transaction successful: 3WDaXgL2Gz7UPGuVdgQfsrbD4kTe4cfopPE3PgUFxPchTPCN1k5G4VrJgb4zQGmG6ThDvE5eG1aJSvpaf13wpQ9A","tag":"contract","timestamp":"2025-03-19T14:33:53.898Z"}
+{"level":"info","message":"Transaction successful: 5bWibCz6mHRg6pZPUAt81NgqFopxo9m5M5zxtjuqDfnxfVsVeWBEsUt9TXZFwbah1h2xaGuhqwWaRMRCcpxVn4Kc","tag":"contract","timestamp":"2025-03-19T14:33:53.899Z"}
+{"level":"info","message":"Quote for SPY: 564.7174","tag":"quote","timestamp":"2025-03-19T14:34:25.572Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2025.9","tag":"quote","timestamp":"2025-03-19T14:34:25.576Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84031.47","tag":"quote","timestamp":"2025-03-19T14:34:25.580Z"}
+{"level":"info","message":"Transaction successful: 23N4TeavastVD12ifiR6gdde2qqtYika2JPFarPoTvMdTS1Q758cdffTNERW2ztJB2jdGNX2X3W2yN9D6VLfHnVQ","tag":"contract","timestamp":"2025-03-19T14:38:03.611Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2028.58","tag":"quote","timestamp":"2025-03-19T14:39:25.512Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84140.75","tag":"quote","timestamp":"2025-03-19T14:39:25.512Z"}
+{"level":"info","message":"Quote for SPY: 564.44","tag":"quote","timestamp":"2025-03-19T14:39:25.515Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84216.04","tag":"quote","timestamp":"2025-03-19T14:44:25.514Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2028.81","tag":"quote","timestamp":"2025-03-19T14:44:25.526Z"}
+{"level":"info","message":"Quote for SPY: 564.02","tag":"quote","timestamp":"2025-03-19T14:44:25.532Z"}
+{"level":"info","message":"Quote for SPY: 563.97","tag":"quote","timestamp":"2025-03-19T14:49:25.505Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2030.13","tag":"quote","timestamp":"2025-03-19T14:49:25.506Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84230.99","tag":"quote","timestamp":"2025-03-19T14:49:25.511Z"}
+{"level":"info","message":"Quote for SPY: 563.48","tag":"quote","timestamp":"2025-03-19T14:55:29.856Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2030.34","tag":"quote","timestamp":"2025-03-19T14:55:29.857Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84230.54","tag":"quote","timestamp":"2025-03-19T14:55:29.858Z"}
+{"level":"info","message":"Quote for SPY: 563.446","tag":"quote","timestamp":"2025-03-19T14:56:12.772Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2030.79","tag":"quote","timestamp":"2025-03-19T14:56:12.781Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84206.31","tag":"quote","timestamp":"2025-03-19T14:56:12.784Z"}
+{"level":"info","message":"Transaction successful: mF1RZ1iy3b946wQWC8PMfc93o6gJGQ3399D1E23JHy4fVhdibRmVtjA2E4LS1YwLkSLnCPYeWsrsasBx8qYtQ3r","tag":"contract","timestamp":"2025-03-19T14:56:21.161Z"}
+{"level":"info","message":"Transaction successful: g37RbuNTXVUv3A3Z9wHYykPPvvdQj4Ddq8a2BfS479zHqxkDokKHZf3MZywv5xhj1waxgi76kvaHPJjb7dKTiqo","tag":"contract","timestamp":"2025-03-19T14:56:22.578Z"}
+{"level":"info","message":"Transaction successful: 39dfjfVL1X3aHx6s2yq2qYWpTXzGveQxV96oshvQPJhN5QgaXixMvqEyHSKWoBXXB4TMLQbnrisyeG9hjnFDbx25","tag":"contract","timestamp":"2025-03-19T14:56:22.579Z"}
+{"level":"info","message":"Transaction successful: 39dfjfVL1X3aHx6s2yq2qYWpTXzGveQxV96oshvQPJhN5QgaXixMvqEyHSKWoBXXB4TMLQbnrisyeG9hjnFDbx25","tag":"contract","timestamp":"2025-03-19T14:56:22.580Z"}
+{"level":"info","message":"Transaction successful: 39dfjfVL1X3aHx6s2yq2qYWpTXzGveQxV96oshvQPJhN5QgaXixMvqEyHSKWoBXXB4TMLQbnrisyeG9hjnFDbx25","tag":"contract","timestamp":"2025-03-19T14:56:22.581Z"}
+{"level":"info","message":"Transaction successful: g37RbuNTXVUv3A3Z9wHYykPPvvdQj4Ddq8a2BfS479zHqxkDokKHZf3MZywv5xhj1waxgi76kvaHPJjb7dKTiqo","tag":"contract","timestamp":"2025-03-19T14:56:22.582Z"}
+{"level":"info","message":"Transaction successful: 2SygztKw7Q6C32gUtyb5WD5nRfuyvRVh24iM9NRvYFp7BHq1bepc2ADeWamJbDBqMdm4PRrRBU4RPuR51c24uVie","tag":"contract","timestamp":"2025-03-19T14:56:22.582Z"}
+{"level":"info","message":"Transaction successful: 59ByM59qaSxNXK9p6HnSVqf9bzgmLVzX6bjkWBxJknjn2vKTZfvbnBMwn9wm8L42d4QYEUbK6gWcvraTYjpcYrSC","tag":"contract","timestamp":"2025-03-19T14:56:22.944Z"}
+{"level":"info","message":"Transaction successful: 59ByM59qaSxNXK9p6HnSVqf9bzgmLVzX6bjkWBxJknjn2vKTZfvbnBMwn9wm8L42d4QYEUbK6gWcvraTYjpcYrSC","tag":"contract","timestamp":"2025-03-19T14:56:22.946Z"}
+{"level":"info","message":"Transaction successful: 59ByM59qaSxNXK9p6HnSVqf9bzgmLVzX6bjkWBxJknjn2vKTZfvbnBMwn9wm8L42d4QYEUbK6gWcvraTYjpcYrSC","tag":"contract","timestamp":"2025-03-19T14:56:22.947Z"}
+{"level":"info","message":"Transaction successful: 45RNyo2sCkmT7xAuRHBsGeyDUFX8h7h5a5NteHEoWGrYfahwSxCCQjwJd6MRC11kPYTWTKFnbY6Sw5NDQnZmNPhK","tag":"contract","timestamp":"2025-03-19T14:56:23.293Z"}
+{"level":"info","message":"Transaction successful: 7bxE8mnRB2J1hDFKA8uH96a64LJeKnTHjXH83DPwz4tQE6E7BqKioCoNePVyLhQPXRXeFTwAnddhL3GZMnQen2U","tag":"contract","timestamp":"2025-03-19T14:56:27.691Z"}
+{"level":"info","message":"Transaction successful: 7bxE8mnRB2J1hDFKA8uH96a64LJeKnTHjXH83DPwz4tQE6E7BqKioCoNePVyLhQPXRXeFTwAnddhL3GZMnQen2U","tag":"contract","timestamp":"2025-03-19T14:56:27.752Z"}
+{"level":"info","message":"Transaction successful: 49WsAPovoV5Va3QsNpYjNCKst2dMUbqA4oD2j98cGhf8kXoqXBk63M9FC1g7aS1T7du4JHyga4t2mNhgfWC7gHmz","tag":"contract","timestamp":"2025-03-19T14:56:27.972Z"}
+{"level":"info","message":"Transaction successful: 49WsAPovoV5Va3QsNpYjNCKst2dMUbqA4oD2j98cGhf8kXoqXBk63M9FC1g7aS1T7du4JHyga4t2mNhgfWC7gHmz","tag":"contract","timestamp":"2025-03-19T14:56:28.113Z"}
+{"level":"info","message":"Transaction successful: 5XdNbhoPapaUrRVTRwjTSpcdvWKDqH5UaxyWtRU1EMfonsci281huq9FrpfREb8vhyoU1gnhikpeqmedox9RR4f3","tag":"contract","timestamp":"2025-03-19T14:56:29.780Z"}
+{"level":"info","message":"Transaction successful: 2Pg1YUabnUPmn1iAtRr4t2n3W7KhHRS4jASzr2kNpM4EkakFS33Dgq9YLXZz9DgtKFedra9rhfJhYL8dtQNRUYRb","tag":"contract","timestamp":"2025-03-19T14:56:30.118Z"}
+{"level":"info","message":"Transaction successful: 2Pg1YUabnUPmn1iAtRr4t2n3W7KhHRS4jASzr2kNpM4EkakFS33Dgq9YLXZz9DgtKFedra9rhfJhYL8dtQNRUYRb","tag":"contract","timestamp":"2025-03-19T14:56:30.211Z"}
+{"level":"info","message":"Transaction successful: 2B9nTos2FjqhGGJEWro6rvK6siu4YehPZVC4k7okzuV2xbgkkFNi4E8vBuBYr9FiVWdhrjL8URyU4iCKGNoyT1TD","tag":"contract","timestamp":"2025-03-19T14:56:30.476Z"}
+{"level":"info","message":"Transaction successful: 3T8TRYxwxLtrpNCGNexXTEiv2WXj2Qvd5SDhsHWw6jhbQDeKKBZH2poY4yoB9wYNGXqDYPGBh8RtMHMDAkvun8iT","tag":"contract","timestamp":"2025-03-19T14:56:30.477Z"}
+{"level":"info","message":"Transaction successful: 2B9nTos2FjqhGGJEWro6rvK6siu4YehPZVC4k7okzuV2xbgkkFNi4E8vBuBYr9FiVWdhrjL8URyU4iCKGNoyT1TD","tag":"contract","timestamp":"2025-03-19T14:56:30.601Z"}
+{"level":"info","message":"Transaction successful: 2jeLbF42fp8zrWrxpQCHZ7e46XACiYaGjMDhTiFDvH8an86x9hxJeETWq3u1i2P2FeiqaYnLNSx1oMNQFQWzwVYu","tag":"contract","timestamp":"2025-03-19T14:56:30.829Z"}
+{"level":"info","message":"Transaction successful: 2jeLbF42fp8zrWrxpQCHZ7e46XACiYaGjMDhTiFDvH8an86x9hxJeETWq3u1i2P2FeiqaYnLNSx1oMNQFQWzwVYu","tag":"contract","timestamp":"2025-03-19T14:56:30.977Z"}
+{"level":"info","message":"Transaction successful: J3SXUdQ4nmdPaxeA5QQeoLHTEQU3hX9bCofPUwouFsng9RKNjMfXXSje8DdryPNcDAWPKELwzFnmcMgDjZUEUqd","tag":"contract","timestamp":"2025-03-19T14:56:31.525Z"}
+{"level":"info","message":"Transaction successful: t4RPhP7rKRM6GAxMvRBPzJW3PzwGzFybMs42zHRr2DKd1Kqk5ZmiQMbDbUVm9DqTxXPjRycjQuMRXfJXA3CcSq4","tag":"contract","timestamp":"2025-03-19T14:56:31.527Z"}
+{"level":"info","message":"Transaction successful: J3SXUdQ4nmdPaxeA5QQeoLHTEQU3hX9bCofPUwouFsng9RKNjMfXXSje8DdryPNcDAWPKELwzFnmcMgDjZUEUqd","tag":"contract","timestamp":"2025-03-19T14:56:31.527Z"}
+{"level":"info","message":"Transaction successful: 3ar7Efrwz9jUyoAndjrEiQymkTvQjSM4wVennWC3JR7sT6i6K9Dqk84SudPWP8YUAB22yhL5BgX8iCxLrLqSdMWv","tag":"contract","timestamp":"2025-03-19T14:59:12.393Z"}
+{"level":"info","message":"Transaction successful: 4pXEHmgn5ptYp1FYJMTyXrXd2xSHu8erZxDzFdfdLf8eQrthppT1QLWr4iy9W3BAjXBxWHMPMRtRBoRxJgvyctsj","tag":"contract","timestamp":"2025-03-19T14:59:12.394Z"}
+{"level":"info","message":"Transaction successful: 4pXEHmgn5ptYp1FYJMTyXrXd2xSHu8erZxDzFdfdLf8eQrthppT1QLWr4iy9W3BAjXBxWHMPMRtRBoRxJgvyctsj","tag":"contract","timestamp":"2025-03-19T14:59:12.394Z"}
+{"level":"info","message":"Transaction successful: 3NbMci5ZNZ5wAa4BRUheRSv6eZE9aQkvK4vK3yKSNhrKPNPn9MxcPYdBuQHPBwfMchYXpmysd6msr8BfrL68CEy1","tag":"contract","timestamp":"2025-03-19T14:59:12.394Z"}
+{"level":"info","message":"Transaction successful: 3ar7Efrwz9jUyoAndjrEiQymkTvQjSM4wVennWC3JR7sT6i6K9Dqk84SudPWP8YUAB22yhL5BgX8iCxLrLqSdMWv","tag":"contract","timestamp":"2025-03-19T14:59:12.395Z"}
+{"level":"info","message":"Transaction successful: 4pXEHmgn5ptYp1FYJMTyXrXd2xSHu8erZxDzFdfdLf8eQrthppT1QLWr4iy9W3BAjXBxWHMPMRtRBoRxJgvyctsj","tag":"contract","timestamp":"2025-03-19T14:59:12.395Z"}
+{"level":"info","message":"Transaction successful: 23zEggEAXFpAfk98Heb39tv8HZh29WVDrQxPjEySZhsz61hCHJnVqTYyCHgEzkpcoB5NvWhDpxG5FNKQ7TFqP9Ao","tag":"contract","timestamp":"2025-03-19T14:59:12.686Z"}
+{"level":"info","message":"Transaction successful: 23zEggEAXFpAfk98Heb39tv8HZh29WVDrQxPjEySZhsz61hCHJnVqTYyCHgEzkpcoB5NvWhDpxG5FNKQ7TFqP9Ao","tag":"contract","timestamp":"2025-03-19T14:59:12.687Z"}
+{"level":"info","message":"Transaction successful: 23zEggEAXFpAfk98Heb39tv8HZh29WVDrQxPjEySZhsz61hCHJnVqTYyCHgEzkpcoB5NvWhDpxG5FNKQ7TFqP9Ao","tag":"contract","timestamp":"2025-03-19T14:59:12.718Z"}
+{"level":"info","message":"Transaction successful: 23zEggEAXFpAfk98Heb39tv8HZh29WVDrQxPjEySZhsz61hCHJnVqTYyCHgEzkpcoB5NvWhDpxG5FNKQ7TFqP9Ao","tag":"contract","timestamp":"2025-03-19T14:59:12.831Z"}
+{"level":"info","message":"Transaction successful: 23zEggEAXFpAfk98Heb39tv8HZh29WVDrQxPjEySZhsz61hCHJnVqTYyCHgEzkpcoB5NvWhDpxG5FNKQ7TFqP9Ao","tag":"contract","timestamp":"2025-03-19T14:59:12.852Z"}
+{"level":"info","message":"Transaction successful: 23zEggEAXFpAfk98Heb39tv8HZh29WVDrQxPjEySZhsz61hCHJnVqTYyCHgEzkpcoB5NvWhDpxG5FNKQ7TFqP9Ao","tag":"contract","timestamp":"2025-03-19T14:59:12.874Z"}
+{"level":"info","message":"Transaction successful: 5mHRoKJvdQBq6zAggJrFS2m5QfcgVhCUnsc6tHQ6EKru2WNvf2FNHjJFy9UEMot24t34SZL5AHY6gcQrQ8obmrKD","tag":"contract","timestamp":"2025-03-19T14:59:13.043Z"}
+{"level":"info","message":"Transaction successful: 5mHRoKJvdQBq6zAggJrFS2m5QfcgVhCUnsc6tHQ6EKru2WNvf2FNHjJFy9UEMot24t34SZL5AHY6gcQrQ8obmrKD","tag":"contract","timestamp":"2025-03-19T14:59:13.044Z"}
+{"level":"info","message":"Transaction successful: 5mHRoKJvdQBq6zAggJrFS2m5QfcgVhCUnsc6tHQ6EKru2WNvf2FNHjJFy9UEMot24t34SZL5AHY6gcQrQ8obmrKD","tag":"contract","timestamp":"2025-03-19T14:59:13.045Z"}
+{"level":"info","message":"Transaction successful: 5mHRoKJvdQBq6zAggJrFS2m5QfcgVhCUnsc6tHQ6EKru2WNvf2FNHjJFy9UEMot24t34SZL5AHY6gcQrQ8obmrKD","tag":"contract","timestamp":"2025-03-19T14:59:13.171Z"}
+{"level":"info","message":"Transaction successful: 5mHRoKJvdQBq6zAggJrFS2m5QfcgVhCUnsc6tHQ6EKru2WNvf2FNHjJFy9UEMot24t34SZL5AHY6gcQrQ8obmrKD","tag":"contract","timestamp":"2025-03-19T14:59:13.192Z"}
+{"level":"info","message":"Transaction successful: 5mHRoKJvdQBq6zAggJrFS2m5QfcgVhCUnsc6tHQ6EKru2WNvf2FNHjJFy9UEMot24t34SZL5AHY6gcQrQ8obmrKD","tag":"contract","timestamp":"2025-03-19T14:59:13.230Z"}
+{"level":"info","message":"Transaction successful: 4W5x166aHafKnWbGmyM3gYGQs6DJLWnfGUcZJuC6WQQPdENVce75mwaEoy7Q6CL8pjAk458jdEBpmpi4bDYpCxFK","tag":"contract","timestamp":"2025-03-19T14:59:13.374Z"}
+{"level":"info","message":"Transaction successful: 4W5x166aHafKnWbGmyM3gYGQs6DJLWnfGUcZJuC6WQQPdENVce75mwaEoy7Q6CL8pjAk458jdEBpmpi4bDYpCxFK","tag":"contract","timestamp":"2025-03-19T14:59:13.375Z"}
+{"level":"info","message":"Transaction successful: 34M2jF4HssG9sxz9BdhFe7uq5bfzPuxcQKLoKmaygGzaXQwCew5vBJCq3rBsSgQCrJXrsVKpvDGW5GZFK5FraMQH","tag":"contract","timestamp":"2025-03-19T14:59:19.077Z"}
+{"level":"info","message":"Transaction successful: 3hNhDSHWRxo3nR4ULfa6sAwps6req4VaiHKaahSQjC4oQ7MnepbmgCQ3bj4yU2CbZp858ucgSb67LAxqJfL53oPh","tag":"contract","timestamp":"2025-03-19T14:59:19.079Z"}
+{"level":"info","message":"Transaction successful: 37NFkxXAiYdkf85DPrFHHSgdpTkAg8juuZ3U9dKcLMS1MQkhjoc6e3x8YVUKnQ482AGQiX42xSbJV4EjDEQrgV2K","tag":"contract","timestamp":"2025-03-19T14:59:20.557Z"}
+{"level":"info","message":"Transaction successful: 3ekZNLq2KxZz2L4dJ5qWWTzmH1MvCHzANcRxMXH26Bn2TiiWjbHpofVeuWYMzG6MPdo5yFN1BGgGnhzKP9eSHfoH","tag":"contract","timestamp":"2025-03-19T14:59:23.362Z"}
+{"level":"info","message":"Transaction successful: 3ekZNLq2KxZz2L4dJ5qWWTzmH1MvCHzANcRxMXH26Bn2TiiWjbHpofVeuWYMzG6MPdo5yFN1BGgGnhzKP9eSHfoH","tag":"contract","timestamp":"2025-03-19T14:59:23.363Z"}
+{"level":"info","message":"Transaction successful: epFCtV2LUizqY7jwXPQA1qokhxoXGjsfjf36cD4taVr8RNMWuvbnLmTCQW92xnG75KVwyX6xdMQhfQnsRofYHWy","tag":"contract","timestamp":"2025-03-19T14:59:23.729Z"}
+{"level":"info","message":"Transaction successful: epFCtV2LUizqY7jwXPQA1qokhxoXGjsfjf36cD4taVr8RNMWuvbnLmTCQW92xnG75KVwyX6xdMQhfQnsRofYHWy","tag":"contract","timestamp":"2025-03-19T14:59:23.731Z"}
+{"level":"info","message":"Transaction successful: 5bRNTLueiZ1D41mjMm8vAu7bvVbeB26XMfRsZMgMpWBVZtHCr9Xk3UsxSzsFHG2X31fcFsehyxyuqdwxkjEccKS9","tag":"contract","timestamp":"2025-03-19T14:59:24.428Z"}
+{"level":"info","message":"Transaction successful: 5bRNTLueiZ1D41mjMm8vAu7bvVbeB26XMfRsZMgMpWBVZtHCr9Xk3UsxSzsFHG2X31fcFsehyxyuqdwxkjEccKS9","tag":"contract","timestamp":"2025-03-19T14:59:24.429Z"}
+{"level":"info","message":"Transaction successful: 5r2eJwDKcdSZrTSdCaXfBYyoE1Wh3JLz9L3SHho5oqvivwBC3oEiu1jQouAodP8C8SoKp3BF74NNvCREWQsZWfMY","tag":"contract","timestamp":"2025-03-19T14:59:25.884Z"}
+{"level":"info","message":"Transaction successful: 4jpw5rUYGW4MXoAvDrhEYbNG2ZbCJGiSCjSV8GRSr9rvxbQ4JxYDUK6bNxu75JoB2K2sw9Ltv48kDfMfJCwJ94L","tag":"contract","timestamp":"2025-03-19T14:59:25.885Z"}
+{"level":"info","message":"Transaction successful: 5r2eJwDKcdSZrTSdCaXfBYyoE1Wh3JLz9L3SHho5oqvivwBC3oEiu1jQouAodP8C8SoKp3BF74NNvCREWQsZWfMY","tag":"contract","timestamp":"2025-03-19T14:59:25.974Z"}
+{"level":"info","message":"Transaction successful: 43cuwpB2YYpH2HcUgbcquyuaAtRccLpSoRBr5XRUYU58GeqXNM4d1Lh66AC8cu9pYyCXecockxnQj2wzXhbegPUp","tag":"contract","timestamp":"2025-03-19T14:59:26.240Z"}
+{"level":"info","message":"Transaction successful: 43cuwpB2YYpH2HcUgbcquyuaAtRccLpSoRBr5XRUYU58GeqXNM4d1Lh66AC8cu9pYyCXecockxnQj2wzXhbegPUp","tag":"contract","timestamp":"2025-03-19T14:59:26.365Z"}
+{"level":"info","message":"Transaction successful: 5UyFFAwbbnKTxjuBt7cjwsNcsGdKBCMGssUsefNF3oVVsF8ngD5S4JY1ooN4kaYqifWyrg8RWHAoB4tAyK2Jdr6s","tag":"contract","timestamp":"2025-03-19T14:59:28.123Z"}
+{"level":"info","message":"Transaction successful: 2pWtM23FcrZa2FSiqwzUQ3bFxYZhQgsXgwBDGVZaNhdauC2DSsWhPmMZHyy1mbxn3syAnt5d5ez8oa3YZCXvM3bX","tag":"contract","timestamp":"2025-03-19T14:59:28.417Z"}
+{"level":"info","message":"Transaction successful: 52Kuu3ZKFphw7HM8JBXxtu2sxFTivWgTZpHVn7uaw777oSio4CR3ZpHHhMSaS2f11GzCWsg7ySCKVNHDU1GrR5N7","tag":"contract","timestamp":"2025-03-19T14:59:28.704Z"}
+{"level":"info","message":"Transaction successful: 2sKbPqy9zABHQHBLfwEj82HhBtPUqqeuNumagg9gebh4hhFru827ZGhbNiPsZmYE3k2A6hE8tM3JGg7U6kkFFTPu","tag":"contract","timestamp":"2025-03-19T14:59:29.066Z"}
+{"level":"info","message":"Transaction successful: 3Hyb8FfUYzdN8xBe8iEtfsUqfsLunSp2weC4zSS6sHC4A4PtkTxv6Qn4DojXBDF1MTCRP36ahJ7oWhhA4wyvP4g3","tag":"contract","timestamp":"2025-03-19T14:59:29.447Z"}
+{"level":"info","message":"Transaction successful: zq1LA7QWyYqyvHEXVvAasV6fPaSmjHRDNweWGe5HUrk1N1Ur5TZPjPGXaTDNxHAhqvYStYyqHNbCwaPG22B7XuX","tag":"contract","timestamp":"2025-03-19T14:59:29.447Z"}
+{"level":"info","message":"Transaction successful: 2DZSYsDZexgnq9wNbPmRZSVwVruTH93zcznNrWRRCSvKcim5itiLnMPQk2TxmeXp4u3XJKU1y9CoNDTPsioyhpCp","tag":"contract","timestamp":"2025-03-19T14:59:29.448Z"}
+{"level":"info","message":"Transaction successful: 2DZSYsDZexgnq9wNbPmRZSVwVruTH93zcznNrWRRCSvKcim5itiLnMPQk2TxmeXp4u3XJKU1y9CoNDTPsioyhpCp","tag":"contract","timestamp":"2025-03-19T14:59:29.448Z"}
+{"level":"info","message":"Transaction successful: 3Hyb8FfUYzdN8xBe8iEtfsUqfsLunSp2weC4zSS6sHC4A4PtkTxv6Qn4DojXBDF1MTCRP36ahJ7oWhhA4wyvP4g3","tag":"contract","timestamp":"2025-03-19T14:59:29.449Z"}
+{"level":"info","message":"Transaction successful: 3AFH8sjV2dtTUqBVPRRi77eJQ7qYfe8C5nZKicHwo4tXtu5Zt3f2oEJhQVghzmvFnhf79tuSwaqDfMxKCsZYbMJT","tag":"contract","timestamp":"2025-03-19T14:59:31.760Z"}
+{"level":"info","message":"Transaction successful: 4Z7VBekrwo45ey8X8Pj6jCAQpG9rxqApiGmih1eeTLs42YY9uqAmtveRdB5kowpJWGw1k56jhy4TBmEDjJG5hvsX","tag":"contract","timestamp":"2025-03-19T14:59:32.783Z"}
+{"level":"info","message":"Transaction successful: 4Z7VBekrwo45ey8X8Pj6jCAQpG9rxqApiGmih1eeTLs42YY9uqAmtveRdB5kowpJWGw1k56jhy4TBmEDjJG5hvsX","tag":"contract","timestamp":"2025-03-19T14:59:32.783Z"}
+{"level":"info","message":"Transaction successful: 4Z7VBekrwo45ey8X8Pj6jCAQpG9rxqApiGmih1eeTLs42YY9uqAmtveRdB5kowpJWGw1k56jhy4TBmEDjJG5hvsX","tag":"contract","timestamp":"2025-03-19T14:59:32.784Z"}
+{"level":"info","message":"Transaction successful: 37mjN7uqTw5rJDXA4xK9Nb1aEbyPB7wgNNtMynTMedHqQkKu8JyZFED5Kae2f55Bf2t3cjs2ZF8FAZst4PBFyoWY","tag":"contract","timestamp":"2025-03-19T15:00:13.795Z"}
+{"level":"info","message":"Transaction successful: 37mjN7uqTw5rJDXA4xK9Nb1aEbyPB7wgNNtMynTMedHqQkKu8JyZFED5Kae2f55Bf2t3cjs2ZF8FAZst4PBFyoWY","tag":"contract","timestamp":"2025-03-19T15:00:13.852Z"}
+{"level":"info","message":"Transaction successful: 4HfZq3FoDLuWJQBbAMixnnaNR7jLPSmJDPbxK6p2oVnbXpiUxs1CvGr1kZxFVhRJB43NcBSpidirFhK97CRKFGDa","tag":"contract","timestamp":"2025-03-19T15:00:14.072Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-03-19T15:00:14.077Z"}
+{"level":"info","message":"Transaction successful: 2oyASiLnoCJJG1WuKUvLgZPgcmAi1jkpbA2kwSZnMHFtprYbcKM46aE9BHFS8AQAn1mp3D9jtaSD4oXG9WHbUxjj","tag":"contract","timestamp":"2025-03-19T15:00:14.420Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-03-19T15:00:14.435Z"}
+{"level":"info","message":"Transaction successful: 37q9hH11vRzuKDAhhBJCr1UbvH271mEyHATw7tvJSS5tDwRwDwwVHiJZtbFc8j74iVd8tMebCA8J7JdiGLiK8hUv","tag":"contract","timestamp":"2025-03-19T15:00:14.781Z"}
+{"level":"info","message":"Transaction successful: 2RxE74FNhssDLavjnUKcDVVeRu5SK1QimJoydN9aAy9vsq35DAYStGfUVw1PJt2j2j4vujk2oPUcRop91XxtLjzq","tag":"contract","timestamp":"2025-03-19T15:00:15.130Z"}
+{"level":"info","message":"Transaction successful: 2RxE74FNhssDLavjnUKcDVVeRu5SK1QimJoydN9aAy9vsq35DAYStGfUVw1PJt2j2j4vujk2oPUcRop91XxtLjzq","tag":"contract","timestamp":"2025-03-19T15:00:15.212Z"}
+{"level":"info","message":"Transaction successful: 3BYgDthkNoWMR96WJ3MXTadAjGiuqCiBMdYcXPAcRZCRgBCnjjN8oJfRQ3xprjcrxJ48PhxxhNJaao2Av3biP7E2","tag":"contract","timestamp":"2025-03-19T15:00:15.469Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-03-19T15:00:15.491Z"}
+{"level":"info","message":"Transaction successful: 5u5BBSNeT6RDsyNmY7xYbZdo8GX5P5k15otMfLMR22qFku4D5x2HyBrVW8DMcmLRvmvAXCfAyB3Pe7TrfAjmJ5oi","tag":"contract","timestamp":"2025-03-19T15:00:15.875Z"}
+{"level":"info","message":"Transaction successful: 2qU1ZdD5g9kdfYVXprwGzHvWMHUFusMeuxXawYVqaVchNnpQfvrPySofHHxxDxntCEA5kRHJt4vmvGsmJqffiz5K","tag":"contract","timestamp":"2025-03-19T15:00:19.086Z"}
+{"level":"info","message":"Transaction successful: 3yV3w92sVcshVezg6Vu2NwM9UEmGSSzAnJ3pxEsWLYVdBpvrFxFRiMXnqd37FxtVqUMdzm5J2smV2ak9Ws7BQkTb","tag":"contract","timestamp":"2025-03-19T15:00:19.434Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-03-19T15:00:19.443Z"}
+{"level":"info","message":"Transaction successful: 4qkkujJ5NAYU7n99iuWntx3csULo8tzDR1jDPA6x3U6zFEJxkxXfW12sWjJvQjjiBAPs2TGY5PwGLTAEdtUeTjPZ","tag":"contract","timestamp":"2025-03-19T15:00:24.090Z"}
+{"level":"info","message":"Transaction successful: 5MqzensALDfBnbxiNApGGkDBVy7WGWJMtuRUrbukNpLqeggUAiLZUbybS8DwKx7V9vXcH6HrpyAHffNqF76qHBGL","tag":"contract","timestamp":"2025-03-19T15:00:24.091Z"}
+{"level":"info","message":"Transaction successful: 4qkkujJ5NAYU7n99iuWntx3csULo8tzDR1jDPA6x3U6zFEJxkxXfW12sWjJvQjjiBAPs2TGY5PwGLTAEdtUeTjPZ","tag":"contract","timestamp":"2025-03-19T15:00:24.092Z"}
+{"level":"info","message":"Transaction successful: 4sHnHYVBsaWzrZp39y5pAs3fSwvGeM77vdXb7AW31vR8otEdUxGwNjHTJV9KRALwwxDygSPmnVBGXfcRQtc23TDj","tag":"contract","timestamp":"2025-03-19T15:00:25.832Z"}
+{"level":"info","message":"Transaction successful: yDZFr3CikkhmPyCfP6CaHezjqEimtRKUNzAGSjqMeFYsGo8gKBmtcb24zAD9tcZ5Gzb7xZuvEFaByasew7XsX79","tag":"contract","timestamp":"2025-03-19T15:00:26.337Z"}
+{"level":"info","message":"Transaction successful: yDZFr3CikkhmPyCfP6CaHezjqEimtRKUNzAGSjqMeFYsGo8gKBmtcb24zAD9tcZ5Gzb7xZuvEFaByasew7XsX79","tag":"contract","timestamp":"2025-03-19T15:00:26.337Z"}
+{"level":"info","message":"Transaction successful: 4LsovopPdmjYPTZL1xdrTa7oEAmAkih2tpcoAxEYpxrmFYeaLCwCeWpQ1NEbPRxMJBHCNGcGWeMnFSNGpWvhySFt","tag":"contract","timestamp":"2025-03-19T15:00:27.265Z"}
+{"level":"info","message":"Transaction successful: 5eV4ZbJ6jB5Bd6SQN1u3vcZPL98AMGLcr1czT988LiSMZuK4DuV7BcGbvZDfi1n9xE7FWnFRSqiHtJ2hLmuCTqxM","tag":"contract","timestamp":"2025-03-19T15:00:27.357Z"}
+{"level":"info","message":"Transaction successful: 3hzD4jwtQqAJofnaWVCEi3CGDGW7fdmcqnJfyidtDmzp2Xa3Lo6w4uVhDVLQaGyAbmsEVLvgEPhcvXFMuovejdsW","tag":"contract","timestamp":"2025-03-19T15:00:27.357Z"}
+{"level":"info","message":"Transaction successful: 3hzD4jwtQqAJofnaWVCEi3CGDGW7fdmcqnJfyidtDmzp2Xa3Lo6w4uVhDVLQaGyAbmsEVLvgEPhcvXFMuovejdsW","tag":"contract","timestamp":"2025-03-19T15:00:27.359Z"}
+{"level":"info","message":"Transaction successful: 5V3nncTRsYx8YSjP1zABv2nFbzVEGmyuX5fEvsnfnxgERns2sHkue4jna96ESZJEJunDv1noniy4ZoCTWtNyLuXM","tag":"contract","timestamp":"2025-03-19T15:00:28.488Z"}
+{"level":"info","message":"Transaction successful: j2NHBERwyQjtBLaz98T9TzZrSiiH8bRwSPozyZEBSKh6UsvGz42ia4cqY1nMVSQkGbYwET5cXYLpmwHTTUvHVuU","tag":"contract","timestamp":"2025-03-19T15:00:42.706Z"}
+{"level":"info","message":"Transaction successful: j2NHBERwyQjtBLaz98T9TzZrSiiH8bRwSPozyZEBSKh6UsvGz42ia4cqY1nMVSQkGbYwET5cXYLpmwHTTUvHVuU","tag":"contract","timestamp":"2025-03-19T15:00:42.706Z"}
+{"level":"info","message":"Transaction successful: 3VjwmA2EthSKTuu2JqvLsu1vzxhNXb58biqG1Qtopo33BCJ2jL6CvkVrsrLuTcT16ySj3T2DkMwGERTNpDzzEUM1","tag":"contract","timestamp":"2025-03-19T15:00:45.571Z"}
+{"level":"info","message":"Transaction successful: 65m24kFsuUXJ9ZRqxYfxfgU33vWKGkHZUNiQ1rcWBVwnfRSLP3PTDZaAiZkH1p2TXMevxZrkRgpnGr4JX6qZ8cSL","tag":"contract","timestamp":"2025-03-19T15:00:45.572Z"}
+{"level":"info","message":"Transaction successful: 65m24kFsuUXJ9ZRqxYfxfgU33vWKGkHZUNiQ1rcWBVwnfRSLP3PTDZaAiZkH1p2TXMevxZrkRgpnGr4JX6qZ8cSL","tag":"contract","timestamp":"2025-03-19T15:00:45.572Z"}
+{"level":"info","message":"Transaction successful: 5spgJYbJH2PvFyHuFKkSu3JowAVMizKaKk6QS3SKhsDjUN4zD9XdSTp2AYzVh8ZfFdkEXAHy1wwSMkJqt9L4S9sM","tag":"contract","timestamp":"2025-03-19T15:00:45.573Z"}
+{"level":"info","message":"Transaction successful: 3VjwmA2EthSKTuu2JqvLsu1vzxhNXb58biqG1Qtopo33BCJ2jL6CvkVrsrLuTcT16ySj3T2DkMwGERTNpDzzEUM1","tag":"contract","timestamp":"2025-03-19T15:00:45.632Z"}
+{"level":"info","message":"Transaction successful: 5spgJYbJH2PvFyHuFKkSu3JowAVMizKaKk6QS3SKhsDjUN4zD9XdSTp2AYzVh8ZfFdkEXAHy1wwSMkJqt9L4S9sM","tag":"contract","timestamp":"2025-03-19T15:00:45.633Z"}
+{"level":"info","message":"Transaction successful: 1PA5vaUsZacw8cGikzeDaNckAS28VeiFcMHmes23peecDRWzsRgfLDHe7Ksw9TJYuj8Quc58RBpXoefwAjduiV8","tag":"contract","timestamp":"2025-03-19T15:00:48.485Z"}
+{"level":"info","message":"Transaction successful: 1PA5vaUsZacw8cGikzeDaNckAS28VeiFcMHmes23peecDRWzsRgfLDHe7Ksw9TJYuj8Quc58RBpXoefwAjduiV8","tag":"contract","timestamp":"2025-03-19T15:00:48.485Z"}
+{"level":"info","message":"Transaction successful: 1PA5vaUsZacw8cGikzeDaNckAS28VeiFcMHmes23peecDRWzsRgfLDHe7Ksw9TJYuj8Quc58RBpXoefwAjduiV8","tag":"contract","timestamp":"2025-03-19T15:00:48.486Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2031.71","tag":"quote","timestamp":"2025-03-19T15:01:13.089Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84358.65","tag":"quote","timestamp":"2025-03-19T15:01:13.099Z"}
+{"level":"info","message":"Quote for SPY: 563.59","tag":"quote","timestamp":"2025-03-19T15:01:13.110Z"}
+{"level":"info","message":"Transaction successful: 3ePnKdjgNjNCmfJHoCia3hhki1J6GakntJqpMhNfZ9VrkvDUjcQpr6hK7eDBAaPYsGUnw8DVo2ekk8WcgPYPEJSv","tag":"contract","timestamp":"2025-03-19T15:02:28.648Z"}
+{"level":"info","message":"Transaction successful: 3uBMXqkdYuRH4NFqm1akqa25qGLbHGJ2eEGVeBcdfFY9HcrrBfRnToskF53fxEh9TcPi5gqbRzaujAk3MLSD4rVz","tag":"contract","timestamp":"2025-03-19T15:02:28.649Z"}
+{"level":"info","message":"Transaction successful: 3M1uPDRMuLmbCEpo9zkv9jf3T4gDMya98QfFT4eWf2p1wfwGEGRbaGPb9xa9FchzVrHF391tdT5p1Mw2fgvSy8yn","tag":"contract","timestamp":"2025-03-19T15:03:26.948Z"}
+{"level":"info","message":"Transaction successful: 3xew1zitNVJR7Px5W3qyfAtJznkHLnvpkL3XPHMvM1bdus7ZG8XHmpHaoeKvp5LT58pfiK4AKBYaDa9Vy5aL2kv3","tag":"contract","timestamp":"2025-03-19T15:03:26.949Z"}
+{"level":"info","message":"Transaction successful: 3M1uPDRMuLmbCEpo9zkv9jf3T4gDMya98QfFT4eWf2p1wfwGEGRbaGPb9xa9FchzVrHF391tdT5p1Mw2fgvSy8yn","tag":"contract","timestamp":"2025-03-19T15:03:27.101Z"}
+{"level":"info","message":"Transaction successful: 389S8QXfDb348A7iaiXoxE8qBkt9mxDhHUT8e2R6b8SorWoUtmprEGuTHu32AMrsEzqKpD7XH61uHNHC9TxrkA62","tag":"contract","timestamp":"2025-03-19T15:03:27.345Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-03-19T15:03:27.355Z"}
+{"level":"info","message":"Transaction successful: 2ruFts1HvCBTieoozBw6TXUM3XVBX9S9wvfmWShBuxLov3ZXw1NMxUuzFg1Dv2nfSGgABUfdNRiyShD6HfQ8xrdS","tag":"contract","timestamp":"2025-03-19T15:03:27.683Z"}
+{"level":"info","message":"Transaction successful: 3b63ctQRGNL1qFUpyYDYkfRAcWAUXVeRAHskgK1KKJK4b9N9WsG7CGw56oUUxLDEZKRoFEC1E3FTo3H6ms2Bqhmm","tag":"contract","timestamp":"2025-03-19T15:03:28.015Z"}
+{"level":"info","message":"Transaction successful: 3b63ctQRGNL1qFUpyYDYkfRAcWAUXVeRAHskgK1KKJK4b9N9WsG7CGw56oUUxLDEZKRoFEC1E3FTo3H6ms2Bqhmm","tag":"contract","timestamp":"2025-03-19T15:03:28.057Z"}
+{"level":"info","message":"Transaction successful: W4L1mNdLuzWPAqRZyDyb4jWyRiCx6HjSQVZ7UVxu5wgjNxyxLbqdLqjV8WeiT3AfHGymuKcHQgtoobmMoRCsNA8","tag":"contract","timestamp":"2025-03-19T15:03:28.362Z"}
+{"level":"info","message":"Transaction successful: W4L1mNdLuzWPAqRZyDyb4jWyRiCx6HjSQVZ7UVxu5wgjNxyxLbqdLqjV8WeiT3AfHGymuKcHQgtoobmMoRCsNA8","tag":"contract","timestamp":"2025-03-19T15:03:28.465Z"}
+{"level":"info","message":"Transaction successful: 4PCQxPyG9fKb91Zx3Jwdc4jMHoENkprABH9GX8j5o44DtaZfHRhRbpzRyLQHdyRM5Gqbr3FV865FgGSWE4kr7kXM","tag":"contract","timestamp":"2025-03-19T15:03:31.888Z"}
+{"level":"info","message":"Transaction successful: 4PCQxPyG9fKb91Zx3Jwdc4jMHoENkprABH9GX8j5o44DtaZfHRhRbpzRyLQHdyRM5Gqbr3FV865FgGSWE4kr7kXM","tag":"contract","timestamp":"2025-03-19T15:03:31.888Z"}
+{"level":"info","message":"Transaction successful: 22AmGwu5RHDZs3z63D3u5HbCprAPVaxjafmg1ZAHmxDm3M6JkYSnz82XzFH1yqjstvLSY5h4iaCV2q3qqnN57wbn","tag":"contract","timestamp":"2025-03-19T15:03:31.889Z"}
+{"level":"info","message":"Transaction successful: 22AmGwu5RHDZs3z63D3u5HbCprAPVaxjafmg1ZAHmxDm3M6JkYSnz82XzFH1yqjstvLSY5h4iaCV2q3qqnN57wbn","tag":"contract","timestamp":"2025-03-19T15:03:31.890Z"}
+{"level":"info","message":"Transaction successful: WA9YtDZDxv6unM2s3yfBhRB4Kv2q9XmpLzUmH8ZofoCbN27oVwpoGDU3BAmnE8sJ99sCAeBLtafiDK2cpRnVhqX","tag":"contract","timestamp":"2025-03-19T15:03:32.912Z"}
+{"level":"info","message":"Transaction successful: WA9YtDZDxv6unM2s3yfBhRB4Kv2q9XmpLzUmH8ZofoCbN27oVwpoGDU3BAmnE8sJ99sCAeBLtafiDK2cpRnVhqX","tag":"contract","timestamp":"2025-03-19T15:03:32.912Z"}
+{"level":"info","message":"Transaction successful: 446nAD61YvXejf9YRJin1VP1uto1DKDKiSBwqCTTFau4GbdWUawH2aF37z4A5MkByWpvFxjGpTvnxUqKMMW3tQCP","tag":"contract","timestamp":"2025-03-19T15:03:34.754Z"}
+{"level":"info","message":"Transaction successful: 5hiY3EJVWHDaeF6r5XPikV5LEmHaededJat8Dr6qaxPpfeheKxLgXdViFwU2ojQuGKU5jWLUHCc1ALUL7BLAoNc4","tag":"contract","timestamp":"2025-03-19T15:03:34.755Z"}
+{"level":"info","message":"Transaction successful: 446nAD61YvXejf9YRJin1VP1uto1DKDKiSBwqCTTFau4GbdWUawH2aF37z4A5MkByWpvFxjGpTvnxUqKMMW3tQCP","tag":"contract","timestamp":"2025-03-19T15:03:34.755Z"}
+{"level":"info","message":"Transaction successful: 446nAD61YvXejf9YRJin1VP1uto1DKDKiSBwqCTTFau4GbdWUawH2aF37z4A5MkByWpvFxjGpTvnxUqKMMW3tQCP","tag":"contract","timestamp":"2025-03-19T15:03:34.756Z"}
+{"level":"info","message":"Transaction successful: 4nP3wXfdTu3oFhGGqdV2ptEPAAkbUQdAHKynqVn5sWmg59r2hukrynwtmBAnWwkw4gG9AsWxh6rMhjzXsyKryQbC","tag":"contract","timestamp":"2025-03-19T15:03:35.213Z"}
+{"level":"info","message":"Transaction successful: 4nP3wXfdTu3oFhGGqdV2ptEPAAkbUQdAHKynqVn5sWmg59r2hukrynwtmBAnWwkw4gG9AsWxh6rMhjzXsyKryQbC","tag":"contract","timestamp":"2025-03-19T15:03:35.213Z"}
+{"level":"info","message":"Transaction successful: 4nP3wXfdTu3oFhGGqdV2ptEPAAkbUQdAHKynqVn5sWmg59r2hukrynwtmBAnWwkw4gG9AsWxh6rMhjzXsyKryQbC","tag":"contract","timestamp":"2025-03-19T15:03:35.214Z"}
+{"level":"info","message":"Transaction successful: 4nP3wXfdTu3oFhGGqdV2ptEPAAkbUQdAHKynqVn5sWmg59r2hukrynwtmBAnWwkw4gG9AsWxh6rMhjzXsyKryQbC","tag":"contract","timestamp":"2025-03-19T15:03:35.214Z"}
+{"level":"info","message":"Transaction successful: xtvJDWsBKLnrY2Kf8iCfxiRVDKH9xDzbLbpPuTaSoL9stApotbAH5QZBRSrwTrEoc15LFznyjr5SuKz4EYEpAGN","tag":"contract","timestamp":"2025-03-19T15:03:35.539Z"}
+{"level":"info","message":"Transaction successful: 3FJDkXoiQYQYCLK3E6UGLWc6QZwhF67xZBYN9uZdEJjb1mPN378qBsUPfqHrs2KhCfFg1VAPHYEEfn7srVRGPhVx","tag":"contract","timestamp":"2025-03-19T15:03:35.540Z"}
+{"level":"info","message":"Transaction successful: xtvJDWsBKLnrY2Kf8iCfxiRVDKH9xDzbLbpPuTaSoL9stApotbAH5QZBRSrwTrEoc15LFznyjr5SuKz4EYEpAGN","tag":"contract","timestamp":"2025-03-19T15:03:35.540Z"}
+{"level":"info","message":"Transaction successful: 3FJDkXoiQYQYCLK3E6UGLWc6QZwhF67xZBYN9uZdEJjb1mPN378qBsUPfqHrs2KhCfFg1VAPHYEEfn7srVRGPhVx","tag":"contract","timestamp":"2025-03-19T15:03:35.541Z"}
+{"level":"info","message":"Transaction successful: xtvJDWsBKLnrY2Kf8iCfxiRVDKH9xDzbLbpPuTaSoL9stApotbAH5QZBRSrwTrEoc15LFznyjr5SuKz4EYEpAGN","tag":"contract","timestamp":"2025-03-19T15:03:35.541Z"}
+{"level":"info","message":"Transaction successful: xtvJDWsBKLnrY2Kf8iCfxiRVDKH9xDzbLbpPuTaSoL9stApotbAH5QZBRSrwTrEoc15LFznyjr5SuKz4EYEpAGN","tag":"contract","timestamp":"2025-03-19T15:03:35.541Z"}
+{"level":"info","message":"Transaction successful: 3pK6hPD9okTSXanPnUiuVoUHVrJjXQYN41btpt5c4MJozx6H4pHnnJSZQ16rndi4eMYJvUS65kMNDJS6m7FqHmYQ","tag":"contract","timestamp":"2025-03-19T15:03:35.887Z"}
+{"level":"info","message":"Transaction successful: 3pK6hPD9okTSXanPnUiuVoUHVrJjXQYN41btpt5c4MJozx6H4pHnnJSZQ16rndi4eMYJvUS65kMNDJS6m7FqHmYQ","tag":"contract","timestamp":"2025-03-19T15:03:35.892Z"}
+{"level":"info","message":"Transaction successful: 3pK6hPD9okTSXanPnUiuVoUHVrJjXQYN41btpt5c4MJozx6H4pHnnJSZQ16rndi4eMYJvUS65kMNDJS6m7FqHmYQ","tag":"contract","timestamp":"2025-03-19T15:03:35.909Z"}
+{"level":"info","message":"Transaction successful: 3pK6hPD9okTSXanPnUiuVoUHVrJjXQYN41btpt5c4MJozx6H4pHnnJSZQ16rndi4eMYJvUS65kMNDJS6m7FqHmYQ","tag":"contract","timestamp":"2025-03-19T15:03:36.033Z"}
+{"level":"info","message":"Transaction successful: 3pK6hPD9okTSXanPnUiuVoUHVrJjXQYN41btpt5c4MJozx6H4pHnnJSZQ16rndi4eMYJvUS65kMNDJS6m7FqHmYQ","tag":"contract","timestamp":"2025-03-19T15:03:36.052Z"}
+{"level":"info","message":"Transaction successful: 3pK6hPD9okTSXanPnUiuVoUHVrJjXQYN41btpt5c4MJozx6H4pHnnJSZQ16rndi4eMYJvUS65kMNDJS6m7FqHmYQ","tag":"contract","timestamp":"2025-03-19T15:03:36.092Z"}
+{"level":"info","message":"Transaction successful: 3sFHnNjFDuxtMdg6JKK8Zb6eHjxVoFxheAoHDyAqMcRcQT7jkuu5qzXY7bsBtoYjvtXAkwjjwFzHJ8hBQWBPd1zU","tag":"contract","timestamp":"2025-03-19T15:03:36.260Z"}
+{"level":"info","message":"Transaction successful: 3sFHnNjFDuxtMdg6JKK8Zb6eHjxVoFxheAoHDyAqMcRcQT7jkuu5qzXY7bsBtoYjvtXAkwjjwFzHJ8hBQWBPd1zU","tag":"contract","timestamp":"2025-03-19T15:03:36.261Z"}
+{"level":"info","message":"Transaction successful: 3sFHnNjFDuxtMdg6JKK8Zb6eHjxVoFxheAoHDyAqMcRcQT7jkuu5qzXY7bsBtoYjvtXAkwjjwFzHJ8hBQWBPd1zU","tag":"contract","timestamp":"2025-03-19T15:03:36.281Z"}
+{"level":"info","message":"Transaction successful: 3sFHnNjFDuxtMdg6JKK8Zb6eHjxVoFxheAoHDyAqMcRcQT7jkuu5qzXY7bsBtoYjvtXAkwjjwFzHJ8hBQWBPd1zU","tag":"contract","timestamp":"2025-03-19T15:03:36.301Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2037.62","tag":"quote","timestamp":"2025-03-19T15:06:13.088Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84383.96","tag":"quote","timestamp":"2025-03-19T15:06:13.089Z"}
+{"level":"info","message":"Quote for SPY: 563.89","tag":"quote","timestamp":"2025-03-19T15:06:13.125Z"}
+{"level":"info","message":"Transaction successful: 3jEeV8DUraYSw6tmF8xirkZU81odHYC3YHPVrG6xxhcYqBYc9GEAPXkZC81unX4CJowcFVdzedbrrd8AhUgpWzLe","tag":"contract","timestamp":"2025-03-19T15:06:28.926Z"}
+{"level":"info","message":"Transaction successful: 3nbBLewHSdWgLog721nu1VuGQpaMW8FU11CFBJS8iZ286kVEop83wd5Fj2XFMm3hBkNtsVuMn8QRT1aiMBniPFZm","tag":"contract","timestamp":"2025-03-19T15:06:28.927Z"}
+{"level":"info","message":"Transaction successful: 3nbBLewHSdWgLog721nu1VuGQpaMW8FU11CFBJS8iZ286kVEop83wd5Fj2XFMm3hBkNtsVuMn8QRT1aiMBniPFZm","tag":"contract","timestamp":"2025-03-19T15:06:29.055Z"}
+{"level":"info","message":"Transaction successful: 3pMfg5PdsMo9jbaBDU1h4hj6xHZkG7y1CXuttgmXgXNK9ta2tzRCoEf428ipcQd45aKEGD49tjfDKBKuvoFXPyr2","tag":"contract","timestamp":"2025-03-19T15:06:29.262Z"}
+{"level":"info","message":"Transaction successful: 3pMfg5PdsMo9jbaBDU1h4hj6xHZkG7y1CXuttgmXgXNK9ta2tzRCoEf428ipcQd45aKEGD49tjfDKBKuvoFXPyr2","tag":"contract","timestamp":"2025-03-19T15:06:29.344Z"}
+{"level":"info","message":"Transaction successful: 2EvNNBDU92NKJn8QWHT2B9r5iqZ4pELKuXXXy3JoNyLaRVA4hpzLxDLLeCo9NtiD6hut3uAKgs3Xf3MoHCCP6XmF","tag":"contract","timestamp":"2025-03-19T15:06:29.609Z"}
+{"level":"info","message":"Transaction successful: 2EvNNBDU92NKJn8QWHT2B9r5iqZ4pELKuXXXy3JoNyLaRVA4hpzLxDLLeCo9NtiD6hut3uAKgs3Xf3MoHCCP6XmF","tag":"contract","timestamp":"2025-03-19T15:06:29.731Z"}
+{"level":"info","message":"Transaction successful: 55o2CtLtj6yfx5Reh2DEumypxXZKEjRnDAc7MJQapAVmnRz7igkorbaoPaKTJLj4n9duSN9v7wq6MfaG5w4WLhAx","tag":"contract","timestamp":"2025-03-19T15:06:29.961Z"}
+{"level":"info","message":"Transaction successful: 55o2CtLtj6yfx5Reh2DEumypxXZKEjRnDAc7MJQapAVmnRz7igkorbaoPaKTJLj4n9duSN9v7wq6MfaG5w4WLhAx","tag":"contract","timestamp":"2025-03-19T15:06:30.085Z"}
+{"level":"info","message":"Transaction successful: qJYaodozE4a23gy9BzSP6pwLYMEjrX32BKhXT2Q428iQVDGfFs1dEx5yUs6aHXYRoeCo4nSqnPmWtXBdJYGRtVm","tag":"contract","timestamp":"2025-03-19T15:06:30.348Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-03-19T15:06:30.613Z"}
+{"level":"info","message":"Transaction successful: 3YYCvD3pKbcpLt1gX4pfeA7S4JtigNTYVzvpFWKjT7u1HmbLsgAVf3V4Tn3BAwjX5MswbFw7ZSezyjRb4AnDF8w5","tag":"contract","timestamp":"2025-03-19T15:06:32.726Z"}
+{"level":"info","message":"Transaction successful: 53nXhuhW6u78sjwsC4QXawJgxudGrtmKFDFcQBGQMM42PXkPL8otTuDdMisy4N6qbWnd19NcfsuNtJZkeZ3FCpTu","tag":"contract","timestamp":"2025-03-19T15:08:54.820Z"}
+{"level":"info","message":"Transaction successful: 355iGruYjifRk3Z1Pes3cYwGYxBNfUKrisWAvof8SkD99i2WBJtap1zG185AHftnhbYTDwhRocBEWfsrAdDzkr4f","tag":"contract","timestamp":"2025-03-19T15:08:54.821Z"}
+{"level":"info","message":"Transaction successful: 53nXhuhW6u78sjwsC4QXawJgxudGrtmKFDFcQBGQMM42PXkPL8otTuDdMisy4N6qbWnd19NcfsuNtJZkeZ3FCpTu","tag":"contract","timestamp":"2025-03-19T15:08:54.963Z"}
+{"level":"info","message":"Transaction successful: 42Wz65PcR1nXhoXG2k9QJkDbYQKJs3UxMTQTAYyKsueSS37dkrwE4PagNJDsfXKb2qAhxgJ2k8TmCyVnrouBqTWp","tag":"contract","timestamp":"2025-03-19T15:08:55.161Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-03-19T15:08:55.198Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84443.31","tag":"quote","timestamp":"2025-03-19T15:11:13.079Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2038.08","tag":"quote","timestamp":"2025-03-19T15:11:13.080Z"}
+{"level":"info","message":"Quote for SPY: 564.51","tag":"quote","timestamp":"2025-03-19T15:11:13.094Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2033.04","tag":"quote","timestamp":"2025-03-19T15:16:13.096Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84278.87","tag":"quote","timestamp":"2025-03-19T15:16:13.102Z"}
+{"level":"info","message":"Quote for SPY: 564.55","tag":"quote","timestamp":"2025-03-19T15:16:13.116Z"}
+{"level":"info","message":"Transaction successful: dgL2ZXfKg7zXgt4wqEvsKGpVdMZa96Nz29e2kcqyzucZcDhVovyrQKoHk7e2n3EN89CfHEAi7cWbgJja292mFwi","tag":"contract","timestamp":"2025-03-19T15:16:49.924Z"}
+{"level":"info","message":"Transaction successful: dgL2ZXfKg7zXgt4wqEvsKGpVdMZa96Nz29e2kcqyzucZcDhVovyrQKoHk7e2n3EN89CfHEAi7cWbgJja292mFwi","tag":"contract","timestamp":"2025-03-19T15:16:50.071Z"}
+{"level":"info","message":"Transaction successful: M4JgU8d2EGXDfnmfrpige19RUR4NPxSPYjHtK6G6dzQ7yQYher8xbnLShtZukbkzNUALRSCafqUEamoTgo4gc2T","tag":"contract","timestamp":"2025-03-19T15:17:26.901Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-03-19T15:17:26.909Z"}
+{"level":"info","message":"Transaction successful: M4JgU8d2EGXDfnmfrpige19RUR4NPxSPYjHtK6G6dzQ7yQYher8xbnLShtZukbkzNUALRSCafqUEamoTgo4gc2T","tag":"contract","timestamp":"2025-03-19T15:17:26.982Z"}
+{"level":"info","message":"Transaction successful: 22dJmnXoS7cByxDZVP7dZ1Mkr6SkE9sZUxJ4DABAuUWMjtMkBCfnGovgfWVh8DCvNjpydkC1RxyfwnHcG2YLLy9P","tag":"contract","timestamp":"2025-03-19T15:17:27.584Z"}
+{"level":"info","message":"Transaction successful: 22dJmnXoS7cByxDZVP7dZ1Mkr6SkE9sZUxJ4DABAuUWMjtMkBCfnGovgfWVh8DCvNjpydkC1RxyfwnHcG2YLLy9P","tag":"contract","timestamp":"2025-03-19T15:17:27.685Z"}
+{"level":"info","message":"Transaction successful: 2vptjy2KmzPcNB3aHpRGWWfQHmACzLFa2Sn2kux9hxc5so4c47dYZScW9eyT1xNCWHbFwMU5BwJf39dKMh31hoh5","tag":"contract","timestamp":"2025-03-19T15:17:27.941Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-03-19T15:17:27.947Z"}
+{"level":"info","message":"Transaction successful: 4joKRXdvAX1HeH617uyeoMaREfvdiKsvtzwiCH6b88kiXfa1wxFoz67tb4FuohUPG2G5CV4piqJyxHJRwZZShgSH","tag":"contract","timestamp":"2025-03-19T15:17:28.335Z"}
+{"level":"info","message":"Transaction successful: 4rSGQfYC9Tkwstne69aiskU1nAthzaPVJhj9YzSGRd7v9pHGyfscyEiK42Xia3Fw2ZVB8nAbzeBCAKXoG7awKSMr","tag":"contract","timestamp":"2025-03-19T15:17:28.655Z"}
+{"level":"error","message":"Error interacting with contract: Error interacting with contract: Simulation failed. \nMessage: Transaction simulation failed: This transaction has already been processed. \nLogs: \n[]. \nCatch the `SendTransactionError` and call `getLogs()` on it for full details.","tag":"contract","timestamp":"2025-03-19T15:17:28.659Z"}
+{"level":"info","message":"Transaction successful: ZHhrG1zXXg22N9Zf8ij7SzxoNds7yYLi8o3MM91PTX63yFnWd5YSiFWJbN5hFBeg3REGtwPVr1uvNF3MQ7WDfa5","tag":"contract","timestamp":"2025-03-19T15:17:29.069Z"}
+{"level":"info","message":"Transaction successful: 2nAY9DKeYTwJKpnU8Q2dHZoBCiy6QEf4mvgHDGAj9UGG3fWzbKgzzbfFTenABoigXFQpKcg4nr6f9YcJUrhaTM2S","tag":"contract","timestamp":"2025-03-19T15:17:29.354Z"}
+{"level":"info","message":"Transaction successful: 2nAY9DKeYTwJKpnU8Q2dHZoBCiy6QEf4mvgHDGAj9UGG3fWzbKgzzbfFTenABoigXFQpKcg4nr6f9YcJUrhaTM2S","tag":"contract","timestamp":"2025-03-19T15:17:29.355Z"}
+{"level":"info","message":"Transaction successful: 2nAY9DKeYTwJKpnU8Q2dHZoBCiy6QEf4mvgHDGAj9UGG3fWzbKgzzbfFTenABoigXFQpKcg4nr6f9YcJUrhaTM2S","tag":"contract","timestamp":"2025-03-19T15:17:29.535Z"}
+{"level":"info","message":"Transaction successful: 263Bk3oyVR9o9ghS37ZBxPemVpnFu3boEpMnU3ozrZs5tQPHsadzSjVYNrvU82ddtdzdLCcBZsXADFUNUnkj5mkx","tag":"contract","timestamp":"2025-03-19T15:17:32.695Z"}
+{"level":"info","message":"Transaction successful: 263Bk3oyVR9o9ghS37ZBxPemVpnFu3boEpMnU3ozrZs5tQPHsadzSjVYNrvU82ddtdzdLCcBZsXADFUNUnkj5mkx","tag":"contract","timestamp":"2025-03-19T15:17:32.696Z"}
+{"level":"info","message":"Transaction successful: 3dtzG31zwf3hDNRvsaMQ4xxpzN542smfuVPYQCwmxHLr26KVfPTr5Vwuwb4cVDCKpqZ2a1guaE83kwtTH11QHqBT","tag":"contract","timestamp":"2025-03-19T15:17:32.697Z"}
+{"level":"info","message":"Transaction successful: 263Bk3oyVR9o9ghS37ZBxPemVpnFu3boEpMnU3ozrZs5tQPHsadzSjVYNrvU82ddtdzdLCcBZsXADFUNUnkj5mkx","tag":"contract","timestamp":"2025-03-19T15:17:32.697Z"}
+{"level":"info","message":"Transaction successful: 3JVNbQRAMSJwDtbZbzbW7kG4gWovZYUUCKQAViPXCziztsNutrYE1FGuMPdxzimfoipVWo8dypXyGGNn1PP3q7QX","tag":"contract","timestamp":"2025-03-19T15:17:32.698Z"}
+{"level":"info","message":"Transaction successful: 3JVNbQRAMSJwDtbZbzbW7kG4gWovZYUUCKQAViPXCziztsNutrYE1FGuMPdxzimfoipVWo8dypXyGGNn1PP3q7QX","tag":"contract","timestamp":"2025-03-19T15:17:32.698Z"}
+{"level":"info","message":"Transaction successful: A1MaaNdG6KsAs5JuqMkULh5izhS5RqEva4xmzprkXN9NFBCw4t2KB3m7YuaBtCo9T6QC4oswd4eUycK3SJ1gLQr","tag":"contract","timestamp":"2025-03-19T15:17:33.017Z"}
+{"level":"info","message":"Transaction successful: A1MaaNdG6KsAs5JuqMkULh5izhS5RqEva4xmzprkXN9NFBCw4t2KB3m7YuaBtCo9T6QC4oswd4eUycK3SJ1gLQr","tag":"contract","timestamp":"2025-03-19T15:17:33.018Z"}
+{"level":"info","message":"Quote for BINANCE:ETHUSDT: 2029.63","tag":"quote","timestamp":"2025-03-19T15:21:13.111Z"}
+{"level":"info","message":"Quote for BINANCE:BTCUSDT: 84202.79","tag":"quote","timestamp":"2025-03-19T15:21:13.112Z"}
+{"level":"info","message":"Quote for SPY: 563.9826","tag":"quote","timestamp":"2025-03-19T15:21:13.175Z"}

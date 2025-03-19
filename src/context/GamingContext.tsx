@@ -35,43 +35,61 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
 
 	// Debounced save function to reduce API calls
 	const debouncedSave = useCallback(async (gameState: GameState) => {
+		
 		// Don't queue another save if one is already in progress
 		if (saveInProgressRef.current) {
 			hasPendingChanges.current = true;
+			console.log("Save already in progress, marking pending changes");
 			return;
 		}
-
-		// Clear any existing timer
+		
+		// Mark that we have pending changes
+		hasPendingChanges.current = true;
+		
+		// Clear any existing timer to prevent multiple saves
 		if (saveTimerRef.current) {
 			clearTimeout(saveTimerRef.current);
 		}
-
-		// Mark that we have pending changes
-		hasPendingChanges.current = true;
-
-		// Set a new timer to save after delay
-		saveTimerRef.current = setTimeout(async () => {
-			try {
-				// Only save if there are actual changes
-				if (!lastSavedStateRef.current || !deepEqual(lastSavedStateRef.current, gameState)) {
-					saveInProgressRef.current = true;
-					await saveGameState(gameState);
-					lastSavedStateRef.current = JSON.parse(JSON.stringify(gameState));
-					saveInProgressRef.current = false;
+		
+		// Set a new timer with a shorter delay
+		saveTimerRef.current = setTimeout(() => {
+			
+			// Use an IIFE to handle async operations
+			(async () => {
+				// Set the flag to prevent concurrent saves
+				if (saveInProgressRef.current) {
+					console.log("Another save operation started in the meantime");
+					return;
 				}
-				hasPendingChanges.current = false;
-			} catch (error) {
-				console.error("Error in debounced save:", error);
-				saveInProgressRef.current = false;
-			}
-		}, 5000); // 5 second delay before saving
+				
+				saveInProgressRef.current = true;
+				console.log("Starting save operation");
+				
+				try {
+					// Only save if there are actual changes
+					if (!lastSavedStateRef.current || !deepEqual(lastSavedStateRef.current, gameState)) {
+						await saveGameState(gameState);
+						lastSavedStateRef.current = JSON.parse(JSON.stringify(gameState));
+						console.log("Save completed successfully");
+					}
+				} catch (error) {
+					console.error("Error in save operation:", error);
+				} finally {
+					// Always reset the flag when done
+					saveInProgressRef.current = false;
+					hasPendingChanges.current = false;
+				}
+			})();
+		}, 500); // Reduced to 500ms to make it more responsive
 	}, [saveGameState]);
 
 	// Custom dispatch function to save state after each action
-	const customDispatch = async (action: any) => {
+	const customDispatch = useCallback(async (action: any) => {
 		dispatch(action);
-		debouncedSave(state);
-	};
+		// Use the updated state after dispatch, not the current state
+		const updatedState = gameReducer(state, action);
+		debouncedSave(updatedState);
+	}, [state, debouncedSave]);
 
 	// Helper function to wait for a specified time
 	const wait = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -168,7 +186,7 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
 				// Force synchronous save before unload
 				event.preventDefault();
 				event.returnValue = '';
-				await saveGameState(state);
+				await debouncedSave(state);
 			}
 		};
 
@@ -182,7 +200,7 @@ export const GamingProvider: React.FC<GamingProviderProps> = ({ children }) => {
 			if (hasPendingChanges.current && !saveInProgressRef.current) {
 				debouncedSave(state);
 			}
-		}, 30000); // Check every 30 seconds
+		}, 2000); // Changed from 1000 to 2000 milliseconds (2 seconds)
 
 		return () => clearInterval(periodicSaveInterval);
 	}, [state, debouncedSave]);

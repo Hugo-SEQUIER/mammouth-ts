@@ -2856,3 +2856,6 @@
 {"level":"error","message":"Error fetching game state for user GXmJswRBHheDNdoNqXyVRJHU5gZ99G8ToYJysxcN9ovE: JSON object requested, multiple (or no) rows returned","tag":"database","timestamp":"2025-03-16T10:30:50.063Z"}
 {"level":"error","message":"Error fetching game state for user CLF5HZ3XKWn5wJgw8ARcLaskbPRNyxgJk4npckimfhHA: JSON object requested, multiple (or no) rows returned","tag":"database","timestamp":"2025-03-16T10:30:50.091Z"}
 {"level":"error","message":"Error fetching game state for user GEKWLXuDZGrkgKxnk855529kfRC2wVTL5UCPo5JN4ZDB: JSON object requested, multiple (or no) rows returned","tag":"database","timestamp":"2025-03-16T10:30:50.121Z"}
+{"level":"error","message":"Error fetching leaderboard: Cannot read properties of undefined (reading 'state')","tag":"database","timestamp":"2025-03-19T12:49:19.054Z"}
+{"level":"error","message":"Error fetching leaderboard: Cannot read properties of undefined (reading 'state')","tag":"database","timestamp":"2025-03-19T12:49:19.056Z"}
+{"level":"error","message":"Error fetching leaderboard: Cannot read properties of undefined (reading 'state')","tag":"database","timestamp":"2025-03-19T12:49:20.179Z"}
