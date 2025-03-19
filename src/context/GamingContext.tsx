@@ -617,9 +617,9 @@ const gameReducer = (state: GameState, action: any): GameState => {
 			if (action.payload < 0){
 				return state;
 			}
-			if (checkTechnologyDone("Trading Algorithms", state)){
-				bonus = 1.2;
-			}
+			// if (checkTechnologyDone("Trading Algorithms", state)){
+			// 	bonus = 1.2;
+			// }
 			return {
 				...state,
 				investment: {
@@ -661,9 +661,9 @@ const gameReducer = (state: GameState, action: any): GameState => {
 			if (action.payload < 0){
 				return state;
 			}
-			if (checkTechnologyDone("Trading Algorithms", state)){
-				bonus = 1.2;
-			}
+			// if (checkTechnologyDone("Trading Algorithms", state)){
+			// 	bonus = 1.2;
+			// }
 			return {
 				...state,
 				investment: {
