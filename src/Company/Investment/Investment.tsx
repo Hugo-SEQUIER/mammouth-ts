@@ -32,7 +32,7 @@ export default function Investment() {
                         }
                     }}>Buy</button>
                     <button onClick={() => {
-                        if (inputBtc > 0) {
+                        if (inputBtc > 0 && state.investment.bitcoin.amount > inputBtc) {
                             dispatch({ type: "SELL_BITCOIN", payload: inputBtc });
                         }
                     }} disabled={state.investment.bitcoin.amount == 0}>Sell</button>
@@ -50,7 +50,7 @@ export default function Investment() {
                         }
                     }}>Buy</button>
                     <button onClick={() => {
-                        if (inputEth > 0) {
+                        if (inputEth > 0 && state.investment.ethereum.amount > inputEth) {
                             dispatch({ type: "SELL_ETHEREUM", payload: inputEth })
                         }
                     }} disabled={state.investment.ethereum.amount == 0}>Sell</button>
@@ -70,7 +70,7 @@ export default function Investment() {
                         Buy
                     </button>
                     <button onClick={() => {
-                        if (inputspy > 0) {
+                        if (inputspy > 0 && state.investment.spy.amount > inputspy) {
                             dispatch({ type: "SELL_spy", payload: inputspy });
                             setIsSellingspy(true);
                         }
@@ -99,7 +99,7 @@ export default function Investment() {
                             Buy
                         </button>
                         <button onClick={() => {
-                            if (inputLaika > 0){
+                            if (inputLaika > 0 && state.investment.laika.amount > inputLaika) {
                                 dispatch({ type: "SELL_LAIKA", payload: inputLaika });
                                 setIsSellingLaika(true);
                             }
