@@ -53,7 +53,7 @@ const Leaderboard: React.FC = () => {
         // Set up auto-refresh every 5 minutes
         const refreshInterval = setInterval(loadLeaderboard, 5 * 60 * 1000);
         return () => clearInterval(refreshInterval);
-    }, []);
+    }, [fetchLeaderboard]);
 
     // Sort data based on current sort field and direction
     const sortedData = [...leaderboardData].sort((a, b) => {
@@ -67,6 +67,21 @@ const Leaderboard: React.FC = () => {
             return valueB - valueA;
         }
     });
+
+    // Find user's rank and data
+    const getUserRankAndData = () => {
+        if (!publicKey || sortedData.length === 0) return null;
+        
+        const userIndex = sortedData.findIndex(entry => entry.userPublicKey === publicKey);
+        if (userIndex === -1) return null;
+        
+        return {
+            rank: userIndex + 1,
+            data: sortedData[userIndex]
+        };
+    };
+
+    const userRankInfo = getUserRankAndData();
 
     // Calculate pagination
     const indexOfLastEntry = currentPage * entriesPerPage;
@@ -128,6 +143,36 @@ const Leaderboard: React.FC = () => {
                     {loading ? 'Refreshing...' : 'Refresh'}
                 </button>
             </div>
+
+            {/* User Rank Display */}
+            {!loading && !error && userRankInfo && (
+                <div className="user-rank-display">
+                    <h3>Your Ranking</h3>
+                    <div className="user-rank-card">
+                        <div className="user-rank-position">
+                            <span className="rank-label">Rank</span>
+                            <span className={`rank-value rank-${userRankInfo.rank <= 3 ? userRankInfo.rank : ''}`}>
+                                #{userRankInfo.rank}
+                            </span>
+                        </div>
+                        <div className="user-rank-details">
+                            <div className="user-address">
+                                <span>{truncateAddress(userRankInfo.data.userPublicKey)}</span>
+                            </div>
+                            <div className="user-stats">
+                                <div className="user-ice">
+                                    <span className="stat-label">Ice:</span>
+                                    <span className="stat-value">{formatIce(userRankInfo.data.ice)}</span>
+                                </div>
+                                <div className="user-clicks">
+                                    <span className="stat-label">Clicks:</span>
+                                    <span className="stat-value">{formatNumber(userRankInfo.data.nbClick)}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {loading && <div className="leaderboard-loading">Loading leaderboard data...</div>}
             
