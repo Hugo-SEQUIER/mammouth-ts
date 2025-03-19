@@ -632,7 +632,7 @@ const gameReducer = (state: GameState, action: any): GameState => {
 				}
 			};
 		case "SELL_BITCOIN":
-			if (action.payload < 0){
+			if (action.payload < 0 || action.payload > state.investment.bitcoin.amount){
 				return state;
 			}
 			// if (checkTechnologyDone("Trading Algorithms", state)){
@@ -676,7 +676,7 @@ const gameReducer = (state: GameState, action: any): GameState => {
 				}
 			};
 		case "SELL_ETHEREUM":
-			if (action.payload < 0){
+			if (action.payload < 0 || action.payload > state.investment.ethereum.amount){
 				return state;
 			}
 			// if (checkTechnologyDone("Trading Algorithms", state)){
@@ -720,7 +720,7 @@ const gameReducer = (state: GameState, action: any): GameState => {
 					}
 				};
 			case "SELL_LAIKA":
-				if (action.payload < 0){
+				if (action.payload < 0 || action.payload > state.investment.laika.amount){
 					return state;
 				}
 				// if (checkTechnologyDone("Trading Algorithms", state)){
