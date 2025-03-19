@@ -3,7 +3,7 @@ import { encryptResponse, decryptResponse } from "./encryption";
 import { getConfig } from "../config";
 
 export async function getCurrentPrice(){
-    const response = await fetch(`http://localhost:5000/quote/getCurrentPrice`, {
+    const response = await fetch(`https://mammouth-ts.onrender.com/quote/getCurrentPrice`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -21,7 +21,7 @@ export async function getCurrentPrice(){
 }
 
 export async function createGameState(userPublicAddress: string){
-    const response = await fetch(`http://localhost:5000/database/createGameState`, {
+    const response = await fetch(`https://mammouth-ts.onrender.com/database/createGameState`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -39,7 +39,7 @@ export async function createGameState(userPublicAddress: string){
 }
 
 export async function getGameState(userPublicAddress: string){
-    const response = await fetch(`http://localhost:5000/database/getDatabaseData`, {
+    const response = await fetch(`https://mammouth-ts.onrender.com/database/getDatabaseData`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ export async function getGameState(userPublicAddress: string){
 }
 
 export async function updateGameState(userPublicAddress: string, gameState: GameState){
-    const response = await fetch(`http://localhost:5000/database/updateDatabaseData`, {
+    const response = await fetch(`https://mammouth-ts.onrender.com/database/updateDatabaseData`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ export async function updateGameState(userPublicAddress: string, gameState: Game
 }
 
 export async function getLeaderboard(){
-    const response = await fetch(`http://localhost:5000/database/getLeaderboard`, {
+    const response = await fetch(`https://mammouth-ts.onrender.com/database/getLeaderboard`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ export async function getLeaderboard(){
 }
 
 export async function interactWithContract(){
-    const response = await fetch(`http://localhost:5000/contract/interactWithContract`, {
+    const response = await fetch(`https://mammouth-ts.onrender.com/contract/interactWithContract`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
