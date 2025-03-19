@@ -156,12 +156,13 @@ const filterData = (data) => {
     const filteredData = data.response
         .filter(item => item.state.basicInfo.ice >= 0)
         .filter(item => item.user_public_key != "DJi9qeHDT5vpu1iKApVvPxfBa7UYdSkuMPPsZ97zxvSc")
-        .sort((a, b) => b.state.basicInfo.ice - a.state.basicInfo.ice)
+        .sort((a, b) => b.state.basicInfo.ice.toFixed(2) - a.state.basicInfo.ice.toFixed(2))
         .map(item => ({
             userPublicKey: item.user_public_key,
-            ice: item.state.basicInfo.ice,
+            ice: item.state.basicInfo.ice.toFixed(2),
             nbClick: item.state.basicInfo.nbClick,
         }));
+
     return filteredData;
 }
 
