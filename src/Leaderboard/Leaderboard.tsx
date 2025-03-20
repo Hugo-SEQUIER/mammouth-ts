@@ -35,7 +35,28 @@ const Leaderboard: React.FC = () => {
                     ...entry,
                     nbClick: entry.nbClick || 0 // Default to 0 if nbClick is missing
                 }));
-                setLeaderboardData(processedData);
+                // List of addresses to exclude from leaderboard
+                const excludedAddresses = [
+                    "By1KrbUVMyupM3Ut4beSmHjGkMD467MM67QCW8jRGGRG",
+                    "4AS7w4syHXsRd1Vhpa8o3AB8NBEQCrRZ57upBP6aexWf",
+                    "DBkup5XhxRZwYN5F41FoNwqvqqHsuAsBkJoBEQkP6rPN",
+                    "EuqhVfGu294cvjSUtfbsCmc6iFZjoPRMnvqytJrMEfwp",
+                    "A2ccUuNwTRphZpVpRu8ffxyFBWtdR57hoWwkr37Zp2RU",
+                    "4tGPs2dP1mKKEgoWNNL1skTEzUUnjceLKShbCrtEth6S",
+                    "EeuZcwmpBWAdD2f52ZByMzARUEUjUryYf4YGanX9ZGk6",
+                    "5bRTJ5z1tUQkjSgcASQ4oPVAPBDG5cbhLZsDcCL9mfGj",
+                    "DFij78RYZZCFDNrGuYSHpBctEUJLSN6yGWxyG2vhoXFv",
+                    "A7zaaQk8AtkNtCy8xp4ENs2idCSicMa5EtwekeC2n2Gn",
+                    "5uh71e8uNgN4hYPPz5KXuKV1fCjcPCmb7WfX7ne3qJVj",
+                    "2viuZAZtzJ4VX6goQtUBUdX9SYz5WvCG9TP8AihkV41i",
+                    "4jETtRcFkQHaGar6pjNWVJ5semoUemu99eN3zggwxWMG"
+                ];
+
+                // Filter out excluded addresses
+                const filteredData = processedData.filter((entry: any) => 
+                    !excludedAddresses.includes(entry.userPublicKey)
+                );
+                setLeaderboardData(filteredData);
             } else {
                 setError('Failed to load leaderboard data');
             }
