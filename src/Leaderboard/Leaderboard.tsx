@@ -44,7 +44,6 @@ const Leaderboard: React.FC = () => {
                     "EeuZcwmpBWAdD2f52ZByMzARUEUjUryYf4YGanX9ZGk6",
                     "5bRTJ5z1tUQkjSgcASQ4oPVAPBDG5cbhLZsDcCL9mfGj",
                     "A7zaaQk8AtkNtCy8xp4ENs2idCSicMa5EtwekeC2n2Gn",
-                    "5uh71e8uNgN4hYPPz5KXuKV1fCjcPCmb7WfX7ne3qJVj",
                     "2viuZAZtzJ4VX6goQtUBUdX9SYz5WvCG9TP8AihkV41i "
                 ];
 
