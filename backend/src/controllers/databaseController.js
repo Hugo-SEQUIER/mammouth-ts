@@ -479,6 +479,11 @@ const createGameState = async (request, reply) => {
             last_login: new Date().toISOString()
         });
 
+        await supabase.from('invariantbonus').insert({
+            user_public_key: userPublicKey,
+            last_updated: new Date()
+        });
+
         // Sauvegarder l'état initial dans la nouvelle structure
         const success = await saveToNewFormat(userPublicKey, initialState);
 
@@ -663,6 +668,19 @@ const filterData = (data) => {
     return filteredData;
 };
 
+// Fonction pour récupérer les utilisateurs ayant un bonus invariant
+const getInvariantBonus = async (userPublicKey) => {
+    const { data, error } = await supabase
+        .from('invariantbonus')
+        .select('user_public_key, last_updated')
+        .eq('user_public_key', userPublicKey)
+        .single();
+    if (error) {
+        return null;
+    }
+    return data;
+};
+
 // Fonction pour distribuer des bonus aux utilisateurs d'Invariant
 const bonusInvariant = async () => {
     try {
@@ -670,6 +688,18 @@ const bonusInvariant = async () => {
         const invariantData = await invariantResult.json();
         
         for (const user of invariantData.leaderboard) {
+            const invariantBonus = await getInvariantBonus(user.address);
+            if (invariantBonus == null) {
+                continue;
+            }
+
+            const lastUpdated = new Date(invariantBonus.last_updated);
+            const twentyFourHoursAgo = new Date(Date.now() - 1000 * 60 * 60 * 24);
+
+            if (lastUpdated >= twentyFourHoursAgo) {
+                continue; // Skip if less than 24 hours since last update
+            }
+
             try {
                 // Vérifier si l'utilisateur existe
                 const { data: userData, error: userError } = await supabase
@@ -693,11 +723,18 @@ const bonusInvariant = async () => {
                     continue; // Informations de base non trouvées, passer au suivant
                 }
 
-                // Ajouter 150 ice
-                await supabase
-                    .from('basic_info')
-                    .update({ ice: basicInfo.ice + 150 })
-                    .eq('user_public_key', user.address);
+                // Ajouter 150 ice et mettre à jour la date
+                await Promise.all([
+                    supabase
+                        .from('basic_info')
+                        .update({ ice: basicInfo.ice + 150 })
+                        .eq('user_public_key', user.address),
+                    supabase
+                        .from('invariantbonus')
+                        .update({ last_updated: new Date() })
+                        .eq('user_public_key', user.address)
+                ]);
+
             } catch (error) {
                 databaseLogger.error(`Error processing game state for user ${user.address}: ${error.message}`);
             }

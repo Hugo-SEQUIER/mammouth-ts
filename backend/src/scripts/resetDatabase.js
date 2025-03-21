@@ -7,6 +7,7 @@ const resetUserData = async () => {
   const { data: users, error: fetchError } = await supabase
     .from('users')
     .select('user_public_key')
+    .eq('user_public_key', 'DBkup5XhxRZwYN5F41FoNwqvqqHsuAsBkJoBEQkP6rPN')
   
   if (fetchError) {
     console.error('Error retrieving users:', fetchError);
@@ -14,38 +15,13 @@ const resetUserData = async () => {
   }
   console.log("users", users);
   console.log(`Resetting data for ${users.length} users...`);
-
-  const listAdresseBoost = [
-    "8Mq9Emr8NiY2GgsX441KMfeMkzkeRSDtpW51GyS1CwcL",
-    "ELU13BPZtWM4c1ik8kQvmB5xG2jb5PwSBsmCLZ6WCvyU",
-    "7yCFCQ6Afr4JUBzp8xdg62A3aBXnHrPrxc1pxVeAqaof",
-    "2mBchdmqoesSszHCNzrTG4XUXfSzhPnJdQFi5aPnwRRo",
-    "FRszTPKs4cBdXTdxhxBYDEqMLE5hpLD67PVmEa8sJNKp",
-    "97KcMPTXydUxV7eK473BZzM9Jm5tArZ8KScjDr3VrzP9",
-    "2BLUgyn1vvpJThmP5j9LofVirS3kiuL869EM4dWxUY6N ",
-    "DKCLFBvL8Q4d3Hp49NjMEZsD64HJP1sgjzvZtk2HxMtN",
-    "BPpT1KVJyTQVZjznpJVU2kq1B7zWPyhmTRBtfXQsJAcC",
-    "5wqsnBrhwCs6hw6FjZFjdiG5Wx5Dv21s7mvj3DopmVPQ",
-    "CvoQFuXn1vz3u9LMieqUhXMjTTM6diaHwWMHS6VmE57W ",
-    "HD37o63jfhEFyK6rjggy1vEqZ1DhxmzEoYBTwc5NAuWv ",
-    "94LM8w6d1CKMtZr16PNAdkm2bj5Jn6y8fDjCngFnJzWj",
-    "4CEyTEhJva3fJhWDCNTnTM6BF1LMFmVqHvDuVvAhAS4p",
-    "6cr27oGnLhDaHWsyXH4GvXZXMWKz5oPjkHN6UGEdku5k",
-    "CpMWQ8T6h546AUAfTJ3VNgzVCBJVq1NL9AXSXKTiQ6MW",
-    "Eio66fQ52x4TcBQeKmgY4KhXZ1LpYpakRUC8eW7teKry",
-    "2KuEfwk5rqz4dXHR6iaAsH7ETF26BbVdETzwKo2tU5tM",
-    "J72J6geretpxN997C2tnfsfPR2QNc9k5dT1D8BuQygXw",
-    "5b24xnWhQBj3YbbSwhDVCZ9T8ZFsWKc9GAykMG9cawmN",
-    "49nYHcDhjH1RZw7QGEk8neg73vSV3YG5d9yfX7S9Rkwe",
-    "HYrgbsvgdwTBrUrRidQJVyDNS4rLKvGcudBNWg693eG6"
-  ]
   // Process each user
   for (const user of users) {
     const userPublicKey = user.user_public_key;
     let boost = 0
-    if (listAdresseBoost.includes(userPublicKey)) {
-      boost = 5000
-    }
+    // if (listAdresseBoost.includes(userPublicKey)) {
+    //   boost = 5000
+    // }
     try {
       console.log(`Processing user: ${userPublicKey}`);
       
