@@ -432,7 +432,7 @@ const gameReducer = (state: GameState, action: any): GameState => {
 					...state.laboratory,
 					level: state.laboratory.level + 1,
 					upgradeCost: state.laboratory.upgradeCost * 2.5,
-					researchSpeed: parseFloat((state.laboratory.researchSpeed * 1.15).toFixed(2))
+					researchSpeed: parseFloat(((state.laboratory.researchSpeed * 1.15) || 0).toFixed(2))
 				},
 				basicInfo: {
 					...state.basicInfo,

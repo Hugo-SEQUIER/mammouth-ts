@@ -30,9 +30,9 @@ export default function EmployeeComponent({ employee }: { employee: Employee }) 
                 <div>{employee.job}</div>
                 <div>
                     <div>Quantity: {employee.amount}</div>
-                    <div>Salary: {employee.salary} $</div>
-                    <div>Happiness: {employee.happiness.toFixed(2)}%</div>
-                    <div>Production: {employee.production.toFixed(2)}</div>
+                    <div>Salary: {employee.salary.toFixed(2) || 0} $</div>
+                    <div>Happiness: {employee.happiness.toFixed(2) || 0}%</div>
+                    <div>Production: {employee.production.toFixed(2) || 0}</div>
                 </div>
             </button>
         </div>

@@ -56,11 +56,11 @@ export default function Market() {
                         <p>User Price: </p>
                         <input type="number" value={state.market.userPrice} min={0.01} max={state.market.marketPrice*1.7} step={0.01} onChange={(e) => setUserPrice(dispatch, parseFloat(e.target.value))} />$
                     </div>
-                    <p>Public Demand: {(state.market.publicDemand * bonusPublicDemand).toFixed(3)}%</p>
+                    <p>Public Demand: {(state.market.publicDemand * bonusPublicDemand).toFixed(3) || 0}%</p>
                     <p>Ice Sell: {state.market.iceSell}</p>
                     <br/>
                     <h2>Shop</h2>
-                    <p>Energy Bar : {state.shop.energyBar.price.toFixed(2)} $</p>
+                    <p>Energy Bar : {state.shop.energyBar.price.toFixed(2) || 0} $</p>
                     {isDisabledBuyEnergyBar ? <p>You can't buy energy bar yet</p> : <button onClick={() => buyEnergyBar()} disabled={isDisabledBuyEnergyBar}>Buy</button>}
                 </>    
             )}

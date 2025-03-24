@@ -59,11 +59,11 @@ export default function Company() {
                         <div className="company-container">
                             <div className="company-stats">
                                 <p>Level: {state.company.level}</p>
-                                <p>Upgrade Cost: {state.company.upgradeCost.toFixed(2)} $</p>
+                                <p>Upgrade Cost: {state.company.upgradeCost.toFixed(2) || 0} $</p>
                                 <button onClick={() => customDispatch({ type: "UPGRADE_COMPANY" })} disabled={state.basicInfo.money < state.company.upgradeCost}>
                                     Upgrade Company
                                 </button>
-                                <p>Cash Flow: {state.company.cashFlow.toFixed(2)}</p>
+                                <p>Cash Flow: {state.company.cashFlow.toFixed(2) || 0}</p>
                                 <div className="company-pay-invoices">
                                     <input type="number" value={amountToInject} min={0.01} step={0.01} max={state.basicInfo.money} onChange={(e) => setAmountToInject(parseFloat(e.target.value))} />
                                     <button onClick={() => customDispatch({ type: "INJECT_CASH", payload: amountToInject })}>Inject Cash</button>

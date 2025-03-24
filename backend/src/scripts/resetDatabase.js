@@ -7,7 +7,7 @@ const resetUserData = async () => {
   const { data: users, error: fetchError } = await supabase
     .from('users')
     .select('user_public_key')
-    .eq('user_public_key', 'DBkup5XhxRZwYN5F41FoNwqvqqHsuAsBkJoBEQkP6rPN')
+    .eq('user_public_key', '5uh71e8uNgN4hYPPz5KXuKV1fCjcPCmb7WfX7ne3qJVj')
   
   if (fetchError) {
     console.error('Error retrieving users:', fetchError);

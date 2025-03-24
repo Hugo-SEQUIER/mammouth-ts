@@ -32,14 +32,14 @@ export default function Laboratory() {
                         <>
                             <div className="laboratory-stats">
                                 <p>Level: {state.laboratory.level}</p>
-                                <p>Upgrade Cost: {state.laboratory.upgradeCost}</p>
+                                <p>Upgrade Cost: {state.laboratory.upgradeCost.toFixed(2) || 0} $</p>
                                 <button 
                                     onClick={() => dispatch({ type: "UPGRADE_LABORATORY" })} 
                                     disabled={state.basicInfo.money < state.laboratory.upgradeCost}
                                 >
                                     Upgrade Laboratory
                                 </button>
-                                <p>Research Speed: {(state.laboratory.researchSpeed * bonusResearchSpeed).toFixed(2)}/s</p>
+                                <p>Research Speed: {(state.laboratory.researchSpeed * bonusResearchSpeed).toFixed(2) || 0}/s</p>
                                 <p>Queue: {state.laboratory.researchQueue.map((tech) => tech.name).join(", ")}</p>
                             </div>
 
@@ -51,7 +51,7 @@ export default function Laboratory() {
                                             {state.laboratory.researchQueue.map((tech) => (
                                                 <div key={tech.name}>
                                                     <p>Researching: {tech.name}</p>
-                                                    <p>Reasearch Time: {(tech.researchTime).toFixed(3)}s</p>
+                                                    <p>Reasearch Time: {(tech.researchTime).toFixed(3) || 0}s</p>
                                                 </div>
                                             ))}
                                         </>
