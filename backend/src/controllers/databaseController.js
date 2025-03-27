@@ -661,7 +661,7 @@ const filterData = (data) => {
         .sort((a, b) => b.ice - a.ice)
         .map(item => ({
             userPublicKey: item.user_public_key,
-            ice: item.ice.toFixed(2),
+            ice: item.ice.toFixed(2) || 0,
             nbClick: item.nb_click,
         }));
 

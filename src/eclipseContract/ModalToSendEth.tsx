@@ -43,7 +43,7 @@ export default function ModalToSendEth() {
 
                         <div>
                             <p>
-                                ETH Required: {solRequired ? solRequired.toFixed(8) : "0"} ETH
+                                ETH Required: {solRequired ? solRequired.toFixed(8) || 0 : "0"} ETH
                             </p>
                         </div>
 
